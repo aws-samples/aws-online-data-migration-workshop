@@ -58,4 +58,6 @@ This workshop encompasses 4 modules
 **Module 4** - AWS Transfer for SFTP
 
 
-To get started, [go to module 1](/module1/README.md)
+<br>
+
+To get started go to [module 1](/module1/README.md)
