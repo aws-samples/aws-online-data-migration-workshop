@@ -563,7 +563,7 @@ files, and what attributes were preserved
 			ls -ltr /nfs_target/s3-cli-copy/appdata
 
 
-<img src="images/3-10.png">
+<img src="images/3-11.png">
 
 -   Do the time-stamps, user/group & permission value differ from the original data?
 
@@ -573,7 +573,7 @@ files, and what attributes were preserved
 
 			ls -ltr /nfs_target/datasync-copy/appdata   
 
-<img src="images/3-10.png">
+<img src="images/3-12.png">
 
 -   Do the time-stamps, user/group & permission value differ from the
         original data? Were they preserved?
@@ -598,4 +598,9 @@ knowledge or performance tuning to enable faster data transfers.
 
 <br/><br/>
 
-**END OF MODULE 3**
+**END OF MODULE 2**
+-------------------
+
+
+Click here to go to [module 4](/module4/README.md)
+
