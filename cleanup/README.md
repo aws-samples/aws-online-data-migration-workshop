@@ -11,6 +11,8 @@ session from **YOUR LAPTOP/WORKSTATION** and not from the Remote Desktop
 Session.
 
 
+<br>
+
 **DELETE THE AWS TRANSFER FOR SFTP INSTANCE YOU CREATED**
 -----------------------------------------
 
