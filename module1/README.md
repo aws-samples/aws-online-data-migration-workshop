@@ -71,6 +71,7 @@ CloudFormation template)
 
 2.  In the top right hand corner, next to your account name, click on the drop
     down and change your region to **us-west-2 (Oregon)**
+    <img src="images/1-1.png">
 
     -  Now in the CloudFormation page click on **Create stack**
 
@@ -239,9 +240,10 @@ step 3**.
 
 In this module you deployed your base VPC, subnets, security groups, Amazon
 EC2 instances and the SSH key that that you will use for the remainder of
-the workshop.
+the workshop. 
 
-<br/><br/>
+
+<br>
 
 **END OF MODULE 1**
 
