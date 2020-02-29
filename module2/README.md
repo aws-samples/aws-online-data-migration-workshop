@@ -6,6 +6,8 @@ See the LICENSE file.
 Errors or corrections? Contact akbariw@amazon.com.
 
 <br/><br/>
+**INTRODUCTION**
+-------------------
 The AWS Storage Gateway service enables hybrid cloud storage access between an
 on-premises environment and AWS. The AWS Storage Gateway in File mode, enables
 you to store and retrieve objects in Amazon S3 using file protocols, such as NFS
