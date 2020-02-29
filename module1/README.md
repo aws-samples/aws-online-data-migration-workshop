@@ -1,8 +1,6 @@
 MODULE 1: DEPLOY RESOURCES
 ==========================
-Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.
-
-This sample code is made available under the MIT-0 license.See the LICENSE file.
+Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license.See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
 
