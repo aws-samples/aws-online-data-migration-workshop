@@ -2,6 +2,8 @@ MODULE 3: AWS DATASYNC
 ======================
 <br/><br/>
 
+**INTRODUCTION**
+-------------------
 AWS DataSync is a data transfer service that makes it easy for you to simplify,
 automate & accelerate data migration between on-premises storage and Amazon S3
 or Amazon Elastic File System (Amazon EFS). DataSync automatically handles many
@@ -9,7 +11,9 @@ of the heavy lifting tasks related to data transfers that can slow down
 migrations such as managing scripts, network optimization, handling encryption,
 and data integrity validation.
 
-**Objective** - In this module you will transfer approx. 10,000 small files from
+**OVERVIEW**
+-------------------
+In this module you will transfer approx. 10,000 small files from
 an NFS share (**/nfs_source)** to an Amazon S3 bucket using two methods
 
 -   **Method 1 –** Utilize a script which uses the AWS S3 cp command to pull the
