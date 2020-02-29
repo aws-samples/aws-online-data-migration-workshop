@@ -181,7 +181,7 @@ transfer
 			./show_performance.sh
 <br/><br/>
 
-> Note throughput values shown (i.e. x MB/s transfer rate) for the first 30 seconds, then switch back to your first SSH session window
+**Note** the throughput values shown (i.e. x MB/s transfer rate) for the first 30 seconds, then switch back to your first SSH session window
 
 
 
@@ -195,7 +195,7 @@ transfer
 			cat /scripts/ds-demo/time.log
 
 
-> Take note of the time the script took to run (it is the time value shown next to the value for **real**)
+**Take note** of the time the script took to run (it is the time value shown next to the value for **real**)
 
 <img src="images/3-3.png">
 
@@ -304,7 +304,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
                 -   Select **Create Agent** to continue
 
-<img src="images/3-5.png" width="400">
+<img src="images/3-5.png" width="600">
 
 -   When the create agent process is complete click on the **blue DataSync**
     link at the top left of the screen to continue with the next step of
@@ -548,14 +548,15 @@ files, and what attributes were preserved
     -   From the top menu select **Action**→ **Refresh Cache** then
         select **Start**
 
-    -   **View original data**- Run the below command in your Putty SSH session
+2.   **View original data**- Run the below command in your Putty SSH session
         to view the original data time stamp & permissions for the
         file **saturn.gif** located on /nfs_source
 
 			ls -ltr /nfs_source/appdata
 
 <img src="images/3-10.png">
-    -   **View S3 copy script data that was transferred** - Run the below
+
+3.    **View S3 copy script data that was transferred** - Run the below
         command to view the time-stamp, user/group & permission attributes for
         the file **saturn.gif** copied via the S3 CLI copy script.
 
@@ -566,7 +567,7 @@ files, and what attributes were preserved
 
 -   Do the time-stamps, user/group & permission value differ from the original data?
 
--   **View DataSync copied data** - Run the below command to view the
+4.   **View DataSync copied data** - Run the below command to view the
         timestamp, user/group & permission value for the
         file **saturn.gif** copied via DataSync.
 
