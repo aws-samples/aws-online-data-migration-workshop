@@ -184,7 +184,7 @@ At the end of this task you should now have:
 In order to enable SFTP for our users we need to create our AWS Transfer for
 SFTP server
 
-1.  Head over to the Transfer
+1.  Navigate to the Transfer for SFTP
     console <https://console.aws.amazon.com/transfer/home>
 
 2.  Make sure your Region is set to: us-west-2 Oregon
