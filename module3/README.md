@@ -304,7 +304,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
                 -   Select **Create Agent** to continue
 
-<img src="images/3-5.png" width="100">
+<img src="images/3-5.png" width="400">
 
 -   When the create agent process is complete click on the **blue DataSync**
     link at the top left of the screen to continue with the next step of
