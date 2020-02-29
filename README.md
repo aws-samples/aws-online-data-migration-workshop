@@ -4,6 +4,7 @@ GET HANDS-ON & LEARN BEST PRACTICES FOR ONLINE AWS DATA MIGRATIONS<br>
 Copyright Amazon Web Services, Inc. and its affiliates.All rights reserved. This sample code is made available under the MIT-0 license. See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
+
 =======================================================================
 
 
@@ -23,7 +24,7 @@ using different methods such as AWS S3 cp command script, AWS File Gateway, and 
 AWS DataSync, where you will get an then access the data stored in Amazon S3 to better understand of the benefits of each service for different use cases. Lastly you will also get hands on experience with AWS Transfer for SFTP and using it as a transfer mechanism.
 
 The image below illustrates the different 3 AWS Services that we will use use to get data into Amazon S3 in a simple, repeatable and efficient manner.
-<img src="images/0-0.png">
+<img src="images/0-0.PNG">
 <br/><br/>
 
 **PREREQUISITES** 
