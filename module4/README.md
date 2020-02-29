@@ -213,6 +213,7 @@ At the end of this task you should now have:
 
 • Created your SFTP endopoint 
 • Noted down the name of your AWS Transfer for SFTP server endpoint
+• Created a logging role
 
 <br/><br/>
 
