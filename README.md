@@ -8,8 +8,6 @@ Errors or corrections? Contact akbariw@amazon.com.
 --------------------------------------------------------
 
 
-<br/><br/>
-
 OBJECTIVE OF WORKSHOP
 --------------------------------
 
