@@ -9,7 +9,7 @@ Errors or corrections? Contact akbariw@amazon.com.
 <br/><br/>
 
 OBJECTIVE OF WORKSHOP
-===================== 
+--------------------------------
 
 The prospect of moving data workloads to the cloud can be daunting, so can
 trying to make sense of the array of tools, protocols, and mechanisms available
