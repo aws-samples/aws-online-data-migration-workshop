@@ -1,6 +1,6 @@
 MODULE 1: DEPLOY RESOURCES
 ==========================
-<br/><br/>
+<br/>
   
 **INTRODUCTION**
 ----------------
