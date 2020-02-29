@@ -246,7 +246,7 @@ the workshop.
 <br>
 
 **END OF MODULE 1**
+-------------------
 
 
-<br>
 Click here to go to [module 2](/module2/README.md)
