@@ -38,7 +38,7 @@ In this module you will perform the following tasks
 
 **Lab Diagram: Transferring data to Amazon S3 using AWS File Gateway**
 
-<img src="images/3-1.png">
+<img src="images/2-1.png">
 
 <br/><br/>
 
@@ -307,7 +307,7 @@ In the next steps you will create an NFS file share from your AWS File Gateway.
 
 		df -h
 
-<img src="images/3-2.png">
+<img src="images/2-2.png">
 
 **TRANSFER 10,000 SMALL FILES**
 ----------------------
