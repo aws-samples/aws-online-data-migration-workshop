@@ -12,7 +12,13 @@ you to store and retrieve objects in Amazon S3 using file protocols, such as NFS
 and SMB. Objects written through file gateway can be directly accessed in your Amazon S3 bucket.
 
 
-**Objective** - In this module you will perform the following tasks
+
+<br>
+
+**OBJECTIVE**
+-------------------
+
+In this module you will perform the following tasks
 
 -   Create Amazon S3 buckets
 
@@ -30,7 +36,7 @@ and SMB. Objects written through file gateway can be directly accessed in your A
 
 **Lab Diagram: Transferring data to Amazon S3 using AWS File Gateway**
 
-![Lab Diagram](media/d9b51ff4272ea7797c2bb9c8ee416119.png)
+<img src="images/3-1.png">
 
 <br/><br/>
 
@@ -299,7 +305,7 @@ In the next steps you will create an NFS file share from your AWS File Gateway.
 
 		df -h
 
-![](media/5b75bb69d3a8b6025a0f882b881b7a40.png)
+<img src="images/3-2.png">
 
 **TRANSFER 10,000 SMALL FILES**
 ----------------------
@@ -389,6 +395,9 @@ hybrid cloud file storage architectures, where you can access your hot data via
 the local file gateway cache, where all your data is backed in an Amazon S3
 bucket.
 
-<br/><br/>
-  
+
 **END OF MODULE 2**
+-------------------
+
+
+Click here to go to [module 3](/module3/README.md)
