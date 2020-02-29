@@ -7,7 +7,7 @@ Errors or corrections? Contact akbariw@amazon.com.
 
 <br/>
   
-**INTRODUCTION**
+**OBJECTIVE**
 ----------------
 
 In this module you will firstly deploy the base AWS VPC network environment via
