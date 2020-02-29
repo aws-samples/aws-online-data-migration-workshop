@@ -45,7 +45,7 @@ In this module you will perform the following tasks
 **CREATE S3 BUCKET - AWS FILE GATEWAY**
 ---------------------------------------
 
->  **Note:** Ensure that you are logged into your Windows RDP session and to enter
+**Note:** **Ensure that you are logged into your Windows RDP session** and to enter
 all required details into the workshop.txt file located on the desktop, as
 instructed.
 
@@ -321,7 +321,7 @@ as **/nfs__source** , using a Linux copy script
 
 		cd /workshop_data
 
-		find . -type f \| wc -l
+		find . -type f | wc -l
 
 
 
@@ -349,7 +349,7 @@ gateway local cache took
 
 		ls -ltr
 
-		find . -type f \| wc -l
+		find . -type f | wc -l
 
 
 	- How many files does it show that you copied?
