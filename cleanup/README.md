@@ -161,4 +161,5 @@ Session.
 
 10. Repeat steps 3-7
 
->   **Cleanup tasks complete**
+**CLEANUP TASKS COMPLETED**
+----------------------------
