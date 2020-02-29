@@ -1,6 +1,8 @@
 MODULE 3: AWS DATASYNC
 ======================
-<br/><br/>
+
+
+<br>
 
 **INTRODUCTION**
 -------------------
@@ -10,6 +12,8 @@ or Amazon Elastic File System (Amazon EFS). DataSync automatically handles many
 of the heavy lifting tasks related to data transfers that can slow down
 migrations such as managing scripts, network optimization, handling encryption,
 and data integrity validation.
+
+<br/><br/>
 
 **OVERVIEW**
 -------------------
@@ -81,7 +85,7 @@ transfer
 
 8.  Replace the contents with the below via copy and paste
 
-	       	 {
+	        {
 	          "Version": "2012-10-17",
 	          "Statement": [
 	        {
@@ -223,8 +227,6 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
     -   In the Create agent page, under the **Amazon EC2** section click on
         the **Learn more**  icon
 
-        ![Learn More](media/585be91f87dec7b7a1ef1a689fed66a9.png)
-
     -   Scroll down to the table that has a list of **AMI Names**, and click on
         the **Launch Instance** link corresponding to the **us-west-2** Oregon
         row
@@ -302,7 +304,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
                 -   Select **Create Agent** to continue
 
-<img src="images/3-5.png">
+<img src="images/3-5.png" width="100">
 
 -   When the create agent process is complete click on the **blue DataSync**
     link at the top left of the screen to continue with the next step of
@@ -389,7 +391,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
 <img src="images/3-7.png">
 
->   DataSync Task
+
 
 
 <br/><br/>
@@ -553,19 +555,18 @@ files, and what attributes were preserved
 			ls -ltr /nfs_source/appdata
 
 <img src="images/3-10.png">
-
     -   **View S3 copy script data that was transferred** - Run the below
         command to view the time-stamp, user/group & permission attributes for
         the file **saturn.gif** copied via the S3 CLI copy script.
 
 			ls -ltr /nfs_target/s3-cli-copy/appdata
 
+
 <img src="images/3-10.png">
 
-    -   Do the time-stamps, user/group & permission value differ from the
-        original data?   
+-   Do the time-stamps, user/group & permission value differ from the original data?
 
-    -   **View DataSync copied data** - Run the below command to view the
+-   **View DataSync copied data** - Run the below command to view the
         timestamp, user/group & permission value for the
         file **saturn.gif** copied via DataSync.
 
@@ -573,11 +574,11 @@ files, and what attributes were preserved
 
 <img src="images/3-10.png">
 
-    -   Do the time-stamps, user/group & permission value differ from the
+-   Do the time-stamps, user/group & permission value differ from the
         original data? Were they preserved?
 <br/><br/>
 
->  **Note:** Notice how the Saturn.gif file that was copied across using DataSync
+**Note:** Notice how the Saturn.gif file that was copied across using DataSync
 retained the same timestamp & permissions (r-r-r & user9:appadmin) as the
 original source file, unlike the data copied across via the script.
 
