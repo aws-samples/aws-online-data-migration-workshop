@@ -53,7 +53,7 @@ contains the following:
     downloaded file will also be shown at the bottom of the screen for
     reference.
 
-<br/><br/>
+<br/>
 
 >   **Note:** Take note of the location of this **.pem** file you download, as you will
 copy this to your deployed Windows EC2 instance (after the deploying the below
@@ -206,9 +206,11 @@ manager**
 
 >   **Note:** All remaining tasks for the workshop will be performed through the
 **Remote Desktop Session to the Windows EC2 Instance you just connected to in
-step 3**.
+step 3**.<br/>
 
-1.  Open the Chrome icon located on the desktop of the **Windows EC2 instance** and log into your AWS Account
+
+
+9.  Open the Chrome icon located on the desktop of the **Windows EC2 instance** and log into your AWS Account
     URL <https://console.aws.amazon.com>
 
     -   From the AWS console, on the top left, click **Services** and type &
