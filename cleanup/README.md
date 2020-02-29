@@ -4,7 +4,7 @@ Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This
 
 Errors or corrections? Contact akbariw@amazon.com.
 
-<br/><br/>
+---------------------------------------------------------------------------------
 
 **Note**: You will need to perform all the cleanup workshop from a browser
 session from **YOUR LAPTOP/WORKSTATION** and not from the Remote Desktop
