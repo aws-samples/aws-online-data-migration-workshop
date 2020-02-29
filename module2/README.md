@@ -5,7 +5,10 @@ See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
 
-<br/><br/>
+
+
+<br>
+
 **INTRODUCTION**
 -------------------
 The AWS Storage Gateway service enables hybrid cloud storage access between an
