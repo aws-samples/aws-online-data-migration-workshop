@@ -1,28 +1,27 @@
 GET HANDS-ON & LEARN BEST PRACTICES FOR AWS DATA MIGRATIONS<br>
 =======================================================================
 
-Copyright Amazon Web Services, Inc. and its affiliates. 
-
-All rights reserved. This sample code is made available under the MIT-0 license. See the LICENSE file.
+Copyright Amazon Web Services, Inc. and its affiliates.All rights reserved. This sample code is made available under the MIT-0 license. See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
 
 
 <br>
  
-OVERVIEW
-========
-
 The prospect of moving data workloads to the cloud can be daunting, so can
 trying to make sense of the array of tools, protocols, and mechanisms available
 to move data into AWS.  
-  
-**Objective of workshop** - Get hands on experience in transferring data at
-scale using the available AWS online & hybrid services, where you will copy
-10,000 local small files to Amazon S3, using different methods such as AWS File
-Gateway, AWS S3 copy command script and lastly AWS DataSync. You will also get
-hands on experience with AWS Transfer for SFTP and using it as a transfer
-mechanism.
+
+<br/><br/>
+
+OBJECTIVE OF WORKSHOP
+===================== 
+In this workshop you will get hands-on experience in deploying, configuring and
+transferring data at scale using the available AWS online & hybrid services. 
+In this lab we have a scenario where you will copy 10,000 local small files to Amazon S3,
+using different methods such as AWS File Gateway, AWS S3 copy command script and lastly
+AWS DataSync, where you will get an understanding of the benefits of each serviec. 
+You will also get hands on experience with AWS Transfer for SFTP and using it as a transfer mechanism.
 
 
 
