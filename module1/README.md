@@ -206,8 +206,9 @@ manager**
 
 >   **Note:** All remaining tasks for the workshop will be performed through the
 **Remote Desktop Session to the Windows EC2 Instance you just connected to in
-step 3**.<br/>
+step 3**.
 
+<br/><br/>
 
 
 9.  Open the Chrome icon located on the desktop of the **Windows EC2 instance** and log into your AWS Account
@@ -236,12 +237,14 @@ step 3**.<br/>
 **SUMMARY**
 -----------
 
->   In this module you deployed your base VPC, subnets, security groups, Amazon
->   EC2 instances and the SSH key that that you will use for the remainder of
->   the workshop.
+In this module you deployed your base VPC, subnets, security groups, Amazon
+EC2 instances and the SSH key that that you will use for the remainder of
+the workshop.
 
 <br/><br/>
 
 **END OF MODULE 1**
 
-Click here to, [go to module 2](/module2/README.md)
+<br/><br/>
+
+Click here to go to [module 2](/module2/README.md)
