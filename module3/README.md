@@ -4,8 +4,7 @@ Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This
 
 Errors or corrections? Contact akbariw@amazon.com.
 
-<br>
-
+-------------------------------------------------------------------------------------
 **INTRODUCTION**
 -------------------
 AWS DataSync is a data transfer service that makes it easy for you to simplify,
