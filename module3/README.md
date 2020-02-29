@@ -445,8 +445,11 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
 <img src="images/3-8.png">
 
+
+<br>
+
 Now let’s create a File Gateway NFS share and point it to the Amazon S3 bucket
-that we just transferred data to, using the two methods for, to compare metadata
+that we just transferred data to, using the two methods, to compare metadata
 details.
 
 <br/><br/>
@@ -598,7 +601,7 @@ knowledge or performance tuning to enable faster data transfers.
 
 <br/><br/>
 
-**END OF MODULE 2**
+**END OF MODULE 3**
 -------------------
 
 
