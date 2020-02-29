@@ -30,7 +30,7 @@ contains the following:
     next to your account name, click on the drop down and change your region
     to **us-west-2 (Oregon)**
 
-<img src="images/1-1.png">
+<img src="module1/images/1-1.png">
 
 1.  From the top left of the screen click **Services** and type & select **EC2**
 
