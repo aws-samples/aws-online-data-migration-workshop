@@ -30,7 +30,7 @@ Session.
 
 6.  Click on **Roles**
 
-7.  On the right hand window, in the search bar, enter the name of the role you created in module 4 for the AWS Transfer SFTP role (i.e. **myAWSTransferUserRole**)
+7.  On the right hand window, in the search bar, enter the name of the first role you created in module 4 for the AWS Transfer SFTP role (i.e. **myAWSTransferUserRole**)
 
 8. Select your role from the search list, and click on **Delete role**
 
