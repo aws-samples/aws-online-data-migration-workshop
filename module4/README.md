@@ -1,8 +1,8 @@
 MODULE 4: AWS TRANSFER FOR SFTP
 ===============================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.
-This sample code is made available under the MIT-0 license.
-See the LICENSE file.
+
+This sample code is made available under the MIT-0 license.See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
 
@@ -46,8 +46,9 @@ Please connect to the Linux instance provided for this workshop
 		cd c:\users\administrator\desktop
 
 4.  Next enter the below command to SSH into the Linux server, remember to
-    replace the two values shown in **\< \>** with your values  
-    *ssh -i \<your-key-file-name\>.pem ec2-user\@\<Linux-Instance-Private-IP\> *  
+    replace the two values shown in **\< \>** with your values
+    
+    		ssh -i <your-key-file-name>.pem ec2-user@<Linux-Instance-Private-IP> 
       
     i.e. ssh –i stg316-key.pem ec2-user\@192.168.10.102
 
@@ -210,7 +211,8 @@ SFTP server
 
 At the end of this task you should now have:
 
-• Created your SFTP endopoint • Made a note of your servers endpoint
+• Created your SFTP endopoint 
+• Noted down the name of your AWS Transfer for SFTP server endpoint
 
 <br/><br/>
 
@@ -252,8 +254,9 @@ and then authorises them based on the attached IAM Role and policy
 Now you have a server and an SFTP user, go ahead and try logging in:
 
 1.  Run the following command substituting your username (from Step 4) and
-    endpoint (from Step 3) e.g. sftp -i ./myAWSTransferSSHKey
-    jess\@s-xxxxx.server.transfer.us-east-1.amazonaws.com
+    endpoint (from Step 3) 
+    
+    		sftp -i ./myAWSTransferSSHKey   jess@s-xxxxx.server.transfer.us-east-1.amazonaws.com
 
 >   Note: you need to run this in the directory where your ssh key from step 1
 >   is stored
@@ -278,8 +281,9 @@ Now you have a server and an SFTP user, go ahead and try logging in:
 5.  Upload these new files:
 
     -   Run the following command substituting your username (from Step 4) and
-        endpoint (from Step 3) e.g. sftp -i ./myAWSTransferSSHKey
-        jess\@s-xxxxx.server.transfer.us-west-2.amazonaws.com
+        endpoint (from Step 3) 
+	
+			sftp -i ./myAWSTransferSSHKey jess@s-xxxxx.server.transfer.us-west-2.amazonaws.com
 
     -   change directory to one of your user folders by running cd
         directoryname (e.g. cd jess)
