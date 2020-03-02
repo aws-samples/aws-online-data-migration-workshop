@@ -55,9 +55,8 @@ contains the following:
 
 <br/>
 
->   **Note:** Take note of the location of this **.pem** file you download, as you will
-copy this to your deployed Windows EC2 instance (after the deploying the below
-CloudFormation template)
+>   **Note:** Take note of the location of this **.pem** file you downloaded, as you will
+copy this key to your deployed Amazon Windows EC2 instance, once you have deployed it as part of the subsequent instructions
 
 <br/><br/>
 
