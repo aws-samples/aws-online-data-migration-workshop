@@ -39,7 +39,7 @@ contains the following:
 
 1.  From the top left of the screen click **Services** and type & select **EC2**
 
-2.  From the left hand window pane, navigate to **Network & Security**, and
+2.  From the left hand window pane, navigate to **Network & Security**, click on **Key Pairs** and from the right hand window
     select **Create Key Pairs** from the top menu
 
     -   Enter the Key pair name of : **stg316-key**
