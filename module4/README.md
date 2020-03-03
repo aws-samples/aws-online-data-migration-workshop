@@ -125,17 +125,17 @@ IAM role grants them access to*
 		
 <br>
 
-		{
-		"Version": "2012-10-17",    
-		"Statement": [
+	{
+	"Version": "2012-10-17",    
+	"Statement": [
 
-		{
-      		"Effect": "Allow",
-     		"Action": "s3:*",
-     		"Resource": ["arn:aws:s3:::Target-S3-Bucket", "arn:aws:s3:::Target-S3-Bucket/*"]
-		}
-        	]
-		}
+	{
+      	"Effect": "Allow",
+     	"Action": "s3:*",
+     	"Resource": ["arn:aws:s3:::Target-S3-Bucket", "arn:aws:s3:::Target-S3-Bucket/*"]
+	}
+        ]
+	}
 
 <br>
 	
