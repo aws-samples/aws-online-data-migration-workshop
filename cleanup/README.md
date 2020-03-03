@@ -19,24 +19,31 @@ Session.
 1.  Navigate to the AWS console, at the top of the screen,
     click **Services** and type & select **AWS Transfer for SFTP**
 
-2.  Select the Server-ID you created for the this workshop
+2.  Select the **Server-ID** you created for the this workshop
 
 3.  From the top menu select **Actions** and then **Delete**
 
-4.  Type "delete" in the prompt field and click on **Delete**
+4.  Type "delete" in the prompt field, and click on **Delete**
 
 5.  Navigate to the AWS console, at the top of the screen,
     click **Services** and type & select **IAM**
 
-6.  Click on **Roles**
+6.  Click on **Roles** from the left hand menu
 
-7.  On the right hand window, in the search bar, enter the name of the first role you created in module 4 for the AWS Transfer SFTP role (i.e. **myAWSTransferUserRole**)
+7.  On the right hand window, in the search bar, enter the name of the first IAM role you created in module 4 for the AWS Transfer SFTP role (i.e. **myAWSTransferUserRole**)
 
-8. Select your role from the search list, and click on **Delete role**
+8. Select the box next to the name of your role from the search list, and click on **Delete role**
 
 9. Cick on **Yes, delete**
 
-10. Repeat steps 5 -9 for the second AWS Transfer for SFTP role you created in module 4 (**i.e. myAWSTransferLogRole**) 
+10. Repeat steps 5 -9 for the second AWS Transfer for SFTP role you created in module 4 (**i.e. myAWSTransferLogRole**) then move on to the following step
+
+11. Click on**Policies** from the left hand menu
+
+12. On the right hand window, in the search bar, enter the name of the name of the IAM Policy you created in module 4 for the AWS Transfer SFTP user role (i.e. **target-s3bucket-rw-policy**)
+
+13. Select the box next to the name of your policy from the search list, and click on **Policy actions** & **Delete**
+149. Cick on **Delete**
 
 <br/><br/>
 
