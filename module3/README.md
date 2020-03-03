@@ -220,8 +220,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
 1.  Using the Chrome icon on the desktop, log into your AWS Account
 
-2.  From your Chrome session, in the AWS console, at the top of the screen,
-    click **Services** and type & select **DataSync**
+2.  From your existing remote desktop session to the Windows EC2, open a chrome session or use an existing one to the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
 
     -   Select **Get Started**
 
