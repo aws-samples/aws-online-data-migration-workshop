@@ -9,9 +9,9 @@ Errors or corrections? Contact akbariw@amazon.com.
 -------------------
 AWS DataSync is a data transfer service that makes it easy for you to simplify,
 automate & accelerate data migration between on-premises storage and Amazon S3
-or Amazon Elastic File System (Amazon EFS). DataSync automatically handles many
+, Amazon Elastic File System , or Amazon FSx for Windows File server. AWS DataSync automatically handles many
 of the heavy lifting tasks related to data transfers that can slow down
-migrations such as managing scripts, network optimization, handling encryption,
+migrations such as managing scripts, parallel transfers, network optimization, handling encryption,
 and data integrity validation.
 
 <br/><br/>
