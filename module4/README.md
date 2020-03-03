@@ -324,7 +324,7 @@ We’re now going to show how the files you uploaded via SFTP are accessible
 through alternative access mechanisms. In this case the Storage Gateway we
 created in Module 2
 
-1.  Change into your NFS mount directory for the **Target-S3-Bucket**
+1.  From your SSH session run the following command to change into your NFS mount directory for the **Target-S3-Bucket**
 
 		cd /nfs_target
 
@@ -334,7 +334,7 @@ created in Module 2
 
 		ls
 
-3.  Head to the Storage Gateway AWS console and select **File Shares** from the
+3.  Navigate to the Storage Gateway AWS console and select **File Shares** from the
     left hand windows
 
     -   Select the file share the corresponds with your **Target-S3-Bucket**
