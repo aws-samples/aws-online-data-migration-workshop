@@ -22,13 +22,13 @@ In this module you will transfer approx. 10,000 small files from
 an NFS share (**/nfs_source)** to an Amazon S3 bucket using two methods
 
 -   **Method 1 –** Utilize a script which uses the AWS S3 cp command to pull the
-    data from an NFS share and push it to S3. We will perform this to get a
+    data from an NFS share and push it to an Amazon S3 bucket. We will perform this to get a
     baseline for transfer performance and understand what metadata is copied
-    across
+    across using this method.
 
 -   **Method 2 -** Deploy and configure a single AWS DataSync agent task to
-    accelerate the data transfer bypassing the NFS client and then compare the
-    performance & metadata of both methods
+    accelerate the data transfer bypassing reading the data directly from the NFS server and writing it to an Amazon S3 bucket.
+    We will then compare the performance & metadata of both methods
 
 <br/><br/>
 
