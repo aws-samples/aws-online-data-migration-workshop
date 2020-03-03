@@ -162,7 +162,7 @@ transfer
 
     -  Next enter the below command to SSH into the Linux server, remember to replace the two values shown in **< >** with your values (*i.e. ssh –i stg316-key.pem ec2-user@192.168.10.102*)
 
-			ssh -i <your-key-file-name>.pem	ec2-user@<Linux-Instance-Private-IP>  
+			ssh -i <your-key-file-name>.pem	 ec2-user@<Linux-Instance-Private-IP>  
 
 
     - Switch back to your **first** SSH session and run the below commands to start
