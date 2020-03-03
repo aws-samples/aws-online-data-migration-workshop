@@ -364,6 +364,8 @@ gateway local cache took
     across. Run the following commands:
 
 		cd /nfs_source/appdata
+		
+		ls -ltr
 
 		chmod 444 saturn.gif
 
