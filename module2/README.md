@@ -22,17 +22,17 @@ and SMB. Objects written through file gateway can be directly accessed in your A
 
 In this module you will perform the following tasks
 
--   Create Amazon S3 buckets
+-   Create an Amazon S3 bucket, to back your AWS File Gateway share
 
--   Deploy an AWS storage gateway in **File** mode
+-   Deploy an AWS Storage Gateway in **File** mode
 
--   Create an NFS file share that is backed by an Amazon S3 bucket
+-   Create an NFS file share that is backed by your Amazon S3 bucket
 
--   Mount the file gateway NFS share on a Linux host
+-   Mount the AWS File Gateway, NFS share on a Linux host
 
--   Transfer data from the local Linux host to the NFS file gateway share
+-   Transfer data from the local Linux host to the NFS share presented by the AWS File Gateway
 
--   Verify data transferred to AWS
+-   Verify data transferred to Amazon S3
 
 <br/><br/>
 
