@@ -86,16 +86,19 @@ transfer
 
 8.  Replace the contents with the below via copy and paste
 
-	        {
-	          "Version": "2012-10-17",
-	          "Statement": [
-	        {
+		{
+		"Version": "2012-10-17",    
+		"Statement": [
 
-			  "Effect": "Allow",
+		{
+      		"Effect": "Allow",
+     		"Action": "s3:*",
+     		"Resource": ["arn:aws:s3:::Target-S3-Bucket/*"]
+		}
+        
+   		 ]
+		}
 
-			  "Action": "s3:*",
-
-			  "Resource": ["arn:aws:s3:::Target-S3-Bucket/*"] } ] }
 
 <br/><br/>
 
