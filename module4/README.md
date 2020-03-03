@@ -72,7 +72,7 @@ AWS Transfer for SFTP provides inbuilt user management for users to authenticate
 via SSH key pairs. Lets setup an SSH key pair that we will use to test
 authentication for our users. Run this command in your SSH terminal
 
-    cd \~
+    cd ~
     
     ssh-keygen -P "" -f myAWSTransferSSHKey
     
