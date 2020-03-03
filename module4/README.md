@@ -343,10 +343,10 @@ created in Module 2
 
     -   Click **Start**
 
-    -   Wait a few minutes
+    -   Wait a minute then continue to the next step
 
 4.  Have another look at the local file system mount and see if your new files
-    are available, by running the following commands, where you replace username with the username you created e.g. jess
+    are available, by running the following commands in your SSH session, where you replace username with the username you created e.g. jess
 
 		cd /nfs_target
 
