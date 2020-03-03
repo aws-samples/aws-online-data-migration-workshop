@@ -38,7 +38,7 @@ Session.
 
 10. Repeat steps 5 -9 for the second AWS Transfer for SFTP role you created in module 4 (**i.e. myAWSTransferLogRole**) then move on to the following step
 
-11. Click on**Policies** from the left hand menu
+11. Click on **Policies** from the left hand menu
 
 12. On the right hand window, in the search bar, enter the name of the name of the IAM Policy you created in module 4 for the AWS Transfer SFTP user role (i.e. **target-s3bucket-rw-policy**)
 
