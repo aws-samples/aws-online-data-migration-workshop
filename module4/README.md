@@ -82,7 +82,7 @@ AWS Transfer stores data in S3 buckets we will be working with the bucket that
 we created earlier. Refer to your **Target-S3-Bucket** name in your workshop.txt
 file:
 
-1.  Go to the S3 console <https://console.aws.amazon.com/s3/>
+1.  From the AWS console, at the top of the screen, click **Services** and type & select **S3**
 
 2.  Find your bucket in the list (**Target-S3-Bucket**) and click on it
 
@@ -116,7 +116,7 @@ SFTP users to have. This role will later be mapped onto our SFTP users when we
 create them *Note: the user will have access to all buckets that the attached
 IAM role grants them access to*
 
-1.  Head over to the IAM console <https://console.aws.amazon.com/iam/home>
+1.  From the AWS console, at the top of the screen, click **Services** and type & select **IAM**
 
 2.  Click on **Roles**
 
@@ -146,7 +146,7 @@ create a new one
 We need a second role which will be used by AWS SFTP to send its logs to Cloud
 Watch Logs.
 
-1.  Head over to the IAM console <https://console.aws.amazon.com/iam/home>
+1.   From the AWS console, at the top of the screen, click **Services** and type & select **IAM**
 
 2.  Click on **Roles**
 
@@ -182,8 +182,7 @@ At the end of this task you should now have:
 In order to enable SFTP for our users we need to create our AWS Transfer for
 SFTP server
 
-1.  Navigate to the Transfer for SFTP
-    console <https://console.aws.amazon.com/transfer/home>
+1.  From the AWS console, at the top of the screen, click **Services** and type & select **AWS Transfer for SFTP**
 
 2.  Make sure your Region is set to: us-west-2 Oregon
 
