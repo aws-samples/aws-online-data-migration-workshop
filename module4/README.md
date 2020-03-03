@@ -143,8 +143,10 @@ create a new one
 
 4.  Click **Create Role**
 
-We need a second role which will be used by AWS SFTP to send its logs to Cloud
-Watch Logs.
+
+<br>
+**We need a second role which will be used by AWS SFTP to send its logs to Cloud
+Watch Logs.**
 
 1.   From the AWS console, at the top of the screen, click **Services** and type & select **IAM**
 
