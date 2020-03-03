@@ -372,8 +372,8 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 7.  At the top of the screen click on the **See execution details** button to
     view the progress of the transfer
 
-8.  The task will go through four phases, where it will first compare the files
-    in the source location with what’s stored in the target. In this lab there
+8.  The task will go through a few phases, where it will first compare the files
+    in the source location with what’s stored on the target before sending the new or updated files. In this lab there
     are approx 10,000 files to be transferred so the launching phase may take a
     moment or two before switching to the transferring state.
 
