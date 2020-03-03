@@ -120,27 +120,28 @@ IAM role grants them access to*
 
 2.  Click on **Policies** & then **Create Poliy** 
 
-	- Click on the **JSON tab**
-	- Replace the contents with the below via copy and paste, and replace the **Target-S3-Bucket** value with your value
+- Click on the **JSON tab**
+- Replace the contents with the below via copy and paste, and replace the **Target-S3-Bucket** value with your value
+		
+<br>
 
 		{
-  		  "Version": "2012-10-17",
-  		  "Statement": [
-     	       {
-           	 "Effect": "Allow",
-          	  "Action": "s3:*",
-           	 "Resource": [
-                "arn:aws:s3:::Target-S3-Bucket",
-                "arn:aws:s3:::Target-S3-Bucket/*"
-          	  ]
-      	  }
-   	 ]
-	}
+		"Version": "2012-10-17",    
+		"Statement": [
 
+		{
+      		"Effect": "Allow",
+     		"Action": "s3:*",
+     		"Resource": ["arn:aws:s3:::Target-S3-Bucket", "arn:aws:s3:::Target-S3-Bucket/*"]
+		}
+        	]
+		}
 
-	- Click review policy
-	- Provide the policy with a name such as **target-s3bucket-rw-policy**
-	- Click on create policy
+<br>
+	
+- Click review policy
+- Provide the policy with a name such as **target-s3bucket-rw-policy**
+- Click on create policy
 	
 
 
