@@ -204,9 +204,10 @@ manager**
 
 <br/><br/>
 
->   **Note:** All remaining tasks for the workshop will be performed through the
+ **Note:** All remaining tasks for the workshop will be performed through the
 **Remote Desktop Session to the Windows EC2 Instance you just connected to in
 step 3**.
+----------------
 
 <br/><br/>
 
