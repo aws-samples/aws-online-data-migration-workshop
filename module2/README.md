@@ -395,8 +395,8 @@ gateway local cache took
 -----------
 
 In this module you have obtained hands on experience on how simple and seamless
-it is to leverage AWS File Gateway as a file transfer mechanism to Amazon S3 (in
-this case 10,000 small files), and also how the AWS File Gateway can enable
+it is to leverage a file share presented from the AWS File Gateway as a file transfer mechanism to store data in Amazon S3 (in
+this case 10,000 small files). You also gained insight into how the AWS File Gateway can enable
 hybrid cloud file storage architectures, where you can access your hot data via
 the local file gateway cache, where all your data is backed in an Amazon S3
 bucket.
