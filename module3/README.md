@@ -84,7 +84,7 @@ transfer
 
 7.  Click on the **JSON** tab
 
-8.  Replace the contents with the below via copy and paste
+8.  Replace the contents with the below via copy and paste, and **replace** the  **Target-S3-Bucket** value with your value
 
 		{
 		"Version": "2012-10-17",    
@@ -103,8 +103,6 @@ transfer
 <br/><br/>
 
 
-
-- Replace the **Target-S3-Bucket** value with your value
 
 
 
