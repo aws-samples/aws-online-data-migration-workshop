@@ -175,7 +175,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 
 -   Select **Public** for endpoint type, click **Next**
 
--   Enter the **private IP** address your File Gateway instance (value
+-   Enter the **private IP** address of your File Gateway EC2 instance (value
     of **File-Gateway-Instance-Private-IP**)
 
 -   Select **Connect to Gateway**
@@ -307,7 +307,7 @@ In the next steps you will create an NFS file share from your AWS File Gateway.
 
 		df -h
 
-<img src="images/2-2.png">
+<img src="images/2-2.png" width="400">
 
 **TRANSFER 10,000 SMALL FILES**
 ----------------------
