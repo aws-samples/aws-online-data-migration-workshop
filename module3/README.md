@@ -218,9 +218,9 @@ the absence of an on-premise environment (where you could deploy it as a VMware
 appliance). The AWS DataSync agent will then read directly from the NFS server
 (not the NFS client) and transfer the data to your **Target-S3-Bucket**
 
-1.  Using the Chrome icon on the desktop, log into your AWS Account
+1.  Using the Chrome icon on the Windows EC2 instance desktop, log into your AWS Account using Chrome
 
-2.  From your existing remote desktop session to the Windows EC2, open a chrome session or use an existing one to the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
+2.  From the chrome session, in the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
 
     -   Select **Get Started**
 
