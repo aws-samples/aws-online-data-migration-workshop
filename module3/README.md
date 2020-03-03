@@ -513,7 +513,7 @@ details that were copied across using the two different methods.
 
 **Mount NFS Share**
 
-1.  Navigate back to your SSH session run the following command
+1.  Navigate back to your SSH session and run the following command
 
 		sudo su
 
