@@ -273,7 +273,7 @@ Now that you have a SFTP server and an SFTP user, you can try logging in:
 
 4.  Create a couple of files in the local linux directory:
 
-		cd \~
+		cd ~
 
 		touch file1.txt
 
