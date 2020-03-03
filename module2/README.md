@@ -24,7 +24,7 @@ In this module you will perform the following tasks
 
 -   Create an Amazon S3 bucket, to back your AWS File Gateway share
 
--   Deploy an AWS Storage Gateway in **File** mode
+-   Deploy an AWS Storage Gateway in File mode
 
 -   Create an NFS file share that is backed by your Amazon S3 bucket
 
