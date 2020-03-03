@@ -107,7 +107,7 @@ At the end of this task you should now have:
 <br/><br/>
 
 
-**SETUP IAM ROLES**
+**SETUP IAM POLICY AND ROLES**
 -------------------
 
 AWS Transfer for SFTP will be working with objects in S3 on behalf of your SFTP
@@ -118,30 +118,50 @@ IAM role grants them access to*
 
 1.  From the AWS console, at the top of the screen, click **Services** and type & select **IAM**
 
-2.  Click on **Roles**
+2.  Click on **Policies** & then **Create Poliy** 
 
-3.  Click **Create Role**
+	- Click on the **JSON tab**
+	- Replace the contents with the below via copy and paste, and replace the **Target-S3-Bucket** value with your value
+
+		{
+  		  "Version": "2012-10-17",
+  		  "Statement": [
+     	       {
+           	 "Effect": "Allow",
+          	  "Action": "s3:*",
+           	 "Resource": [
+                "arn:aws:s3:::Target-S3-Bucket",
+                "arn:aws:s3:::Target-S3-Bucket/*"
+          	  ]
+      	  }
+   	 ]
+	}
+
+
+	- Click review policy
+	- Provide the policy with a name such as **target-s3bucket-rw-policy**
+	- Click on create policy
+	
+
+
+3.  From the left hand pane click on **Roles** and then click **Create Role**
 
 4.  We need to allow Transfer to assume the role we create. Under “Choose the
-    service that will use this role“ click on **Transfer**. This creates a trust
-    relationship for the role
+    service that will use this role“ click on **Transfer**. (This creates a trust
+    relationship for the role)
 
 5.  Click **Next: Permissions**
 
 We now need to decide what permissions we would like to give our SFTP user to
-access S3. If you want to get going quickly you can use an existing policy or
-create a new one
+access S3. We will use the policy we created in the previous step to only allow read/write access to your target Amazon S3 bucket
 
-1.  If you don’t want to create your own S3 access policy then choose one of the
-    existing AWS managed policies e.g. AmazonS3FullAccess or
-    AmazonS3ReadOnlyAccess **Note:** the user will have access to all buckets
-    that the attached IAM role grants them access to
+6.  In the search field enter the policy name you created earlier and select it (i.e. **target-s3bucket-rw-policy**)
 
-2.  Click **Next: Tags** and **Next: Review**
+7.  Click **Next: Tags** and **Next: Review**
 
-3.  Provide a **Role Name** (e.g. myAWSTransferUserRole)
+8.  Provide a **Role Name** (e.g. myAWSTransferUserRole)
 
-4.  Click **Create Role**
+9.  Click **Create Role**
 
 
 <br>
