@@ -228,7 +228,7 @@ step 3**.
         instance 1**”.
 
     -   From the bottom window, select the **Description** tab, and write down
-        the **private IP** address into your workshop.txt file where it
+        the **private IP** address into the **workshop.txt** located on the desktop file where it
         states **Linux-Instance-Private-IP=**
 
     -   You will use this **Linux-Instance-Private-IP** in the next module
