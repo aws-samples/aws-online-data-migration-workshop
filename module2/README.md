@@ -30,7 +30,7 @@ In this module you will perform the following tasks
 
 -   Mount the AWS File Gateway, NFS share on a Linux host
 
--   Transfer data from the local Linux host to the NFS share presented by the AWS File Gateway
+-   Transfer 10,000 small files from the local Linux host to the NFS share presented by the AWS File Gateway
 
 -   Verify data transferred to Amazon S3
 
