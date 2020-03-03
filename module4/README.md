@@ -244,7 +244,9 @@ and then authorises them based on the attached IAM Role and policy
 7.  Under **SSH public** keys you need to copy in the public part of your ssh
     key that you created in the first part of this module
 
-    -   In a terminal run cat myAWSTransferSSHKey.pub
+    -   In your SSH session run the below command 
+    				
+			cat myAWSTransferSSHKey.pub
 
     -   Copy the output and paste it into the console
 
