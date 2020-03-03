@@ -162,7 +162,7 @@ transfer
 
     -  Next enter the below command to SSH into the Linux server, remember to replace the two values shown in **< >** with your values (*i.e. ssh –i stg316-key.pem ec2-user@192.168.10.102*)
 
-			ssh -i <your-key-file-name>.pem	 ec2-user@<Linux-Instance-Private-IP>  
+			ssh -i <your-key-file-name>.pem ec2-user@<Linux-Instance-Private-IP>  
 
 
     - Switch back to your **first** SSH session and run the below commands to start
@@ -304,13 +304,13 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
                 -   Select **Create Agent** to continue
 
-<img src="images/3-5.png" width="600">
+		<img src="images/3-5.png" width="600">
 
--   When the create agent process is complete click on the **blue DataSync**
-    link at the top left of the screen to continue with the next step of
-    creating a task
+	-   When the create agent process is complete click on the **blue DataSync**
+  	  link at the top left of the screen to continue with the next step of
+  	  creating a task
 
-<img src="images/3-6.png">
+	<img src="images/3-6.png">
 
 <br/><br/>
 
