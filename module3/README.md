@@ -28,7 +28,7 @@ an NFS share (**/nfs_source)** to an Amazon S3 bucket using two methods
 
 -   **Method 2 -** Deploy and configure a single AWS DataSync agent task to
     accelerate the data transfer bypassing reading the data directly from the NFS server and writing it to an Amazon S3 bucket.
-    We will then compare the performance & metadata of both methods
+    We will then compare the performance & metadata of both methods.
 
 <br/><br/>
 
