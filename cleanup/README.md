@@ -6,9 +6,9 @@ Errors or corrections? Contact akbariw@amazon.com.
 
 ---------------------------------------------------------------------------------
 
-**Note**: You will need to perform all the cleanup workshop from a browser
-session from **YOUR LAPTOP/WORKSTATION** and not from the Remote Desktop
-Session.
+**Note**: You will need to perform all these cleanup workshop instruction steps, from a browser
+session from **YOUR LAPTOP/WORKSTATION** and not from the workshop's Windows Remote Desktop
+Session which you will terminate as part of the clean up.
 
 
 <br>
