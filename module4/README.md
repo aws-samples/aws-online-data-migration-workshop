@@ -187,7 +187,7 @@ SFTP server
 
 1.  From the AWS console, at the top of the screen, click **Services** and type & select **AWS Transfer for SFTP**
 
-2.  Make sure your Region is set to: us-west-2 Oregon
+2.  Make sure your Region is set to: **us-west-2 Oregon**
 
 3.  Click **Create Server**
 
