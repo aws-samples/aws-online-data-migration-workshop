@@ -553,7 +553,7 @@ files, and what attributes were preserved
     -   From the top menu select **Action**→ **Refresh Cache** then
         select **Start**
 
-2.   **View original data**- Run the below command in your Putty SSH session
+2.   **View original data**- Run the below command in your SSH session
         to view the original data time stamp & permissions for the
         file **saturn.gif** located on /nfs_source
 
