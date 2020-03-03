@@ -97,7 +97,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
         -   In the **Network** value select the workshop VPC which has the label
             of “**STG316**”
 
-        -   In the **VPC** value select the one that has a label of **STG316**
+        -   In the **Subnet** value select the one that has a label of **STG316**
 
         -   Leave all other values as default
 
