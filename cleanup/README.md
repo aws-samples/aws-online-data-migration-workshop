@@ -53,15 +53,15 @@ Session which you will terminate as part of the clean up.
 1.  Navigate to the AWS console, at the top of the screen,
     click **Services** and type & select **S3**
 
-2.  Locate the bucket you created for **Source-S3-Bucket & Target-S3-Bucket**
+2.  Locate the bucket you created for **Source-S3-Bucket**
 
 3.  Click on the check box next to the name
 
-4.  Select Delete from the top options
+4.  Select **Delete** from the top options
 
 5.  Follow the prompts
 
-6.  Repeat step 2-5 for **Target-S3-Bucket**
+6.  Repeat step 2-5 for your **Target-S3-Bucket**
 
 <br/><br/>
 
