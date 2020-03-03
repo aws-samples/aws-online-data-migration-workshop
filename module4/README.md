@@ -118,7 +118,7 @@ IAM role grants them access to*
 
 1.  From the AWS console, at the top of the screen, click **Services** and type & select **IAM**
 
-2.  Click on **Policies** & then **Create Poliy** 
+2.  Click on **Policies** & then **Create Policy** 
 
 - Click on the **JSON tab**
 - Replace the contents with the below via copy and paste, and replace the **Target-S3-Bucket** value with your value
