@@ -228,8 +228,7 @@ this role and policy in Step 2 - myAWSTransferUserRole
 AWS Transfer is responsible for authenticating the user based on their SSH key
 and then authorises them based on the attached IAM Role and policy
 
-1.  Navigate to the Transfer for SFTP
-    console <https://console.aws.amazon.com/transfer/home>
+1.  From the AWS console, at the top of the screen, click **Services** and type & select **AWS Transfer for SFTP**
 
 2.  Click on the SFTP server that you created in Task 3
 
