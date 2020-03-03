@@ -236,13 +236,13 @@ and then authorises them based on the attached IAM Role and policy
 
 4.  use the username **Jess**
 
-5.  Under **Access** chose the access role that you created in Task 2 to provide
-    the access policy for the underlying S3 bucket (e.g. myAWSTransferUserRole)
+5.  Under **Access** chose the IAM access role that you created in the previous steps to provide
+    the access policy to your underlying Amazon S3 bucket (e.g. myAWSTransferUserRole)
 
-6.  Under **HomeDirectory** Chose the S3 bucket that you created in Task 1
+6.  Under **HomeDirectory** select your **Target-S3-Bucket**
 
 7.  Under **SSH public** keys you need to copy in the public part of your ssh
-    key that you created in Task 1
+    key that you created in the first part of this module
 
     -   In a terminal run cat myAWSTransferSSHKey.pub
 
@@ -250,7 +250,7 @@ and then authorises them based on the attached IAM Role and policy
 
 8.  Click **Add**
 
-Now you have a server and an SFTP user, go ahead and try logging in:
+Now that you have a SFTP server and an SFTP user, you can try logging in:
 
 1.  Run the following command substituting your username (from Step 4) and
     endpoint (from Step 3) 
