@@ -307,7 +307,7 @@ In the next steps you will create an NFS file share from your AWS File Gateway.
 
 		df -h
 
-<img src="images/2-2.png" width="400">
+<img src="images/2-2.png" width="600">
 
 **TRANSFER 10,000 SMALL FILES**
 ----------------------
