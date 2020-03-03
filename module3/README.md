@@ -450,9 +450,9 @@ Lets view the data copied across from the local NFS share to our target Amazon S
 
 <br>
 
-Now let’s create a File Gateway NFS share and point it to the Amazon S3 bucket
-that we just transferred data to, using the two methods, to compare metadata
-details.
+Now let’s create a File Gateway NFS share and point it to the target Amazon S3 bucket
+that we  transferred data to, so that we can easily visualise the data from the view of a NFS file share. Then we will compare the file metadata
+details that were copied across using the two different methods.
 
 <br/><br/>
 
