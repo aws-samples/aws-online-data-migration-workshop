@@ -321,6 +321,8 @@ as **/nfs__source** , using a Linux copy script
 
 		cd /workshop_data
 
+		ls -ltr
+
 		find . -type f | wc -l
 
 
