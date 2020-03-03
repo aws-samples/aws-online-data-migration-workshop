@@ -399,8 +399,10 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 **VERIFY DATA TRANSFERRED USING BOTH METHODS**
 ----------------------------------------------
 
-1.  From the AWS console, click *Services* at the top of the screen type &
-    select *S3*
+Lets view the data copied across from the local NFS share to our target Amazon S3 bucket
+
+1.  From the AWS console, click **Services** at the top of the screen type &
+    select **S3**
 
 -   Click your **Target-S3-bucket** name
 
