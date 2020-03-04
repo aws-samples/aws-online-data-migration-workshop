@@ -128,26 +128,26 @@ Session which you will terminate as part of the clean up.
 1.  Navigate to the AWS console, at the top of the screen,
     click **Services** and type & select **EC2**
 
-2.  From the left hand menu select **STG316-FileGateway & STG316-DataSync**
+2.  From the left hand menu select **Instances**, then select the box next to the two EC2 instances you deployed, called **STG316-FileGateway** and **STG316-DataSync**
 
-3.  Click on **Actions Instance state Terminate**
+3.  Click on **Actions** then on **Instance state** and select **Terminate**
 
-4.  Confirm deletion of resources and select **Delete**
+4.  Once you confirm these are the two EC2 instances you deployed for this workshop, Select **Yes,Terminate**
 
 5.  From the left hand window pane select **Volumes**
 
-6.  Click on the **refresh** button on the top right hand corner until your
-    **150GB io1** volume is showing its state as **available.**
+6.  Click on the **refresh** icon on the top right hand corner until  the
+    **150GB io1** volume for **STG316-filegateway** is showing its state as **available** in the **State** column.
 
-7.  Verify that the **Attachment information** is blank for this volume (not
+7.  Verify that the **Attachment information** column for this volume is blank (i.e. not
     attached to any host)  
     
 
 <img src="images/5-1.png">
 
-8.  Select your **150GB io1** volume and click **on Actions Delete Volume**
+8.  Select the box next to your **150GB io1** volume and click on **Actions** and  **Delete Volume**
 
-9.  Confirm deletion of resources and select **Delete**
+9.  Confirm deletion of resources and select **Yes,Delete**
 
 <br/><br/>
 
