@@ -166,7 +166,7 @@ Session which you will terminate as part of the clean up.
 
 4.  Confirm deletion of resources and select **Delete stack**
 
-5.  Click on the refresh icon until the stack disappears from the list
+5.  Click on the refresh icon until the stack disappears from the list (this will take a few minutes)
 
 6.  Next click on the dropdown and change it from Active to Deleted
 
