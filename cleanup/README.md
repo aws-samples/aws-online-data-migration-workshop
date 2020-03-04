@@ -76,13 +76,13 @@ Session which you will terminate as part of the clean up.
 
 3.  Select the two NFS shares you created (check the box next to them)
 
-4.  **Click on Actions Delete File share**
+4.  Click on **Actions** and  **Delete File share**
 
 5.  Confirm deletion of resources and select **Delete**
 
 6.  From the left hand menu select **Gateways**
 
-7.  Select the File Gateway you deployed (STG316-filegateway)
+7.  Select the File Gateway you deployed (**STG316-filegateway**)
 
 8.  Click on **Actions Delete gateway**
 
