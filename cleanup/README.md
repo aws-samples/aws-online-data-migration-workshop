@@ -164,17 +164,17 @@ Session which you will terminate as part of the clean up.
 
 3.  Click on **Delete**
 
-4.  Confirm deletion of resources and select **Delete stack**
+4.  Confirm deletion of resources and select **Delete stack** (this will take a few minutes)
 
-5.  Click on the refresh icon until the stack disappears from the list (this will take a few minutes)
+5.  Click on the refresh icon until your stack disappears from the list. (if it hasn't disappeared after 5 minute continue to the next step)
 
-6.  Next click on the dropdown and change it from Active to Deleted
+6.  Next click on the dropdown next to the search bar and change it from **Active** to **Deleted**
 
-7.  Verify **STG316-Resources** shows a status of **DELETE_COMPLETE**
+7.  Verify that your stack of **STG316-Resources** is showing a status of **DELETE_COMPLETE**
 
-8.  Next click on the dropdown and change it from Deleted to Active
+8.  Next click on the dropdown next to the search bar and change it from **Deleted** to **Active**
 
-9.  From the same Cloudformation window select the **STG316-VPC** stack
+9.  From the same Cloudformation window select the box next to the **STG316-VPC** stack
 
 10. Repeat steps 3-7
 
