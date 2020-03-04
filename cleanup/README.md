@@ -166,7 +166,7 @@ Session which you will terminate as part of the clean up.
 
 4.  Confirm deletion of resources and select **Delete stack** (this will take a few minutes)
 
-5.  Click on the refresh icon until your stack disappears from the list. (if it hasn't disappeared after 5 minute continue to the next step)
+5.  Next refresh your browser window to the cloudformation page or click on the refesh icon until your stack disappears from the list. (if it hasn't disappeared after 5 minute continue to the next step)
 
 6.  Next click on the dropdown next to the search bar and change it from **Active** to **Deleted**
 
