@@ -99,9 +99,9 @@ Session which you will terminate as part of the clean up.
 
 2.  From the left hand menu select **Tasks**
 
-3.  Select the task you created
+3.  Select the box next to the name of the task you created
 
-4.  Click on **Actions Delete** File share
+4.  Click on **Action** from the drop down menu at the top of the screen and then **Delete*
 
 5.  Confirm deletion of resources and select **Delete**
 
@@ -115,9 +115,9 @@ Session which you will terminate as part of the clean up.
 
 10. From the left hand menu select **Agents**
 
-11. Select the agent you deployed
+11. Select the box next to the agent you deployed
 
-12. Click on **Delete**
+12. Confirm deletion and click on **Delete**
 
 <br/><br/>
 
