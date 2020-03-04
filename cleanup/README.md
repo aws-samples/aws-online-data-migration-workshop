@@ -84,7 +84,7 @@ Session which you will terminate as part of the clean up.
 
 7.  Select the File Gateway you deployed (**STG316-filegateway**)
 
-8.  Click on **Actions Delete gateway**
+8.  Click on **Actions** and  **Delete gateway**
 
 9.  Confirm deletion of resources and select **Delete**
 
