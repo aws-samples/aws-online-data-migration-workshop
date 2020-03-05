@@ -51,7 +51,7 @@ on generating and downloading an EC2 Key Pair.
 **WORKSHOP MODULES**
 --------------------
 
-This workshop encompasses 4 modules
+This workshop encompasses 5 modules
 
 **Module 1** - Deploy resources
 
@@ -60,6 +60,8 @@ This workshop encompasses 4 modules
 **Module 3** - AWS DataSync
 
 **Module 4** - AWS Transfer for SFTP
+
+**Cleanup** - Cleanup workshop resources
 
 
 <br>
