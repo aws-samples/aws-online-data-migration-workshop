@@ -16,7 +16,7 @@ trying to make sense of the array of tools, protocols, and mechanisms available
 to move data into AWS.
 
 In this workshop you will get hands-on experience in deploying, configuring and
-transferring data at scale using some of the available AWS online & hybrid data tranfer services. 
+transferring data at scale using some of the available AWS online & hybrid data transfer services. 
 In this lab we have a scenario where you will copy 10,000 small files to Amazon S3,
 using different methods such as AWS S3 cp command script, AWS File Gateway, and also
 AWS DataSync, where you will then access the data stored in Amazon S3 to better understand of the benefits of each service for different use cases. Lastly you will get hands on experience with AWS Transfer for SFTP and using it as a transfer mechanism.
