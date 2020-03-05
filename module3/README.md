@@ -112,10 +112,15 @@ transfer
 
 **METHOD 1 - 10,000K SMALL FILE MIGRATION USING A SCRIPT**
 ------------------------------------------------------
+<br>
+
+Now lets migrate 10,000 small files (hosted on the NFS server), using a copy script located on the Linux host EC2 instance. The copy script will read from the NFS mount point and write to Amazon S3.
+
+<br>
 
 <img src="images/3-2.png">
 
-1.  Navigate back to your SSH session to your Linux EC2 instance (App Server)
+1.  Navigate back to the SSH session you have running to your Linux  EC2 instance (NFS client)
 
 2.  In the SSH session run the below commands to upate the copy script with your
     values as per the instructions shown below
@@ -200,6 +205,12 @@ transfer
 
 **METHOD 2 - 10K SMALL FILE MIGRATION USING AWS DATASYNC**
 ----------------------------------------------------------
+
+<br>
+
+Now lets migrate the same 10,000 small files (hosted on the NFS server), this time using AWS DataSync.
+
+<br>
 
 <img src="images/3-4.png">
 
