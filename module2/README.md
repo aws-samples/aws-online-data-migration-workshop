@@ -38,7 +38,7 @@ In this module you will perform the following tasks
 
 **Lab Diagram: Transferring data to Amazon S3 using AWS File Gateway**
 
-<img src="images/2-0.png">
+<img src="images/2-1.png">
 
 <br/><br/>
 
