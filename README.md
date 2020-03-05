@@ -33,7 +33,7 @@ The image below illustrates at a high level the different 3 AWS Services that we
 --------------------------------
 
 **AWS Account** – You will need an AWS account to log into to run this workshop, which has access to 
-create AWS IAM roles, EC2 instances, AWS DataSync, AWS Storage Gateway, AWS Transfer for SFTP and CloudFormation stacks in the AWS regions you select.
+create AWS IAM roles, Amazon EC2 instances, Amazon S3 buckets, AWS DataSync, AWS Storage Gateway, AWS Transfer for SFTP and CloudFormation stacks in the AWS regions you select.
 
 **Browser** – It is recommended that you use the latest version of Chrome or
 Firefox for this workshop.
