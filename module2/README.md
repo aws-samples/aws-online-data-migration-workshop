@@ -255,14 +255,14 @@ In the next steps you will create an NFS file share from your AWS File Gateway.
 1.  In your Remote Desktop session, click on Windows icon located at the bottom
     left of the screen
 
-2.  Type CMD and hit Enter to open a new command prompt
+2.  Type CMD and hit Enter to open a new windows command prompt
 
 3.  You should have stored your \*.pem key file on the desktop as per the
     previous instructions. Enter the below commands in the command prompt
 
 		cd c:\users\administrator\desktop
 
-4.  Next enter the below command to SSH into the Linux server, remember to
+4.  Next you will SSH into the Linux server by entering the below command into your windows command prompt, remember to
     replace the two values shown in **\< \>** with your values 
  
 		ssh -i <your-key-file-name>.pem ec2-user@<Linux-Instance-Private-IP>
