@@ -255,7 +255,7 @@ and then authorises them based on the attached IAM Role and policy
 
 3.  Under Users Click on **Add User**
 
-4.  use the username **Jess**
+4.  use the username **jess**
 
 5.  Under **Access** chose the IAM access role that you created in the previous steps to provide
     the access policy to your underlying Amazon S3 bucket (e.g. myAWSTransferUserRole)
