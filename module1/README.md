@@ -232,6 +232,9 @@ the previous steps**.
         states **Linux-Instance-Private-IP=**
 
     -   You will use this **Linux-Instance-Private-IP** in the next module
+    
+    -   Lastly open this **link** in Chrome (https://view.highspot.com/viewer/5ea61f8d628ba238210a9c56), and then click on the **download** button at the top left of the screen, you will populate this file during the lab
+    
 
 <br/><br/>
 
