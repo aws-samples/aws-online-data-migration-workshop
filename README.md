@@ -20,7 +20,7 @@ transferring data at scale using some of the available AWS online & hybrid data 
 
 In this lab we have a scenario where you will copy 10,000 small files to Amazon S3,
 using different methods such as AWS S3 copy command script, AWS File Gateway, and also
-AWS DataSync, and then see the benefits that AWS DataSync can provide in not only being able to simplify and accelerate the data transfer, but being able to preserve file metadata for transferred data from your NFS share. You will also learn how you can seamlessly access data your transferred data which is stored in Amazon S3 as objects, back in your environment using standard file shares. Lastly you will get hands on experience with AWS Transfer for SFTP and using it as a transfer mechanism.
+AWS DataSync. Then visualize the benefits that AWS DataSync can provide in not only being able to simplify and accelerate the data transfer, but being able to preserve file metadata for transferred data from your NFS share. You will also learn how you can seamlessly access data your transferred data which is stored in Amazon S3 as objects, back in your environment using standard file shares. Lastly you will get hands on experience with AWS Transfer for SFTP and using it as a transfer mechanism.
 
 The image below illustrates at a high level the different 3 AWS Services that we will use to get the workshop data, into Amazon S3 in a simple, repeatable and efficient manner.
 
