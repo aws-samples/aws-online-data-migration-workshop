@@ -64,7 +64,7 @@ We are going to deploy the AWS DataSync agent within your AWS VPC as an EC2 inst
 
 - Within your Windows EC2 instance, click on the Windows START icon in the bottom left hand corner and type **Powershell** and select **Windows Powershell**
 
-Then copy and paste the below into the powershell window to install Google Chrome 
+Then copy and paste the below into the powershell window as a single line to download and install Google Chrome 
 
     $Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
 
@@ -161,7 +161,7 @@ Then copy and paste the below into the powershell window to install Google Chrom
 <br/><br/>
 
 
-**Transfer Data Using DataSync** 
+**Transfer data using DataSync** 
 ---------------------------------
 
 1.  Following on from the previous AWS DataSync screen, click on the **Create task** from the top right hand side of the window
@@ -243,7 +243,7 @@ Then copy and paste the below into the powershell window to install Google Chrom
 
 <br/><br/>
 
-**Verify Data Transferred**
+**Verify data transferred**
 ----------------------------------------------
 
 Lets view the data copied across from the local SMB share to your target Amazon FSx for Windows File Server, file share.
