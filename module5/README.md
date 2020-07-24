@@ -49,7 +49,7 @@ We are now going to create a target SMB share on the Amazon FSx for Windows File
 5. Click Browse
 6. Select d$.
 7. Click Make New Folder.
-8. Name the new folder **datasync**
+8. Name the new folder **myshare**
 9. Select OK
 10. Complete the Create A Shared Folder Wizard, and at the **Shared folder permissions** screen, select **Custom permissions** and then click on **Custom** and enable **Everyone** with **Full Control**
 
@@ -191,7 +191,7 @@ Then copy and paste the below into the powershell window as a single line to dow
 
     -   **FSx file system:** Select the one you deployed (MAZ)
 
-    -   **Share name:** enter **datasync**
+    -   **Share name:** enter **myshare**
     -   Click on the **Additional settings** and select from the **Security groups drop down menu** select the following groups : `FileSystemSecurityGroup`   and `ClientSecurityGroup`
 
     -   In the User settings enter the user which has access to the target SMB share, enter the following values and then click Next
@@ -251,7 +251,7 @@ Lets view the data copied across from the local SMB share to your target Amazon 
 1.  From your Windows EC2 instance open a windows file explorer to your **c:\Tools** folder and check out the size of the data and number of files stored
 2.  Open a Windows command prompt (CMD) and enter the following command, and replace **your-fsx-DNS-name** with your value and press enter to map the target share
 
-    `net use t: \\your-fsx-DNS-name\datasync`
+    `net use t: \\your-fsx-DNS-name\myshare`
 
 3. Open a windows file explorer to your **T:\\** **drive** and check out the size of the data and number of files stored, does it match that of the source C:\Tools data?
 
