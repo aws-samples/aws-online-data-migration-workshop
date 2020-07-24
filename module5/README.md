@@ -267,7 +267,7 @@ DataSync to simplify the transfer of SMB file share data to Amazon FSx for Windo
 
 <br/><br/>
 
-**END OF MODULE **
+**END OF MODULE**
 -------------------
 
 
