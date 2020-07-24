@@ -1,4 +1,4 @@
-Transferring data using AWS DataSync
+Transferring SMB data using AWS DataSync
 ======================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
@@ -14,7 +14,6 @@ AWS DataSync is a data transfer service that makes it easy for you to simplify &
 **OVERVIEW**
 -------------------
 In this module we are going to create a local windows SMB share on the Windows EC2 instance that will act as your source SMB share data, and also create a target Amazon FSx for Windows File Server, file share. Then deploy and use AWS DataSync to migrate the source SMB data to the target FSx for Windows File Server, file share.
-
 
 <br/><br/>
 
@@ -55,7 +54,7 @@ We are now going to create a target SMB share on the Amazon FSx for Windows File
 10. Complete the Create A Shared Folder Wizard, and at the **Shared folder permissions** screen, select **Custom permissions** and then click on **Custom** and enable **Everyone** with **Full Control**
 
 
-
+<br/><br/>
 
 **DEPLOY AWS DATASYNC AGENT**
 -----------------------------
