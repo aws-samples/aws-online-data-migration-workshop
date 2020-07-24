@@ -56,7 +56,7 @@ We are now going to create a target SMB share on the Amazon FSx for Windows File
 
 <br/><br/>
 
-**DEPLOY AWS DATASYNC AGENT**
+**Deploy AWS DataSync agent**
 -----------------------------
 
 We are going to deploy the AWS DataSync agent within your AWS VPC as an EC2 instance. The AWS DataSync agent will then read directly from your Windows SMB share and transfer the data to your **Amazon FSx for Windows File Server, file share**
@@ -161,7 +161,7 @@ Then copy and paste the below into the powershell window to install Google Chrom
 <br/><br/>
 
 
-**TRANSFER DATA USING DATASYNC** 
+**Transfer Data Using DataSync** 
 ---------------------------------
 
 1.  Following on from the previous AWS DataSync screen, click on the **Create task** from the top right hand side of the window
@@ -243,7 +243,7 @@ Then copy and paste the below into the powershell window to install Google Chrom
 
 <br/><br/>
 
-**VERIFY DATA TRANSFERRED**
+**Verify Data Transferred**
 ----------------------------------------------
 
 Lets view the data copied across from the local SMB share to your target Amazon FSx for Windows File Server, file share.
@@ -259,7 +259,7 @@ Lets view the data copied across from the local SMB share to your target Amazon 
 
 
 
-**SUMMARY**
+**Summary**
 -----------
 
 In this module, you have obtained hands-on experience in deploying and configuring AWS
