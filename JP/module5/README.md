@@ -2,268 +2,257 @@ AWS DataSyncを使ったSMBファイル共有データの移行
 ======================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
-Errors or corrections? Contact akbariw@amazon.com.
+何かお気付きの場合は kawabmak@amazon.com までお願い致します
 
 -------------------------------------------------------------------------------------
-**Summary**
+**概要**
 -------------------
-AWS DataSync is a data transfer service that makes it easy for you to simplify & accelerate data migration between on-premises storage and Amazon S3, Amazon Elastic File System, or Amazon FSx for Windows File server. AWS DataSync automatically handles many of the heavy lifting tasks related to data transfers that can slow down and complicate migrations such as building & managing complex scripts that handle metadata preservation, data integrity validation, enabling parallel transfers and network optimization.
+AWS DataSyncは、オンプレミスのストレージとAmazon S3、Amazon Elastic File System、またはAmazon FSx for Windowsファイルサーバー間のデータ移行を簡単かつ迅速に行えるようにするデータ転送サービスです。 AWS DataSyncは、メタデータの保持、データの整合性の検証、並列転送とネットワークの最適化を可能にし、複雑なスクリプトの作成と管理など、データ移行に必要とされる複雑な数多くの負荷の高いタスクを自動的に処理します。
 
 <br/><br/>
 
-**OVERVIEW**
+**このモジュールの流れ**
 -------------------
-In this module we are going to create a local windows SMB share on the Windows EC2 instance that will act as your source SMB share data, and also create a target Amazon FSx for Windows File Server, file share. Then deploy and use AWS DataSync to migrate the source SMB data to the target FSx for Windows File Server, file share.
+このモジュールでは、送信元となるWindows SMB共有をWindows EC2インスタンスに作成し、送信先となるWindows SMB共有をAmazon FSx for Windowsファイルサーバーに作成します。次に、AWS DataSyncをデプロイし、DataSyncを使って送信元から送信先へデータを移行します。
 
 <br/><br/>
 
-**Duration**
+**必要時間**
 -------------------
-It will take approximately 20 minutes to complete this section.
+この章の目安時間は約20分です。
 
 <br/><br/>
 
-**Create local Windows SMB Share**
+**送信元Windows ファイル共有の作成**
 -----------------------------
 
-1. Open this link using Internet Explorer (https://view.highspot.com/viewer/5f1a645ba2e3a938135fa3f6), and then click on the **download** button at the top left of the screen, you will need this workshop file during in this module    
-2. While your are logged within your Windows EC2 instance for the workshop, click on the Windows icon in the bottom left hand corner and type **C:\\** and press Enter
-2. Right click on the **Tools** folder and select **Properties**
-3. Click on the **Sharing** tab, and then click on **Advanced Sharing**
-4. Select the box to **Share this folder** and select **OK** and close
-5. Open a Windows command prompt and type in **hostname** and press Enter. Copy down the value shown for your server's hostname in your the workshop notepad file you downloaded, as you will need this later
+1. ブラウザで次のリンクを開き(https://view.highspot.com/viewer/5f1a645ba2e3a938135fa3f6)、ドキュメントを**ダウンロード**して下さい。このワークショップを通して必要な情報のメモとして使用します。   
+2. ワークショップで使用しているWindows EC2インスタンスに接続し、 左下のWindowsアイコンをクリック、次に**C:\\**を入力して、Enterを押して下さい。
+3. **Tools**フォルダーを右クリックし、**Properties**を選択して下さい。
+4. **Sharing**タブをクリックし、**Advanced Sharing**をクリックして下さい。
+5. **Share this folder**を選択し、**OK**をクリックし、ダイアログを閉じて下さい。
+6. コマンドプロンプトを開き(例：左下のWindowsアイコンをクリックしてcmdと入力)、**hostname**と入力し、Enterを押して下さい。表示されたサーバーのホスト名を上記でダウンロードしたメモに記載して下さい。後ほど使用します。
 
 
 
 <br/><br/>
 
-**Create target Amazon FSx for Windows File Server, file share**
+**送信先Amazon FSx for Windowsファイルサーバー　ファイル共有の作成**
 -----------------------------
 
-We are now going to create a target SMB share on the Amazon FSx for Windows File Server instance
+Amazon FSx for Windowsファイルサーバーへ、送信先となるファイル共有を作成します。
 
-1. Within your Windows EC2 instance, click on the Windows START icon in the bottom left hand corner and type **fsmgmt.msc** and press Enter
-2. Click on **Action** and select **Connect to another computer** 
-3. Enter in your Amazon FSx for Windows File Server DNS name (e.g. amznfsxnzvcely3.example.com) and select OK
-4. Context/right-click the **Shares** folder and click **New Share** and select Next
-5. Click Browse
-6. Select d$.
-7. Click Make New Folder.
-8. Name the new folder **myshare**
-9. Select OK
-10. Complete the Create A Shared Folder Wizard, and at the **Shared folder permissions** screen, select **Custom permissions** and then click on **Custom** and enable **Everyone** with **Full Control**
+1. ワークショップで使用しているWindows EC2インスタンスに接続し、 左下のWindowsアイコンをクリック、次に**fsmgmt.msc**を入力して、Enterを押して下さい。
+2. **Action**をクリックし、**Connect to another computer**を選択して下さい。
+3. Amazon FSx for WindowsファイルサーバーのDNS name(例： amznfsxnzvcely3.example.com)を入力し、OKを押して下さい。このDNS Nameもメモに書き留めておいて下さい。
+4. **Shares**フォルダーを右クリックし、**New Share**を選択しNextを押して下さい。
+5. Browseをクリックして下さい。
+6. d$　を選択して下さい。
+7. Make New Folderをクリックして下さい。
+8. **myshare**という名前を入力して下さい。
+9. OKを押して下さい。
+10. Create A Shared Folderウィザードを進めます。**Shared folder permissions**の画面で**Custom permissions**を選択し、**Custom**をクリックして下さい。**Everyone**ユーザーに**Full Control**を割り当てて、その後ウィザードを終了まで進めて下さい。
 
 
 <br/><br/>
 
-**Deploy AWS DataSync agent**
+**AWS DataSyncエージェントのデプロイ**
 -----------------------------
 
-We are going to deploy the AWS DataSync agent within your AWS VPC as an EC2 instance. The AWS DataSync agent will then read directly from your Windows SMB share and transfer the data to your **Amazon FSx for Windows File Server, file share**
+AWS DataSyncエージェントをAWS VPCにEC2インスタンスとしてデプロイします。AWS DataSyncエージェントは送信元Windowsファイル共有から直接データを読み出し、送信先の**Amazon FSx for Windowsファイルサーバー上ファイル共有**へファイルを転送します。
 
 
-- Within your Windows EC2 instance, click on the Windows START icon in the bottom left hand corner and type **Powershell** and select **Windows Powershell**
+- エージェントのアクティベーションを行うために、エージェントとなるインスタンスとAWSコンソールの双方にアクセス出来る必要があるため、このデプロイの手順はWindows EC2インスタンス上で行います。Windows EC2インスタンスに接続し、左下のWindowsアイコンをクリック、**Powershell**と入力し、表示された候補の中から**Windows Powershell**を選択して下さい。
+デフォルトブラウザとなっているIEの使用を避けるため、まずはChromeのインストールを行います。
 
-Then copy and paste the below into the powershell window as a single line to download and install Google Chrome 
+以下のスクリプトをPowerShellに貼り付けて実行して下さい。デスクトップにChromeのアイコンが現れて、プロンプトが戻ったら完了です。
 
     $Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
 
-2.  Next open the Chrome icon located on your desktop and log into the AWS account provided like you did initially for the workshop (using the Event Engine URL hash). From the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
+2.  Chromeを開いてAWSコンソールにアクセスして下さい。コンソール上部の**Services**をクリックし、**DataSync**と入力して、現れたリンクを選択します。
 
-    -   Select **Get Started**
+    -   **Get Started**を選択して下さい。
 
-    -   In the Deploy agent section select **Amazon EC2** from the drop down, then
-        click on the **Learn more**  icon in the same Deploy agent blue box
+    -   Deploy agentの部分でドロップダウンメニューから**Amazon EC2**を選択して下さい。**Learn more**のリンクから具体的なデプロイ方法のドキュメントを参照できます。
 
-    -   Scroll down to the table that has a list of **AWS Regions and AMI Names**, and click on
+    -   [注意：このステップはAWS公式ドキュメントが更新され、使えなくなっているため、講師の支持に従って下さい]Scroll down to the table that has a list of **AWS Regions and AMI Names**, and click on
         the **Launch Instance** link corresponding to the **us-east-1** row
 
-        -   In the next page, select the box next to **m5.xlarge**
+        ここからはEC2インスタンスの作成ウィザードの手順です。
 
-        -   Select **Next: Configure Instance Details**
+        -   インスタンスタイプ選択のページで**m5.xlarge**を選択して下さい。
 
-        -   In the **Network** drop down select the VPC which has “**mod-xyz**”
-            in its name
+        -   **Next: Configure Instance Details**を押して次へ進みます。
 
-        -   In the **Subnet** drop down, select the one which has “**Public Subnet 0**”
-            in its name
+        -   **Network**ドロップダウンメニューで“**mod-xyz**”のような形式のVPCを選択して下さい。
 
-        -   Leave all other settings as default on the page
+        -   **Subnet**ドロップダウンメニューで“**Public Subnet 0**”を選択して下さい。
 
-        -   Click **Next: Add Storage**
+        -   その他はデフォルト設定のままにして下さい。
 
-        -   Click **Next: Add Tags**
+        -   **Next: Add Storage**をクリックして下さい。
 
-            -   Select **Add Tag**
+        -   **Next: Add Tags**をクリックして下さい。
 
-        -   Enter the following values (case sensitive)
+            -   **Add Tag**をクリックして下さい。
+
+        -   以下の値を入力して下さい。
 
             -   Key = **Name**
 
             -   Value = **DataSync-agent**
 
-        -   Click **Next: Configure Security Group**
+        -   **Next: Configure Security Group**をクリックして下さい。
 
-            -   Click on the “**Select an existing security group**” check box
+            -   “**Select an existing security group**”チェックボックスを選択して下さい。
 
-            -   Select the security groups with the names that start with
-                of **mod-xyz**
+            -   **mod-xyz**の名前で始まるセキュリティーグループを選択して下さい。
 
-        -   Click **Review and Launch**
+        -   **Review and Launch**をクリックして下さい。
 
-        -   Click **Launch**
+        -   **Launch**をクリックして下さい。
 
-        -   From the select key pair drop down select **ee-default-keypair**, accept the check box and click **Launch
-            Instances**  
+        -   キーペア選択のドロップダウンメニューで**ee-default-keypair**を選択し、チェックボックスをチェックした上、**Launch Instances**をクリックして下さい。  
             
 
-    -   From the AWS console, click **Services** and type & select **EC2**
+    -  AWS consoleに戻り、**Services**をクリックし、**EC2**をクリックして下さい。
 
-        -   From the left hand menu, select **Instances**
+        -   左のメニューから**Instances**を選択して下さい。
 
-        -   In the right hand pane, select the box next to “**DataSync-agent**”
+        -   インスタンス一覧の中から“**DataSync-agent**”を選択して下さい。
 
-        -   From the bottom window pane, select the **Description** tab, and
-            take note of the **private IP** address into the workshop notepad file you downloaded, as
-             **DataSync Instance Private IP=**
+        -   下部の窓の**Description**タブの情報の中から**private IP**アドレスを探し、メモの中の**DataSync Instance Private IP=**の所に記入して下さい。
 
-            -   Ensure the “**Status Check**” column for this EC2 instance
-                shows **“2/2 checks passed“** before proceeding to the next
-                step.
+            -   次の￥ステップに進む前にEC2インスタンスの“**Status Check**”が **“2/2 checks passed“**になっている事を確認して下さい。
 
-        -   From the AWS console, at the top of the screen,
-            click **Services** and type & select **DataSync**
+        -   AWS consoleに戻り、**Services**をクリックし、**DataSync**をクリックして下さい。
 
-            -   Select **Get Started**
+            -   **Get Started**をクリックして下さい。
 
-            -   Select **Amazon EC2** from the **deploy agent** drop down, then enter the following values on the page
+            -   **deploy agent**のドロップダウンメニューから**Amazon EC2**を選択し、続いて以下の値を入力して下さい。
 
-                -   **Service endpoint:** Select Public service endpoints in US
+                -   **Service endpoint:** USのPublic service endpointsを選択して下さい。
                     
 
-                -   **Activation key:** Enter the Private IP address you noted
-                    down in the previous step for **DataSync Instance Private IP**
+                -   **Activation key:** 先ほどメモした**DataSync Instance Private IP**を入力して下さい。
 
-                -   Select **Get Key**
+                -   **Get Key**をクリックして下さい。
 
-                    -   You will get a notification when when your agent has activated successfully
-                        agent has activated successfully
+                    -   アクティベーションが成功すると、その旨が通知されます。
 
-                -   Select **Create Agent** to continue
+                -   次に進むため**Create Agent**をクリックして下さい。
 
 		
 
-	-   When the create agent process is complete click on the **blue DataSync**
-  	  link at the top left of the screen to continue with the next step of
-  	  creating a transfer task
+	-   エージェント作成完了後、左上の**DataSync**リンクをクリックして次のタスクの作成に進みます。
 
 
 <br/><br/>
 
 
-**Transfer data using DataSync** 
+**DataSyncを使ったデータの転送** 
 ---------------------------------
 
-1.  Following on from the previous AWS DataSync screen, click on the **Create task** from the top right hand side of the window
+1.  前の章で表示したAWS DataSync画面で、右上の**Create task**をクリックして下さい。
 
-    -   Select **Create a new location** from the source locations options
+    -   Source location optionsのところで**Create a new location**を選択して下さい。
 
-    -   **Location type:** Server Message Block (SMB)
+    -   **Location type:** Server Message Block (SMB)を選択
 
-    -   **Agents:** select the agent you have just deployed
+    -   **Agents:** デプロイしたエージェントを選択
 
-    -   **SMB Server:** enter your servers hostname that you took down 
-        `e.g. EC2AMAZ-12ID25G`
+    -   **SMB Server:** メモしたホスト名を入力
+        `例 EC2AMAZ-12ID25G`
 
-    -   **Share name:**  enter **Tools**
+    -   **Share name:**  **Tools**を入力
 
-    -   In the **Additional settings** select **SMB3** 
-    -   In the User settings enter the user which has access to the source SMB share, enter the following values
+    -   **Additional settings**のところで**SMB3**を選択して下さい。
+    -   User settingsのところで、以下の値を入力して下さい。
 	    -   User : **admin**
-	    -   Password : The password for admin@example.com you used to log into your Windows EC2 instnace (from secret manager)
+	    -   Password : admin@example.comのパスワードです。Secrets Managerから入手出来ます。
 	    -   domain : **example**
 
-    -   Click **Next** to continue
+    -   次に進むため**Next**をクリックして下さい。
 	    
-2.  Select **Create a new location** from the Destination locations options
+2.  Destination locations optionsのところで**Create a new location**を選択して下さい。
 
-    -   **Location type:** Amazon FSx for Windows File Server
+    -   **Location type:** Amazon FSx for Windows File Serverを選択
 
-    -   **FSx file system:** Select the one you deployed (MAZ)
+    -   **FSx file system:** リストからMAZファイルシステムを選択
 
-    -   **Share name:** enter **myshare**
-    -   Click on the **Additional settings** and select from the **Security groups drop down menu** select the following groups : `FileSystemSecurityGroup`   and `ClientSecurityGroup`
+    -   **Share name:** **myshare**を入力
+    -   **Additional settings**をクリックし、**Security groupsドロップダウンメニュー**から以下のセキュリティーグループを選択して下さい :
+     `FileSystemSecurityGroup` と `ClientSecurityGroup`
 
-    -   In the User settings enter the user which has access to the target SMB share, enter the following values and then click Next
+    -   User settingsのところで、以下の値を入力して下さい。
 	    -   User : **admin**
-	    -   Password : The password for admin@example.com you used to log into your Windows EC2 instnace (from secret manager)
+	    -   Password : admin@example.comのパスワードです。Secrets Managerから入手出来ます。
 	    -   domain : **example**
 
-    -   Click **Next** to continue
+    -   次に進むため**Next**をクリックして下さい。
 
-3.  Provide a task name (*i.e. local-smb-to-FSx-for-windows-file-server-transfer*)
+3.  タスク名を入力して下さい。 (*例 local-smb-to-FSx-for-windows-file-server-transfer*)
 
     -   **Verify data:** Check integrity during transfer
 
-    -   Leave the options as checked and scroll to the bottom of page to **Task logging** section and ensure the following perform the following
+    -   その他の設定はデフォルトを使用し、**Task logging**のところまで下にスクロールして下さい。
 
         -   **Log Level :** Select Log all transferred objects
 
-        -   Click on the **Autogenerate** button on the screen to auto create a CloudWatch log group that will store the details of your files transferred
+        -   ファイル転送ログを送るCloudWatch log groupを自動生成するため**Autogenerate**をクリックして下さい。
 
 
-    -   Leave all other options & select **Next**
+    -   その他はデフォルト設定のままで**Next**をクリックして下さい。
 
-    -   Review the details and click **Create task**
+    -   **Create task**をクリックして下さい。
 
-4.  On the next screen wait until the **Task status** value is **Available**
-    (refresh screen to get update)
+4.  **Task status**が**Available**になるまでお待ち下さい。
+    (スクリーンをリフレッシュすると状況がアップデートされます)
 
-5.  Click on the **Start** button
+5.  **Start**ボタンをクリックして下さい。
 
-6.  Leave all options as they are (don’t override any) and click on **Start**
+6.  デフォルト設定をそのまま受け入れ、**Start**をクリックして下さい。
 
-7.  At the top of the screen click on the **See execution details** button to
-    view the progress of the transfer
+7.  転送状況をモニターするため、画面上部の**See execution details**ボタンをクリックして下さい。
 
-8.  The task will go through a few phases, where it will perform some checks of the task setup, compare source and target details before starting the data transfer.
+8.  タスクはデータの転送前に、タスクセットアップのチェック、ソースとターゲットの比較等のいくつかのフェーズを経ます。
 
+9.  **Execution status**が**Success**になれば転送は完了です。
 
-9.  When the **Execution status** show a status of **Success**, your data transfer has completed.
+10. タスクの**Duration**やパフォーマンス状況が表示されるので、確認してみて下さい。    
 
-10.  Take note of the details shown such as **Duration** time taken for the data transfer, and also the performance details for this small transfer.
-    
+11. 右上の**View logs in CloudWatch**ボタンをクリックすると、転送結果の詳細ログを見ることが出来ます。
 
-11. You can view the details of the files transferred by clicking on the **View logs in CloudWatch** button at the top right of the screen
-12. In the next window pane look for an entry in the **Log streams** section, if there is no entry click the **refresh** circle icon, it can take a few minutes for the latest logs to be available.
-13. When the log stream appears it will have a name similar to `task-0372cba912b113e4b-exec-xyz` click on it
-14. Here you can view the details of the files transferred.
+12. 表示された画面で、**Log streams**の中身を確認してみて下さい。何も表示されていない場合、**refresh**アイコンをクリックして最新の情報に更新して下さい。最新のログが表示されるまで数分かかることが有ります。
+
+13. ログストリームは`task-0372cba912b113e4b-exec-xyz`のような形式で表示されます。表示されたらクリックして下さい。
+
+14. ファイル転送の詳細が確認出来ることがわかります。
 
 
 
 <br/><br/>
 
-**Verify data transferred**
+**転送データの確認**
 ----------------------------------------------
 
-Lets view the data copied across from the local SMB share to your target Amazon FSx for Windows File Server, file share.
+実際にコピーされたデータを見てみましょう。
 
-1.  From your Windows EC2 instance open a windows file explorer to your **c:\Tools** folder and check out the size of the data and number of files stored
-2.  Open a Windows command prompt (CMD) and enter the following command, and replace **your-fsx-DNS-name** with your value and press enter to map the target share
+1.  Windows EC2インスタンスのファイルエクスプローラーで、**c:\Tools**フォルダーを開き、データのサイズとファイルの数を確認して下さい。
+2.  コマンドプロンプト（CMD）を開き、以下のコマンドを実行して下さい。**your-fsx-DNS-name**はメモしたFSxのDNS名に入れ替えて下さい。
 
     `net use t: \\your-fsx-DNS-name\myshare`
 
-3. Open a windows file explorer to your **T:\\** **drive** and check out the size of the data and number of files stored, does it match that of the source C:\Tools data?
+3. エクスプローラーで**T:\\** **drive**を開き、データのサイズとファイルの数を確認して下さい。C:\Tools のデータと一致しますか？
 
 <br/><br/>
 
 
 
-**Summary**
+**まとめ**
 -----------
 
-In this module, you have obtained hands-on experience in deploying and configuring AWS
-DataSync to simplify the transfer of SMB file share data to Amazon FSx for Windows File Server.
+このモジュールでは、WindowsのSMBファイル共有からFSx for windowsのファイル共有へ、DataSyncを使ってファイル転送するハンズオン体験を行いました。
 
 <br/><br/>
 
