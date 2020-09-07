@@ -1,4 +1,4 @@
-MODULE 2: AWS FILE GATEWAY
+MODULE 2: FILE GATEWAY
 ==========================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
@@ -28,22 +28,22 @@ In this module you will perform the following tasks
 
 -   Create an NFS file share that is backed by your Amazon S3 bucket
 
--   Mount the AWS File Gateway, NFS share on a Linux host
+-   Mount the File Gateway, NFS share on a Linux host
 
--   Transfer 10,000 small files from the local Linux host to the NFS share presented by the AWS File Gateway
+-   Transfer 10,000 small files from the local Linux host to the NFS share presented by the File Gateway
 
 -   Verify data transferred to Amazon S3
 
 <br/><br/>
 
-**Lab Diagram: Transferring data to Amazon S3 using AWS File Gateway**
+**Lab Diagram: Transferring data to Amazon S3 using File Gateway**
 <br/>
 
 <img src="images/2-1.png">
 
 <br/><br/>
 
-**CREATE S3 BUCKET - AWS FILE GATEWAY**
+**CREATE S3 BUCKET - FILE GATEWAY**
 ---------------------------------------
 
 **Note:** **Ensure that you are logged into your Windows RDP session** and to enter
