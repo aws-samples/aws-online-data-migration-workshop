@@ -27,7 +27,7 @@ It will take approximately 20 minutes to complete this section, and all work wil
 -----------------------------
 
 1. From the Windows EC2 instance that you are logged into for the workshop, left click on the Windows icon in the bottom left hand corner and type in **Notepad** and hit Enter. Use this notepad to write down values as requested for this workshop. 
-2. Click on this using Internet Explorer (https://view.highspot.com/viewer/5f1a645ba2e3a938135fa3f6), and then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
+2. Click on this using Internet Explorer (https://view.highspot.com/viewer/5f55ed45659e9361eec1bae2), and then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
 3. Left click on the Windows icon in the bottom left corner and type in **Windows Powershell**, right click on the returned item and select **Run as administrator**, and  **YES** at the prompt. 
 4. Let's go ahead a run the workshop script, in your powershell window, copy and paste the following commands one line at time and hit Enter: 
 ```
