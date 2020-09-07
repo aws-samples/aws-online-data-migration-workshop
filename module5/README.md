@@ -27,7 +27,7 @@ It will take approximately 20 minutes to complete this section, and all work wil
 -----------------------------
 
 1. From the Windows EC2 instance that you are logged into for the workshop, left click on the Windows icon in the bottom left hand corner and type in **Notepad** and hit Enter. Use this notepad to write down values as requested for this workshop. 
-2. Click on this using Internet Explorer (https://view.highspot.com/viewer/5f55ed45659e9361eec1bae2), and then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
+2. Click on this using Internet Explorer (https://view.highspot.com/viewer/5f55ee7aa2e3a91f2e4ed7c7), and then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
 3. Left click on the Windows icon in the bottom left corner and type in **Windows Powershell**, right click on the returned item and select **Run as administrator**, and  **YES** at the prompt. 
 4. Let's go ahead a run the workshop script, in your powershell window, copy and paste the following commands one line at time and hit Enter: 
 ```
@@ -39,8 +39,8 @@ ren deploy.txt deploy.ps1`
 6. Left click on the Windows icon in the bottom left hand corner and type **C:\\** and press Enter
 6. Right click on the **Tools** folder and select **Properties**
 7. Click on the **Security** tab, and then click on **Edit** **-->** **Add**
-8. In the **Object name** field, copy and paste the `user99;file-users-group` and select **Check Names**, then select **OK**
-9. On the next window pane, click on the **user99** name, and from the Permissions delect everything and only leave **Read** and **List folder contents**, then select **OK** twice when prompted.
+8. In the **Object name** field, copy and paste the `admin@example.com;file-users-group@example.com` and select **Check Names**, then select **OK**
+9. On the next window pane, click on the **Admin** name, and from the permissions select **Full control**, and for **file-users-group** Select only **Read** and **List folder contents**, then select **OK** twice when prompted.
 10. Left click on the Windows icon in the bottom left hand corner, type in **CMD**. In the command prompt type in **hostname** and press Enter. Copy down the value shown for your server's hostname in your the workshop notepad file, as you will need this later
 
 
