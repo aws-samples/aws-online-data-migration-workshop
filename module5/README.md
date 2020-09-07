@@ -19,7 +19,7 @@ In this module we are going to create a local windows SMB share on the Windows E
 
 **Duration**
 -------------------
-It will take approximately 20 minutes to complete this section, and all work will be performed from your Windows Server EC2 instance.
+It will take approximately 20 minutes to complete this section, and all work will be performed from the **Windows Server EC2 instance** you have used for this workshop.
 
 <br/><br/>
 
