@@ -22,7 +22,7 @@ and SMB. Objects written through file gateway can be directly accessed in your A
 
 In this module you will perform the following tasks
 
--   Create an Amazon S3 bucket, to back your AWS File Gateway share
+-   Create an Amazon S3 bucket, to back your File Gateway, file share
 
 -   Deploy an AWS Storage Gateway in File mode
 
