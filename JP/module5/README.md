@@ -75,7 +75,7 @@ AWS DataSyncエージェントをAWS VPCにEC2インスタンスとしてデプ�
 
     -   Deploy agentの部分でドロップダウンメニューから**Amazon EC2**を選択して下さい。**Learn more**のリンクから具体的なデプロイ方法のドキュメントを参照できます。
 
-    -   [注意：このステップはAWS公式ドキュメントが更新され、使えなくなっているため、講師の支持に従って下さい]Scroll down to the table that has a list of **AWS Regions and AMI Names**, and click on
+    -   [注意：このステップはAWS公式ドキュメントが更新され、使えなくなっているため、講師の指示に従って下さい]Scroll down to the table that has a list of **AWS Regions and AMI Names**, and click on
         the **Launch Instance** link corresponding to the **us-east-1** row
 
         ここからはEC2インスタンスの作成ウィザードの手順です。
