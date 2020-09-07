@@ -32,7 +32,7 @@ It will take approximately 20 minutes to complete this section, and all work wil
 4. Let's go ahead a run the workshop script, in your powershell window, copy and paste the following commands one line at time and hit Enter: 
 ```
 cd C:\users\Admin\Downloads\
-ren deploy.txt deploy.ps1`
+ren deploy.txt deploy.ps1
 ./deploy.ps1
 ```
 5. At the security prompt, enter **R** and hit Enter to deploy the script which will install Google Chrome, create an SMB share, create a new Active Directory based user and also security group, and lastly create the sample 10,000 files that we will use for the transfer. 
