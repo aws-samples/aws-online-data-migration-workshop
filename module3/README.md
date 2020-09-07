@@ -234,11 +234,27 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
     -   In the Create agent page, under the **Amazon EC2** section click on
         the **Learn more**  icon
 
-    -   Scroll down to the table that has a list of **AMI Names**, and click on
-        the **Launch Instance** link corresponding to the **us-west-2** Oregon
-        row
+	-   Take note of the instructions for deploying the DataSync agent as an EC2 instance, which i have summarized for you with the follow steps. 
+	-   Open a Windows Command Promt (CMD), copy and paste the below command, where you replace the value of **$region** with your value (e.g. us-west-2) then run it, where it will return the value of the ami-id to use for your EC2 instance.
 
-        -   In the next page, select the box next to **m5.xlarge**
+	`aws ssm get-parameter --name /aws/service/datasync/ami --region $region`
+
+	- From the output of the above command copy the "ami" value shown for the item of **"Value"** into your workpad file as ami-id to use  in the next step (e.g. ami-0b703a238b1fc4df5)
+	
+	**Note** : If you are unfamiliar with the region name syntax, you can use this command to list out the RegionName's (aws ec2 describe-regions --output table)
+
+	- Next copy and paste the below command into your workshop notepad file and replace the **source-file-system-region** with your value (i.e. us-west-2) and also replace **ami-id** with the value you noted from above then, copy and paste that whole URL into a new tab in your Chrome Internet browser. 
+	
+	`https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#LaunchInstanceWizard:ami=ami-id`
+	
+	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0b703a238b1fc4df5`
+
+	This will now use this AMI image for our DataSync agent when we deploy it on our Amazon EC2 instance.
+	
+
+    -   Ok, now lets go ahead and configure our EC2 instance specifications
+
+        -   In the next page, select the box next to **r5.xlarge**
 
         -   Select **Next: Configure Instance Details**
 
