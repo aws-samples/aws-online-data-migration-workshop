@@ -68,7 +68,7 @@ Then copy and paste the below into the powershell window as a single line to dow
 
     $Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
 
-2.  Next open the Chrome icon located on your desktop and log into the AWS account provided like you did initially for the workshop (using the Event Engine URL hash). From the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
+1.  Next open the Chrome icon located on your desktop and log into the AWS account provided like you did initially for the workshop (using the Event Engine URL hash). From the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
 
     -   Select **Get Started**
 
@@ -90,7 +90,9 @@ Then copy and paste the below into the powershell window as a single line to dow
 	
 	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0b703a238b1fc4df5`
 	
-	-This will now use this AMI image for our DataSync agent when we deploy it on our Amazon EC2 instance.
+	This will now use this AMI image for our DataSync agent when we deploy it on our Amazon EC2 instance.
+	
+
 
     -   Ok, now lets go ahead and configure the EC2 instance specifications before we deploy it. 
 
