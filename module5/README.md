@@ -90,7 +90,7 @@ Then copy and paste the below into the powershell window as a single line to dow
 	
 	`https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#LaunchInstanceWizard:ami=ami-id`
 	
-	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0b703a238b1fc4df5`
+	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0b703a238b1fc4df5`
 
 	This will now use this AMI image for our DataSync agent when we deploy it on our Amazon EC2 instance.
 	
