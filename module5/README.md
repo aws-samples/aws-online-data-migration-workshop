@@ -82,7 +82,7 @@ Then copy and paste the below into the powershell window as a single line to dow
 
 	`aws ssm get-parameter --name /aws/service/datasync/ami --region $region`
 
-	- From the output of the above command copy the "ami" value shown for the item of **"Value"** into your workpad file as ami-id to use  in the next step (e.g. ami-0b703a238b1fc4df5)
+	- From the output of the above command copy the "ami" value shown for the item of **"Value"** into your workpad file as ami-id to use  in the next step (e.g. ami-0b4512915c43f10c9)
 	
 	**Note** : If you are unfamiliar with the region name syntax, you can use this command to list out the RegionName's (aws ec2 describe-regions --output table)
 
@@ -90,7 +90,7 @@ Then copy and paste the below into the powershell window as a single line to dow
 	
 	`https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#LaunchInstanceWizard:ami=ami-id`
 	
-	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0b703a238b1fc4df5`
+	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0b4512915c43f10c9`
 
 	This will now use this AMI image for our DataSync agent when we deploy it on our Amazon EC2 instance.
 	
