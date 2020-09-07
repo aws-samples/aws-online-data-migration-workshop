@@ -123,7 +123,7 @@ AWS DataSyncエージェントをAWS VPCにEC2インスタンスとしてデプ�
 
         -   下部の窓の**Description**タブの情報の中から**private IP**アドレスを探し、メモの中の**DataSync Instance Private IP=**の所に記入して下さい。
 
-            -   次の￥ステップに進む前にEC2インスタンスの“**Status Check**”が **“2/2 checks passed“**になっている事を確認して下さい。
+            -   次のステップに進む前にEC2インスタンスの“**Status Check**”が **“2/2 checks passed“**になっている事を確認して下さい。
 
         -   AWS consoleに戻り、**Services**をクリックし、**DataSync**をクリックして下さい。
 
