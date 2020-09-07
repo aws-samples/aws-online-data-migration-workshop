@@ -56,7 +56,7 @@ This workshop encompasses 5 modules
 
 **Module 1** - Deploy resources
 
-**Module 2** - AWS File Gateway
+**Module 2** - File Gateway (AWS Storage Gateway)
 
 **Module 3** - AWS DataSync
 
