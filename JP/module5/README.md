@@ -31,7 +31,7 @@ AWS DataSyncは、オンプレミスのストレージとAmazon S3、Amazon Elas
 2. ワークショップで使用しているWindows EC2インスタンスに接続し、 左下のWindowsアイコンをクリック、次に**C:\\**を入力して、Enterを押して下さい。
 3. **Tools**フォルダーを右クリックし、**Properties**を選択して下さい。
 4. **Sharing**タブをクリックし、**Advanced Sharing**をクリックして下さい。
-5. **Share this folder**を選択し、**OK**をクリックし、ダイアログを閉じて下さい。
+5. **Share this folder**を選択し、**Permissions**ボタンをクリック。Everyoneにフルコントロールを与えて**OK**をクリックし、ダイアログを閉じて下さい。
 6. コマンドプロンプトを開き(例：左下のWindowsアイコンをクリックしてcmdと入力)、**hostname**と入力し、Enterを押して下さい。表示されたサーバーのホスト名を上記でダウンロードしたメモに記載して下さい。後ほど使用します。
 
 
