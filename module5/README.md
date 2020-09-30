@@ -285,6 +285,8 @@ Lets view the data copied across from the local SMB share to your target Amazon 
 
 3. Open a windows file explorer to your **T:\\** **drive** and check out the size of the data and number of files stored, does it match that of the source C:\Tools data?
 
+4. Lastly in the same file explorer window for **T:\\**, right click on a folder and select **Properties**, then select the **Security** tab. Take a look at the Active Directory based user and group permissions, did DataSync copy across the permissions you set on the source SMB share (at the start of this module) for the Active Directory user (admin) and group (file-users-group)?
+
 <br/><br/>
 
 
