@@ -205,7 +205,7 @@ Then copy and paste the below into the powershell window as a single line to dow
     -   **SMB Server:** enter your servers hostname that you took down 
         `e.g. EC2AMAZ-12ID25G`
 
-    -   **Share name:**  enter **Tools**
+    -   **Share name:**  enter **MyLocalShare**
 
     -   In the **Additional settings** select **SMB3** 
     -   In the User settings enter the user which has access to the source SMB share, enter the following values
