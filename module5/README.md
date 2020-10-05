@@ -27,13 +27,13 @@ It will take approximately 20 minutes to complete this section, and all work wil
 -----------------------------
 
 1. From the Windows EC2 instance that you are logged into for the workshop, left click on the Windows icon in the bottom left hand corner and type in **Notepad** and hit Enter. Use this notepad to write down values as requested for this workshop. 
-2. Click on this using Internet Explorer (https://view.highspot.com/viewer/5f55ee7aa2e3a91f2e4ed7c7), and then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
+2. Click on this using Internet Explorer (https://view.highspot.com/viewer/5f7a68e6b7b73918b28be6f9), and then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
 3. Left click on the Windows icon in the bottom left corner and type in **Windows Powershell**, right click on the returned item and select **Run as administrator**, and  **YES** at the prompt. 
 4. Let's go ahead a run the workshop script, in your powershell window, copy and paste the following commands one line at time and hit Enter: 
 ```
 cd C:\users\Admin\Downloads\
-ren deploy.txt deploy.ps1
-./deploy.ps1
+Expand-Archive -Path deploy.zip
+./deploy/deploy.ps1
 ```
 5. At the security prompt, enter **R** and hit Enter to deploy the script which will install Google Chrome, create an SMB share, create a new Active Directory based user and also security group, and lastly create the sample 10,000 files that we will use for the transfer. 
 6. Left click on the Windows icon in the bottom left hand corner and type **C:\\** and press Enter
