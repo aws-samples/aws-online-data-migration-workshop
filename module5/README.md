@@ -1,4 +1,4 @@
-Transferring SMB file share data using AWS DataSync
+Transferring SMB file data to Amazon FSx for Windows File Server using AWS DataSync
 ======================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
