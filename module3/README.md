@@ -225,7 +225,16 @@ the absence of an on-premise environment (where you could deploy it as a VMware
 appliance). The AWS DataSync agent will then read directly from the NFS server
 (not the NFS client) and transfer the data to your **Target-S3-Bucket**
 
-1.  Using the Chrome icon on the Windows EC2 instance desktop, log into your AWS Account using Chrome
+1.  Using the Chrome icon on the Windows EC2 instance desktop, log into your AWS Account using Chrome and perform the following tasks to update the IAM role we are using for the Windows server EC2 instance
+
+    -   From the Chrome session, in the AWS console, at the top of the screen, click Services and type & select **IAM**
+    -   Select **Roles** from the left hand pane
+    -   In the search field enter **WindowsInstanceRole**, and click on the name that it returns
+    -   In the Permissions tab on the next screen, click on the **Attach policies** blue button
+    -   In the search field enter **AmazonSSMReadOnlyAccess**
+    -   Check the box next to the returned policy name to select it
+    -   Click on **Attach Policy**
+
 
 2.  From the Chrome session, in the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
 
