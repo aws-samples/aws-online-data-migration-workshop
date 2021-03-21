@@ -13,7 +13,7 @@ AWS DataSync is a data transfer service that makes it easy for you to simplify &
 
 **OVERVIEW**
 -------------------
-In this module we are going to create a local windows SMB share on the Windows EC2 instance that will act as your source SMB share data, and also create a target Amazon FSx for Windows File Server, file share. Then deploy and use AWS DataSync to migrate the source SMB data to the target FSx for Windows File Server, file share.
+In this module you are going use AWS DataSync to migrate Windows based SMB file share data to a new Amazon FSx for Windows File Server Instance. You will firstly create a local Windows SMB file share on an Amazon EC2 compute instance, that will act as the source location for SMB file share data. You will then create an Amazon FSx for Windows File Server instance, and use it your target SMB file share location. Lastly, you will deploy and use AWS DataSync to migrate the source SMB file share data to the target FSx for Windows File Server, file share.
 
 <br/><br/>
 
