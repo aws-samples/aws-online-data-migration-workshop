@@ -26,19 +26,19 @@ It will take approximately 20 minutes to complete this section. All work will be
 **Deploy workshop data, and configure local Windows SMB Share**
 -----------------------------
 
-1. From the Windows EC2 instance that you are logged into for the workshop, left click on the Windows icon in the bottom left hand corner and type in **Notepad** and hit Enter. Use this notepad to write down values as requested for this workshop. 
-2. Click on this using Internet Explorer (https://view.highspot.com/viewer/5f7a68e6b7b73918b28be6f9), and then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
+1. On the Windows Server (EC2 instance) that you are logged into for the workshop, left click on the Windows icon in the bottom left hand corner and type in **Notepad** and hit Enter. Use this notepad to write down values as requested for this workshop. 
+2. Copy and paste the following linking into an Internet Explorer browser (https://view.highspot.com/viewer/5f7a68e6b7b73918b28be6f9), then click on the **download** button, when prompted select **Save** to download a powershell script, which will be used to deploy the your workshop items
 3. Left click on the Windows icon in the bottom left corner and type in **Windows Powershell**, right click on the returned item and select **Run as administrator**, and  **YES** at the prompt. 
-4. Let's go ahead a run the workshop script, in your powershell window, copy and paste the following commands one line at time and hit Enter: 
+4. Let's go ahead and run the workshop script. In your powershell window, copy and paste and run the following commands, one line at time: 
 ```
 cd C:\users\Admin\Downloads\
 Expand-Archive -Path deploy.zip
 ./deploy/deploy.ps1
 ```
-5. At the security prompt, enter **R** and hit Enter to deploy the script which will install Google Chrome, create an SMB share, create a new Active Directory based user and also security group, and lastly create the sample 10,000 files that we will use for the transfer. 
-6. Left click on the Windows icon in the bottom left hand corner and type **C:\\** and press Enter
+5. At the security prompt, enter **R** and hit Enter to deploy the script which will install Google Chrome, create an SMB share, create a new Active Directory based user and  security group, and  create the sample 10,000 files that you will use for the data transfer. 
+6. Once you see **Deploy completed** in the Powershell window, left click on the Windows icon in the bottom left hand corner and type **C:\\** and press Enter
 6. Right click on the **Tools** folder and select **Properties**
-7. Click on the **Security** tab, and then click on **Edit** **-->** **Add**
+7. You will now add user and group permissions to this folder. Click on the **Security** tab, and then click on **Edit** **-->** **Add**
 8. In the **Object name** field, copy and paste the `admin@example.com;file-users-group@example.com` and select **Check Names**, then select **OK**
 9. On the next window pane, click on the **Admin** name, and from the permissions select **Full control**, and for **file-users-group** Select only **Read** and **List folder contents**, then select **OK** twice when prompted.
 10. Left click on the Windows icon in the bottom left hand corner, type in **CMD**. In the command prompt type in **hostname** and press Enter. Copy down the value shown for your server's hostname in your the workshop notepad file, as you will need this later
@@ -52,16 +52,16 @@ Expand-Archive -Path deploy.zip
 
 We are now going to create a target SMB share on the Amazon FSx for Windows File Server instance
 
-1. Within your Windows EC2 instance, click on the Windows START icon in the bottom left hand corner and type **fsmgmt.msc** and press Enter
+1. Within your Windows Server EC2 instance, click on the Windows **Start** icon in the bottom left hand corner and type **fsmgmt.msc** and press Enter
 2. Click on **Action** and select **Connect to another computer** 
-3. Enter in your Amazon FSx for Windows File Server DNS name (e.g. amznfsxnzvcely3.example.com) and select OK
+3. Enter in your Amazon FSx for Windows File Server's DNS name that you used prevoiusly during this workshop, it can be found in the Amazon FSx console (e.g. amznfsxnzvcely3.example.com) and select OK
 4. Context/right-click the **Shares** folder and click **New Share** and select Next
 5. Click Browse
 6. Select d$.
 7. Click Make New Folder.
 8. Name the new folder **myshare**
 9. Select OK
-10. Complete the Create A Shared Folder Wizard, and at the **Shared folder permissions** screen, select **Custom permissions** and then click on **Custom** and enable **Everyone** with **Full Control**
+10. Complete the Create A Shared Folder Wizard, and at the **Shared folder permissions** screen, select **Custom permissions** and then click on **Custom** and enable **Everyone** with **Full Control**, then select OK, and click on Finish twice.
 
 
 <br/><br/>
