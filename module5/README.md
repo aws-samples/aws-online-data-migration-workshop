@@ -153,7 +153,7 @@ Then copy and paste  each of the below commands into the Powershell window one l
 
         -   In the right hand pane, select the box next to “**DataSync-agent**”
 
-        -   From the bottom window pane, select the **Description** tab, and
+        -   From the bottom window pane, select the **Details** tab, and
             take note of the **private IP** address into the workshop notepad file you downloaded, as
              **DataSync Instance Private IP=**
 
