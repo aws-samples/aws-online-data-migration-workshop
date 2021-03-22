@@ -19,7 +19,7 @@ In this module you are going use AWS DataSync to migrate Windows based SMB file 
 
 **Duration**
 -------------------
-It will take approximately 20 minutes to complete this section, and all work will be performed from the **Windows Server EC2 instance** you have used for this workshop.
+It will take approximately 20 minutes to complete this section. All work will be performed from the **Windows Server (Amazon EC2 instance)** you have already deployed for this workshop.
 
 <br/><br/>
 
