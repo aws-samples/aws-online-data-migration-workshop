@@ -74,35 +74,35 @@ We are going to deploy the AWS DataSync agent within your AWS VPC as an EC2 inst
 
 - Within your Windows EC2 instance, click on the Windows START icon in the bottom left hand corner and type **Powershell** and select **Windows Powershell**
 
-Then copy and paste the below into the powershell window as a single line to download and install Google Chrome 
+Then copy and paste  each of the below commands into the Powershell window one line at a time, and press Enter (install AWS CLI)
 
-    $Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path\$Installer; Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer
+    powershell Invoke-WebRequest "https://s3.amazonaws.com/aws-cli/AWSCLI64.msi" -OutFile c:\AWSCLI64.msi
+    start c:\AWSCLI64.msi /qb
     
 <br/>
 
-1.  Next open the Chrome icon located on your desktop and log into the AWS account provided like you did initially for the workshop (using the Event Engine URL hash). From the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
+1.  Open an Internet Explorer session and log into the AWS account that has been provided to you for this entire workshop (copy and paste your Event Engine URL into browser). From the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
 
     -   Select **Get Started**
 
-    -   In the Deploy agent section select **Amazon EC2** from the drop down, then
-        click on the **Learn more**  icon in the same Deploy agent blue box
+    -   In the Deploy agent section select **Amazon EC2** from the drop down.
 
-	-   Take note of the instructions for deploying the DataSync agent as an EC2 instance, which i have summarized for you with the follow steps. 
-	-   Open a Windows Command Promt (CMD) and copy and paste the below command, where you replace the value of **$region** with your value (e.g. us-east-1) then run it, where it will return the value of the ami-id to use for your EC2 instance.
+	-   Open a Windows Command Promt (CMD). 
+	-   Copy and paste the below command, where you need to replace the value of **$region** with your value (e.g. us-east-1) then run it, where it will return the value of the ami-id to use for your EC2 instance.
 
 	`aws ssm get-parameter --name /aws/service/datasync/ami --region $region`
 
-	- From the output of the above command copy the "ami" value shown for the item of **"Value"** into your workpad file as ami-id to use  in the next step (e.g. ami-0b4512915c43f10c9)
+	- From the output of the command, copy the ami-id name shown for the item **"Value"** into your workpad file  as ami-id to use  in the next step (e.g. ami-0b4512915c43f10c9)
 	
 	**Note** : If you are unfamiliar with the region name syntax, you can use this command to list out the RegionName's (aws ec2 describe-regions --output table)
 
-	- Next copy and paste the below command into your workshop notepad file and replace the **source-file-system-region** with your value (i.e. us-east-1) and also replace **ami-id** with the value you noted from above then, copy and paste that whole URL into a new tab in your Chrome Internet browser. 
+	- Copy and paste the below command into your workshop notepad file, and replace the **source-file-system-region** with your value (i.e. us-east-1), and replace the **ami-id** with the value you noted from above. Lastly copy and paste the entire URL you just updated into a new Internet Explorer browser tab. 
 	
 	`https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#LaunchInstanceWizard:ami=ami-id`
 	
 	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-0b4512915c43f10c9`
 
-	This will now use this AMI image for our DataSync agent when we deploy it on our Amazon EC2 instance.
+	This will now use this DataSync agent AMI image to deploy it as a Amazon EC2 instance.
 	
 
 
