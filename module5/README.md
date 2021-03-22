@@ -81,14 +81,9 @@ Then copy and paste  each of the below commands into the Powershell window one l
     
 <br/>
 
-1.  Open an Internet Explorer session and log into the AWS account that has been provided to you for this entire workshop (copy and paste your Event Engine URL into browser). From the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
+1.  Open a Windows Command Prompt (CMD), by clicking on the Windows START icon in the bottom left hand corner and typing in **CMD**, and press Enter.
 
-    -   Select **Get Started**
-
-    -   In the Deploy agent section select **Amazon EC2** from the drop down.
-
-	-   Open a Windows Command Promt (CMD). 
-	-   Copy and paste the below command, where you need to replace the value of **$region** with your value (e.g. us-east-1) then run it, where it will return the value of the ami-id to use for your EC2 instance.
+    -   Copy and paste the below command, where you need to replace the value of **$region** with your value (e.g. us-east-1) then run it, where it will return the value of the ami-id to use for your EC2 instance.
 
 	`aws ssm get-parameter --name /aws/service/datasync/ami --region $region`
 
