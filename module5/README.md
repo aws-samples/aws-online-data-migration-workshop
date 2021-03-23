@@ -50,6 +50,8 @@ Expand-Archive -Path deploy.zip
 **Create target Amazon FSx for Windows File Server, file share**
 -----------------------------
 
+Note: for all remaining tasks use **Google Chrome**,that was just installed, for your internet browser sessions.
+ 
 We are now going to create a target SMB share on the Amazon FSx for Windows File Server instance
 
 1. Within your Windows Server EC2 instance, click on the Windows **Start** icon in the bottom left hand corner and type **fsmgmt.msc** and press Enter
@@ -91,7 +93,7 @@ Then copy and paste  each of the below commands into the Powershell window one l
 	
 	**Note** : If you are unfamiliar with the region name syntax, you can use this command to list out the RegionName's (aws ec2 describe-regions --output table)
 
-	- Copy and paste the below command into your workshop notepad file, and replace the **source-file-system-region** with your value (i.e. us-east-1), and replace the **ami-id** with the value you noted from above. Lastly copy and paste the entire URL you just updated into a new Internet Explorer browser tab. 
+	- Copy and paste the below command into your workshop notepad file, and replace the **source-file-system-region** with your value (i.e. us-east-1), and replace the **ami-id** with the value you noted from above. Lastly copy and paste the entire URL you just updated into a new **Google Chrome** browser session. 
 	
 	`https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#LaunchInstanceWizard:ami=ami-id`
 	
@@ -189,7 +191,7 @@ Then copy and paste  each of the below commands into the Powershell window one l
 **Transfer data using DataSync** 
 ---------------------------------
 
-1.  Following on from the previous AWS DataSync screen, click on the **Create task** from the top right hand side of the window
+1.  Following on from the previous AWS DataSync screen, using your **Google Chrome** session click on the **Create task** from the top right hand side of the window
 
     -   Select **Create a new location** from the source locations options
 
