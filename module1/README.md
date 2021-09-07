@@ -151,9 +151,9 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 
 
 
--  Click on the **Stack info** tab and click on the **refresh** icon as
+-  Click on the **refresh** icon as
     highlighted in **RED** until the status value changes
-    to **CREATE_COMPLETE** (this may take approx. 4-5 minutes) as shown below,
+    to **CREATE_COMPLETE** (this may take a few minutes) as shown below,
     you can then progress to the next steps
 
 <img src="images/1-7.png">
