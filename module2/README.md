@@ -327,7 +327,7 @@ as **/nfs__source** , using a Linux copy script
 
 
 
-2.  Run the following commands to start the copy of 10,000 small files (Wait until you get the data transfer completed message before proceeding)
+2.  Run the following commands to start the copy of 10,000 small files (this will take a short while, Wait until you get the data transfer completed message before proceeding)
 
 		cd /scripts/fgw-demo
 
@@ -358,7 +358,7 @@ gateway local cache took
 
 
 2.  Next we are going to change the permissions & ownership of a file which will
-    be a reference point in module 3, used to verify metadata being copied
+    be a reference point in the AWS Datasync module, used to verify metadata being copied
     across. Run the following commands:
 
 		cd /nfs_source/appdata
@@ -381,11 +381,11 @@ gateway local cache took
 
     -   Check the box next to **Name** to select all objects
 
-    -   Click on **Actions** → **Get total size**
+    -   Click on **Actions** → **Calculate total size**
 
-        -   Note the total object stored in your S3 bucket via File Gateway
+        -   Note: The results will be shown in the **Summary** box. It will show the total number of objects stored in your S3 bucket which were uploaded by the File Gateway in this module
         
-    -   Click **Cancel** when done viewing.
+    -   Click **Close** when done
 
 <br/><br/>
 
