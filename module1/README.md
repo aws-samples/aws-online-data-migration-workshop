@@ -233,8 +233,7 @@ the previous steps**.
 
     -   You will use this **Linux-Instance-Private-IP** in the next module
     
-    -   **Note**: Open this **link** in Chrome (https://view.highspot.com/viewer/5ea61f8d628ba238210a9c56), and then click on the **download** button at the top left of the screen, you will need this file during the lab
-    
+        
 
 <br/><br/>
 
@@ -242,7 +241,7 @@ the previous steps**.
 -----------
 
 In this module you deployed your base VPC, subnets, security groups, Amazon
-EC2 instances and the SSH key that that you will use for the remainder of
+EC2 compute instances and the SSH key that that you will use for the remainder of
 the workshop. 
 
 
