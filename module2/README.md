@@ -400,8 +400,8 @@ the local file gateway cache, where all your data is backed in an Amazon S3
 bucket.
 
 
-**END OF MODULE 2**
+**END OF MODULE - S3 FILE GATEWAY**
 -------------------
 
 
-**Click** [here to go to the next module and deploy AWS Transfer for SFTP](/module4/README.md)
+**Click** [here to go to the next module and DEPLOY AWS TRANSER FOR SFTP](/module4/README.md)
