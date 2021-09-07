@@ -1,4 +1,4 @@
-MODULE 3: AWS DATASYNC
+DEPLOY AWS DATASYNC
 ======================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
@@ -555,9 +555,9 @@ knowledge or performance tuning to enable faster data transfers.
 
 <br/><br/>
 
-**END OF MODULE 3**
+**END OF MODULE - AWS DATASYNC**
 -------------------
 
 
-Click here to go to [module 4](/module4/README.md)
+**Click** [here to go to the CLEANUP WORKSHOP RESOURCES module](/cleanup/README.md)
 
