@@ -559,5 +559,5 @@ knowledge or performance tuning to enable faster data transfers.
 -------------------
 
 
-**Click** [here to go to the CLEANUP WORKSHOP RESOURCES module](/cleanup/README.md)
+**Click** [here to go to the CLEAN UP WORKSHOP RESOURCES module](/cleanup/README.md)
 
