@@ -162,11 +162,11 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 1. From the AWS console, at the top of the screen, click **Services** and type & select **Storage Gateway**
 
 
-- Click the **Get started** button
+- Click the **Create gateway** button
 
 
 
-- Select **File Gateway** from the list, and select **Next**
+- Select **Amazon S3 File Gateway** from the list, and select **Next**
 
 
 
@@ -179,7 +179,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 -   Enter the **private IP** address of your File Gateway EC2 instance (value
     of **File-Gateway-Instance-Private-IP**)
 
--   Select **Connect to Gateway**
+-   Select **Next**
 
 -   On the next screen, Leave the time zone unchanged
 
@@ -190,9 +190,9 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 -   On the next screen, from the “**Allocated to**” drop down, select “select
     “**Cache**”
 
--   Click on **Configure logging** and the default settings
+-   Click on **Save and continue**. Then on the **Configure logging** page leave the default settings, and Click **Save and continue**
 
--   Click on **Save and continue**
+-   Click **Finish**. Wait until see a **Status** of Online for your File Gateway before you continue to the next step.
 
 <br/><br/>
 
