@@ -93,9 +93,9 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 
 7.  Click on **Create stack**
 
-8.  Click on the **Stack info** tab and click on the **refresh** icon as
+8.  Click on the **refresh** icon as
     highlighted in **RED** until the status value changes
-    to **CREATE_COMPLETE** (this may take 1-2 minutes) as shown below, you can
+    to **CREATE_COMPLETE** (this may take a few minutes) as shown below, you can
     then progress to the next steps
 
 <img src="images/1-4.png">
