@@ -163,8 +163,8 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 **CONNECT TO YOUR INSTANCE**
 ----------------------------
 
-**Firstly let’s retrieve the Windows administrator password from Secrets
-manager**
+**Firstly let’s retrieve the Windows administrator password from AWS Secrets
+Manager**
 
 1.  From **your laptop** connect to the AWS console, click **Services** and type
     & select **Secrets Manager**
