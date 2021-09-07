@@ -64,9 +64,9 @@ This workshop encompasses 5 hands-on workshop activity modules, and a final clea
 
 **Module 5** - DEPLOY AWS DATASYNC
 
-**Module 6 ** - CLEAN-UP WORKSHOP RESOURCES
+**Module 6** - CLEAN-UP WORKSHOP RESOURCES
 
 
 <br>
 
-**To get started go to** [Deploy workshop resources](/module1/README.md)
+**Click** [here to get started with the first module to DEPLOY WORKSHOP RESOURCES](/module1/README.md)
