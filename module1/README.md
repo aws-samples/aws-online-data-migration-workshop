@@ -251,4 +251,6 @@ the workshop.
 -------------------
 
 
-Click here to go to [module 2](/module2/README.md)
+<br/>
+
+**Click** [here to go to the next module and deploy the S3 File Gateway](/module2/README.md)
