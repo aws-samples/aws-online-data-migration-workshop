@@ -52,19 +52,21 @@ on generating and downloading an EC2 Key Pair.
 **WORKSHOP MODULES**
 --------------------
 
-This workshop encompasses 5 modules
+This workshop encompasses 5 hands-on workshop modules
 
-**Module 1** - Deploy resources
+**Module 1** - Deploy workshop resources
 
-**Module 2** - File Gateway (AWS Storage Gateway)
+**Module 2** - Deploy S3 File Gateway (AWS Storage Gateway)
 
-**Module 3** - AWS DataSync
+**Module 3** - Deploy AWS Transfer for SFTP
 
-**Module 4** - AWS Transfer for SFTP
+**Module 4** - Deploy Amazon Kinesis Data Firehose
+
+**Module 5** - Deploy AWS DataSync
 
 **Cleanup** - Cleanup workshop resources
 
 
 <br>
 
-To get started go to [module 1](/module1/README.md)
+**To get started go to** [Deploy workshop resources](/module1/README.md)
