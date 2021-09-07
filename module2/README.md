@@ -199,10 +199,10 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 **CREATE NFS SHARE**
 --------------------
 
-In the next steps you will create an NFS file share from your AWS File Gateway.
+In the next steps you will create an NFS file share from your File Gateway.
 
-1.  Following on from the previous steps you should still be located in
-    the **AWS Storage gateway console**, if not, from the AWS console, at the
+1.  Following on from the previous steps, you should still be located in
+    the **AWS Storage Gateway console**, if not, from the AWS console, at the
     top of the screen, click **Services** and type & select **Storage Gateway**
 
 2.  From the left hand pane of the AWS Storage Gateway console, select **File
@@ -210,12 +210,12 @@ In the next steps you will create an NFS file share from your AWS File Gateway.
 
 3.  Select **Create file Share** from the top menu
 
-4.  Enter the name of your **Source-S3-bucket** in the **Amazon S3 bucket
+4.  From the **Gateway** drop down, select the File Gateway instance you just deployed.  Then enter the name of your **Source-S3-bucket** in the **Amazon S3 bucket
     name** field.
 
-5.  Select **Network File System (NFS)**
+5.  Select your region (us-west-2). Leave the **File share name** that is already populated. Select **Network File System (NFS)** for the **Access objects using** field
 
-6.  Select the **File Gateway** you just deployed (STG316-filegateway)
+6.  Leave all other settings as default
 
 7.  Click **Next**
 
@@ -223,29 +223,26 @@ In the next steps you will create an NFS file share from your AWS File Gateway.
 
 9.  On the next page, click the **Edit** value next to **Allowed clients**
 
-    -   Remove the existing **0.0.0.0/0** value and replace it
-        with **192.168.0.0/16**
+    -   In the **Access object** section, click on **Add client**. 
 
-    -   Then click the **Close** button to the on the right of the screen for
-        Allowed clients
+    -   Then enter **192.168.0.0/16** in the Allowed clients field
 
-10. Click the **Edit** value next to **Mount options**
+10. From the **Mount options** section, select the following values
 
     -   Select “**No root squash**” for Squash level
 
-    -   Leave export as read-write
+    -   Leave export as **Read-write**
 
-    -   Then click the **Close** button to the on the right of the screen for
-        Mount options
+    -   Leave the default values for **File metadata defaults**. Click **Next**
 
-11. Scroll to the bottom of the page and click **Create file share**
+11. Review your inputs and click **Create**
 
-12. On the same File Share page, check the box next to the name of your **File
+12. On the same File Share page, click on the name of your **File
     share ID**
 
-    -   In the details pane below, copy the command for mounting **On Linux**
-        in to your **workshop.txt** for the value of
-        **First-NFS-FileShare-mount-command**\*
+    -   In the details pane below, copy and paste the **Example command** for mounting **On Linux**
+        in to your **workshop.txt** as the value of
+        **First-NFS-FileShare-mount-command**\*  you will use this command to mount the NFS share
 
 <br/><br/>
 
