@@ -1,4 +1,4 @@
-MODULE 2: FILE GATEWAY
+DEPLOY S3 FILE GATEWAY (AWS STORAGE GATEWAY)
 ==========================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
@@ -404,4 +404,4 @@ bucket.
 -------------------
 
 
-Click here to go to [module 3](/module3/README.md)
+**Click** [here to go to the next module and deploy AWS Transfer for SFTP](/module4/README.md)
