@@ -1,4 +1,4 @@
-MODULE 4: AWS TRANSFER FOR SFTP
+DEPLOY AWS TRANSFER FOR SFTP (AWS TRANSFER FAMILY)
 ===============================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
@@ -494,8 +494,8 @@ by AWS Transfer for SFTP service through the use of the AWS File Gateway.
 <br/><br/>
 
 
-**END OF MODULE 4**
+**END OF MODULE - AWS TRANSFER FOR SFTP**
 -------------------
 
 
-Click here to go to the [cleanup module](/cleanup/README.md)
+**Click** [here to go to the Amazon Kinesis Data Firehose module](/kinesismodule/README.md)
