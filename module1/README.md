@@ -227,7 +227,7 @@ the previous steps**.
     -   In the right hand pane, select the box next to “**Workshop Linux
         instance 1**”.
 
-    -   From the bottom window, select the **Description** tab, and write down
+    -   From the bottom window, select the **Details** tab, and write down
         the **private IP** address into the **workshop.txt** located on the desktop file where it
         states **Linux-Instance-Private-IP=**
 
