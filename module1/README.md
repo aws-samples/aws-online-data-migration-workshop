@@ -247,10 +247,10 @@ the workshop.
 
 <br>
 
-**END OF MODULE 1**
+**END OF MODULE - DEPLOY WORKSHOP RESOURCES**
 -------------------
 
 
 <br/>
 
-**Click** [here to go to the next module and deploy the S3 File Gateway](/module2/README.md)
+**Click** [here to go to the next module and DEPLOY S3 FILE GATEWAY](/module2/README.md)
