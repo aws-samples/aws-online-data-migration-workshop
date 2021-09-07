@@ -173,7 +173,7 @@ Manager**
 
 3.  Scroll down the page and click on **Retrieve secret value**
 
-4.  Copy and paste the password value shown into a notepad file
+4.  Copy and paste the password value shown for **Secret key value** into a notepad file
 
 5.  Next let’s connect to your Windows Server EC2 instance
 
