@@ -433,12 +433,105 @@ At the end of this task you should now have:
 <br/><br/>
 
 
-**ACCESS YOUR DATA THROUGH FILE GATEWAY**
+**ACCESS YOUR DATA THROUGH THE S3 FILE GATEWAY**
 -----------------------------------------
 
-We’re now going to show how the files you uploaded via SFTP are accessible
-through alternative access mechanisms. In this case the Storage Gateway we
-created in Module 2
+<img src="images/3-8.png">
+
+
+<br>
+
+We’re now going to show you how the files you uploaded via SFTP to your S3 bucket in this module, are accessible
+to other users and applications through alternative access mechanisms. In this case the S3 File Gateway we
+created in the earlier module
+
+Firstly let’s create a File Gateway NFS share and point it to the target S3 bucket that our SFTP users uploaded the data to.
+This will help you easily access and manage the data from the view of a file share.
+
+<br/><br/>
+
+**Create NFS Share**
+
+1.  From the AWS console, at the top of the screen, click **Services** and type
+    & select **Storage Gateway**
+
+2.  On the left hand pane of the AWS Storage Gateway console, select **File
+    shares**
+
+3.  Select **Create file Share** from the top menu
+
+4.  Select your gateway from the **Gateway** drop down (i.e. STG316-filegateway)
+
+5.  Then enter the name of your **Target-S3-bucket** in the **Amazon S3 bucket
+    name** field (i.e. stg316-target-citizenj). Leave the default file share name provided
+
+6.  In the Access objects using section, select **Network File System (NFS)**
+
+7.  Click **Next**
+
+8.  Leave all defaults and select **Next**
+
+9.  On the Access object section, click on **Add clients**
+
+    -   Enter this value in the field allowed clients field **192.168.0.0/16**
+
+    
+10. In the Mount options section
+
+    -   Select “**No root squash**” for Squash level
+
+    -   Export as **Read-write**
+
+    -   Leave all other items as default and click the **Next**
+
+11. Scroll to the bottom of the page and click **Create**
+
+12. You will be taken to the **File share** page. Click on the **refresh
+    Icon** on the top right hand corner, until the status of the file share
+    changes to **Available**, before proceeding to the next
+    steps.
+
+13. On the same File Share page, check the box next to the name of your **File
+    share ID**
+
+14. In the details pane below, copy the command for mounting **On Linux** in
+    to your **workshop.txt** for the value of
+    **Second-NFS-FileShare-mount-command**
+
+<br/><br/>
+
+
+**Mount NFS Share**
+
+1.  Navigate back to your SSH session and run the following command
+
+		sudo su
+
+2.  Next, copy the NFS mount command you noted down from the previous step into your workshop.txt
+    for **Second-NFS-FileShare-mount-command**. Simply replace
+    the **[MountPath]** value at the end with the value of
+     **/nfs_target** and enter the entire command into the SSH session, and
+    hit Enter
+
+    -   *i.e. mount -t nfs -o nolock,hard 192.168.10.12:/stg316-target-citizenj
+        /nfs_target*
+
+
+3.  Run the below command to verify you have the NFS mount points of
+    **/nfs_target** showing in the list
+
+		df -h
+
+
+
+<br/><br/>
+
+
+
+
+<br/><br/>
+
+Let's use the S3 File Gateway and its NFS share to access our data stored in our S3 bucket 
 
 1.  From your SSH session run the following command to change into your NFS mount directory for the **Target-S3-Bucket**
 
@@ -472,15 +565,15 @@ created in Module 2
 
 		ls
 
-    -   you should see your new file1.txt and file2.txt files through the NFS
-        mount
+    -   you should see your new file1.txt and file2.txt files through the NFS file share
+        mount point you just created
 
 <br/><br/>
 
 **SUMMARY**
 -----------
 
-In module 4, you obtained hands-on experience in deploying & configuring AWS
+In this module, you obtained hands-on experience in deploying & configuring AWS
 Transfer for SFTP, and also transferring files using SFTP commands. 
 You also learned how to seamlessly access the data stored in Amazon S3
 by AWS Transfer for SFTP service through the use of the AWS File Gateway.
