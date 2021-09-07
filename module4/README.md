@@ -25,61 +25,109 @@ setup in Module 2.
 
 <br/><br/>
 
-**SETUP MODULE**
-----------------
 
-We have a couple of pre-requisites that we need to ensure are in place. We will
-be using the linux host for this module
+**CREATE TARGET S3 BUCKET AND PERMISSIONS**
+-----------------------------------
 
-Please connect to the Linux instance provided for this workshop 
+**Note:** This bucket will be used as the target S3 bucket by different AWS services in the workshop modules.
 
-1.  In your Remote Desktop session, click on Windows icon located at the bottom
-    left of the screen
+1.  From the AWS console, click **Services** at the top of the screen and type &
+    select **S3**
 
-2.  Type CMD and hit Enter to open a new command prompt
+2.  From the AWS S3 console select **+Create bucket**
 
-3.  You should have stored your \*.pem key file on the desktop as per the
-    previous instructions. Enter the below commands in the command prompt
+3.  Provide a unique bucket name for your **Target-S3-bucket**. Use the
+    following naming convention “stg316-target-**xyz**” were **xyz** is
+    combination your surname and first name (e.g. “**stg316-target-citizenj**”)
 
-		cd c:\users\administrator\desktop
+    -   Take note of your **Target-S3-bucket** name in your workshop.txt file
 
-4.  Next enter the below command to SSH into the Linux server, remember to
-    replace the two values shown in **\< \>** with your values
-    
-    		ssh -i <your-key-file-name>.pem ec2-user@<Linux-Instance-Private-IP> 
-      
-    i.e. ssh –i stg316-key.pem ec2-user\@192.168.10.102
+4.  Next select **US West (Oregon)** as the region
 
-5.  If this is the first time you have connected to this instance, a security
-    alert dialog box that asks whether you trust the host to which you are
-    connecting.
+5.  Click **Next**
 
-    -   (Optional) Verify that the fingerprint in the security alert dialog box
-        matches the fingerprint that you previously obtained in (Optional) Get
-        the Instance Fingerprint
-        (<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html#connection-prereqs-fingerprint>).
-        If these fingerprints don’t match, someone might be attempting a
-        “man-in-the-middle” attack. If they match, continue to the next step.
+6.  Click **Next**
 
-        -   Choose **Yes** when you are ready to proceed**.**  
-            
+7.  Ensure the **“Block all public access**” check box is enabled, and
+    select **Next**
 
-    -   A window opens and you are connected to your instance.
+8.  On the final screen, select **Create bucket**
+
 
 <br/><br/>
 
-AWS Transfer for SFTP provides inbuilt user management for users to authenticate
-via SSH key pairs. Lets setup an SSH key pair that we will use to test
-authentication for our users. Run this command in your SSH terminal
+ Now let’s configure the IAM role assigned to your Linux EC2 instance so it has full access to the **Target-S3-Bucket** you created
 
-    cd ~
-    
-    ssh-keygen -P "" -f myAWSTransferSSHKey
-    
-    chmod 400 myAWSTransferSSHKey
+1.	From the AWS console, click **Services** at the top of the screen and type &
+    select **IAM**
 
-AWS Transfer stores data in S3 buckets we will be working with the bucket that
-we created earlier. Refer to your **Target-S3-Bucket** name in your workshop.txt
+2.  From left hand menu select **Roles**
+
+3.  In the search field enter the following **S3ROrole**
+
+4.  Click on the returned value  
+    
+<img src="images/3-1.png">
+
+
+5.  On the next screen click on the Permissions tab and expand the
+    **s3ROAccessPolicy located** under the Policy Name
+
+6.  Click on the **Edit Policy**
+
+7.  Click on the **JSON** tab
+
+8.  Replace the contents with the below via copy and paste, and **replace** the  **Target-S3-Bucket** value with your value
+
+		{
+		"Version": "2012-10-17",    
+		"Statement": [
+
+		{
+      		"Effect": "Allow",
+     		"Action": "s3:*",
+     		"Resource": ["arn:aws:s3:::Target-S3-Bucket/*"]
+		}
+        
+   		 ]
+		}
+
+
+<br/><br/>
+
+
+
+
+
+- Click on **Review policy** at the bottom of the screen
+
+
+
+- Click on **Save changes**
+
+<br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+<br/><br/>
+
+
+
+<br/><br/>
+
+**CREATE USER FOLDERS IN S3 BUCKET FOR AWS TRANSFER FOR SFTP **
+-----------------------------------
+
+The AWS Transfer for SFTP service stores data in S3 bucket. We will be working with the **Target-S3-Bucket** you created earlier and noted in your workpad.txt
 file:
 
 1.  From the AWS console, at the top of the screen, click **Services** and type & select **S3**
@@ -236,7 +284,60 @@ At the end of this task you should now have:
 
 
 <br/><br/>
+**CONNECT TO LINUX CLIENT AND SFTP SESSION**
+----------------
 
+We have a couple of pre-requisites that we need to ensure are in place. We will
+be using the linux host for this module
+
+Please connect to the Linux instance provided for this workshop 
+
+1.  In your Remote Desktop session, click on Windows icon located at the bottom
+    left of the screen
+
+2.  Type CMD and hit Enter to open a new command prompt
+
+3.  You should have stored your \*.pem key file on the desktop as per the
+    previous instructions. Enter the below commands in the command prompt
+
+		cd c:\users\administrator\desktop
+
+4.  Next enter the below command to SSH into the Linux server, remember to
+    replace the two values shown in **\< \>** with your values
+    
+    		ssh -i <your-key-file-name>.pem ec2-user@<Linux-Instance-Private-IP> 
+      
+    i.e. ssh –i stg316-key.pem ec2-user\@192.168.10.102
+
+5.  If this is the first time you have connected to this instance, a security
+    alert dialog box that asks whether you trust the host to which you are
+    connecting.
+
+    -   (Optional) Verify that the fingerprint in the security alert dialog box
+        matches the fingerprint that you previously obtained in (Optional) Get
+        the Instance Fingerprint
+        (<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html#connection-prereqs-fingerprint>).
+        If these fingerprints don’t match, someone might be attempting a
+        “man-in-the-middle” attack. If they match, continue to the next step.
+
+        -   Choose **Yes** when you are ready to proceed**.**  
+            
+
+    -   A window opens and you are connected to your instance.
+
+<br/><br/>
+
+AWS Transfer for SFTP provides inbuilt user management for users to authenticate
+via SSH key pairs. Lets setup an SSH key pair that we will use to test
+authentication for our users. Run this command in your SSH terminal
+
+    cd ~
+    
+    ssh-keygen -P "" -f myAWSTransferSSHKey
+    
+    chmod 400 myAWSTransferSSHKey
+
+<br/><br/>
 
 **CREATE SFTP USERS & TRANSFER DATA**
 -------------------------------------
