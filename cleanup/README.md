@@ -1,5 +1,5 @@
-CLEAN UP WORKSHOP
-=================
+CLEAN UP WORKSHOP RESOURCES
+============================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
@@ -178,5 +178,5 @@ Session which you will terminate as part of the clean up.
 
 10. Repeat steps 3-7
 
-**CLEANUP TASKS COMPLETED**
+**CLEAN UP TASKS COMPLETED**
 ----------------------------
