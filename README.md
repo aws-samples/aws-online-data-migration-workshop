@@ -52,7 +52,7 @@ on generating and downloading an EC2 Key Pair.
 **WORKSHOP MODULES**
 --------------------
 
-This workshop encompasses 5 hands-on workshop modules
+This workshop encompasses 5 hands-on workshop activity modules, and a final clean-up module
 
 **Module 1** - DEPLOY WORKSHOP RESOURCES
 
@@ -64,7 +64,7 @@ This workshop encompasses 5 hands-on workshop modules
 
 **Module 5** - DEPLOY AWS DATASYNC
 
-**Cleanup** - CLEAN-UP WORKSHOP RESOURCES
+**Module 6 ** - CLEAN-UP WORKSHOP RESOURCES
 
 
 <br>
