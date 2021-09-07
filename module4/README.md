@@ -34,7 +34,7 @@ setup in Module 2.
 1.  From the AWS console, click **Services** at the top of the screen and type &
     select **S3**
 
-2.  From the AWS S3 console select **+Create bucket**
+2.  From the AWS S3 console select **Create bucket**
 
 3.  Provide a unique bucket name for your **Target-S3-bucket**. Use the
     following naming convention “stg316-target-**xyz**” were **xyz** is
@@ -124,7 +124,7 @@ setup in Module 2.
 
 <br/><br/>
 
-**CREATE USER FOLDERS IN S3 BUCKET FOR AWS TRANSFER FOR SFTP **
+**CREATE USER FOLDERS IN S3 BUCKET FOR AWS TRANSFER FOR SFTP**
 -----------------------------------
 
 The AWS Transfer for SFTP service stores data in S3 bucket. We will be working with the **Target-S3-Bucket** you created earlier and noted in your workpad.txt
@@ -149,7 +149,7 @@ Add some user folders to your bucket for us to use later:
 6.  Click **Save**
 
 At the end of this task you should now have:  
-• Created an SSH key pair  
+• Created an S3 bucket that AWS Transfer for SFTP can use to store your data  
 • Added some folders to your S3 bucket to use as your users home destinations
 
 <br/><br/>
@@ -187,16 +187,15 @@ IAM role grants them access to*
 
 <br>
 	
-- Click review policy
+- Click **Next:Tags** then **Next:Review**
 - Provide the policy with a name such as **target-s3bucket-rw-policy**
-- Click on create policy
+- Click on **Create policy**
 	
 
 
 3.  From the left hand pane click on **Roles** and then click **Create Role**
 
-4.  We need to allow Transfer to assume the role we create. Under “Choose the
-    service that will use this role“ click on **Transfer**. (This creates a trust
+4.  We need to allow Transfer to assume the role we create. From the list of AWS services shown, click on **Transfer**. (This creates a trust
     relationship for the role)
 
 5.  Click **Next: Permissions**
@@ -224,8 +223,7 @@ Watch Logs.
 
 3.  Click **Create Role**
 
-4.  We need to allow Transfer to assume the role we create. Under “Choose the
-    service that will use this role“ click on **Transfer** This creates a trust
+4.  We need to allow Transfer to assume the role we create. From the list of AWS services shown, click on **Transfer** This creates a trust
     relationship for the role
 
 5.  Click **Next: Permissions**
@@ -254,43 +252,42 @@ At the end of this task you should now have:
 In order to enable SFTP for our users we need to create our AWS Transfer for
 SFTP server
 
-1.  From the AWS console, at the top of the screen, click **Services** and type & select **AWS Transfer for SFTP**
+1.  From the AWS console, at the top of the screen, click **Services** and type & select **AWS Transfer family**
 
 2.  Make sure your Region is set to: **us-west-2 Oregon**
 
 3.  Click **Create Server**
 
-4.  Select **Public** as we will be creating a public SFTP server
+4.  Select **SFTP** as your protocol, click **NEXT**
 
-5.  Select **Service Managed** to use the inbuilt user management capabilities
+5.  Select **Service Managed** click **Next**. On the next screen, select **Publically accessible** as your endpoint type, and click on **NEXT**
 
-6.  Under Logging Role select the logging role that you created in Task2. (e.g.
-    myAWSTransferLogRole)
+6.  Select **Amazon S3** for the domain type and click **Next**
 
-7.  Click **Create Server** to finish
+7.  In the CloudWatch logging section Click on **Choose an existing IAM role**, then select the role you created or CloudWatch logging (i.e. myAWSTransferLogRole) and click **Next** then **Create Server** to finish
 
-8.  Your server will be created and show as starting, When the server is ready
-    for use the status will change to Online
+8.  Your server will be created and show as starting. When the server is ready
+    for use the status will change to **Online** (this will take a few minutes)
 
-9.  Click on the new server
+9.  Click on the **Server ID** of the the AWS Transfer for SFTP instance
 
-10. Make a note of the endpoint address of your **server-id** for later (e.g.
-    s-1234567890123.server.transfer.ap-us-west-2.amazonaws.com) in your workshop
-    file as **Transfer-For-SFTP-Endpoint-IP-Address**
+10. Take note of the endpoint address shown for your **server-id** for later in your workshop
+    file as **Transfer-For-SFTP-Endpoint-IP-Address** (e.g.
+    s-1234567890123.server.transfer.ap-us-west-2.amazonaws.com) 
 
 At the end of this task you should now have:
 
-• Created your SFTP endopoint & noted down the name of your AWS Transfer for SFTP server endpoint
+• Created your AWS Transfer for SFTP endopoint & noted down the name of your AWS Transfer for SFTP server endpoint
 
 
 <br/><br/>
+
 **CONNECT TO LINUX CLIENT AND SFTP SESSION**
 ----------------
 
-We have a couple of pre-requisites that we need to ensure are in place. We will
-be using the linux host for this module
+In the following steps, we will use the linux instance provided for this workshop, and its SFTP client for the SFTP tasks
 
-Please connect to the Linux instance provided for this workshop 
+ 
 
 1.  In your Remote Desktop session, click on Windows icon located at the bottom
     left of the screen
@@ -345,14 +342,14 @@ authentication for our users. Run this command in your SSH terminal
 We now need to create SFTP users that will be allowed to log into the SFTP
 service and access files in S3. When we create the user we have to attach an IAM
 role that defines what data the user will be able to access in S3 (we defined
-this role and policy in Step 2 - myAWSTransferUserRole
+this role and policy in the previous steps as - myAWSTransferUserRole)
 
 AWS Transfer is responsible for authenticating the user based on their SSH key
 and then authorises them based on the attached IAM Role and policy
 
-1.  From the AWS console, at the top of the screen, click **Services** and type & select **AWS Transfer for SFTP**
+1.  From the AWS console, at the top of the screen, click **Services** and type & select **AWS Transfer Family**
 
-2.  Click on the SFTP server that you created in Task 3
+2.  Click on the SFTP server that you created
 
 3.  Under Users Click on **Add User**
 
@@ -363,35 +360,33 @@ and then authorises them based on the attached IAM Role and policy
 
 6.  Under **HomeDirectory** select your **Target-S3-Bucket**
 
-7.  Under **SSH public** keys you need to copy in the public part of your ssh
+7.  Under **SSH public keys** you need to copy in the public part of your ssh
     key that you created in the first part of this module
 
-    -   In your SSH session run the below command 
+    -   In your Linux instance SSH session, run the below command 
     				
 			cat myAWSTransferSSHKey.pub
 
-    -   Copy the output and paste it into the console
+    -   Copy the output and paste it into the **SSH public keys** field in the AWS Transfer family console
 
 8.  Click **Add**
 
 Now that you have a SFTP server and an SFTP user, you can try logging in:
 
-1.  Run the following command substituting your username (from Step 4) and
-    endpoint (from Step 3) 
+1.  Run the following command to connect to the AWS Transfer for SFTP endpoint, substituting with your AWS Transfer for SFTP endpoint (from prevoius step) 
     
-    		sftp -i ./myAWSTransferSSHKey   jess@s-xxxxx.server.transfer.us-west-2.amazonaws.com
+    		sftp -i ./myAWSTransferSSHKey   jess@<AWS-Transfer-for-SFTP-full-endpoint>
 
->   Note: you need to run this in the directory where your ssh key from step 1
->   is stored
+>   Note: you need to run this command in the directory where your ssh key is stored
 
 1.  You are now in the SFTP shell and mapped to the S3 bucket. You can navigate
-    this S3 bucket using ls and cd \<folder\> operations, notice how the access
+    this S3 bucket using ls, and also use pwd, and also cd \<folder\> operations. Notice how the access
     level to bucket data is dependent on the user’s mapped IAM role
 
 2.  You can attach the same IAM role to multiple users as required (or use
-    different ones for different access requirments) by repeating Step 4
+    different ones for different access requirments) by reperating the previous steps
 
-3.  Exit back to the linux host by tying the exit command
+3.  Exit out of the SFTP client back to the linux host by tying the exit command
 
 4.  Create a couple of files in the local linux directory:
 
@@ -403,13 +398,12 @@ Now that you have a SFTP server and an SFTP user, you can try logging in:
 
 5.  Upload these new files:
 
-    -   Run the following command substituting your username (from Step 4) and
-        endpoint (from Step 3) 
+    -   Run the following command to connect to the AWS Transfer for SFTP endpoint, substituting with your AWS Transfer for SFTP endpoint  
 	
-			sftp -i ./myAWSTransferSSHKey jess@s-xxxxx.server.transfer.us-west-2.amazonaws.com
+			sftp -i ./myAWSTransferSSHKey jess@<AWS-Transfer-for-SFTP-full-endpoint>
 
-    -   change directory to one of your user folders by running cd
-        directoryname (e.g. cd jess)
+    -   change directory to one of your user folders by running "cd
+        directoryname" (e.g. cd jess)
 
     -   Upload your files with the following command
 
@@ -419,12 +413,12 @@ Now that you have a SFTP server and an SFTP user, you can try logging in:
 
 6.  Close the SFTP connection with the exit command
 
-7.  You can view the AWS Transfer logs in the Cloud Watch Logs Console
+7.  You can view the AWS Transfer logs in the CloudWatch Logs Console
 
     -   Navigate back to the Transfer
         console <https://console.aws.amazon.com/transfer/home>
 
-    -   Click on the SFTP server that you created in Task 3
+    -   Click on the SFTP server that you created
 
     -   Click on the View Logs button
 
