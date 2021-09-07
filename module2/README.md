@@ -55,7 +55,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 1.  From the AWS console, click **Services** at the top of the screen and type &
     select **S3**
 
-2.  From the AWS S3 console select **+Create bucket**
+2.  From the AWS S3 console select **Create bucket**
 
 3.  Provide a unique bucket name for your **Source-S3-bucket**. Use the
     following naming convention “stg316-source-**xyz**” were **xyz** is
@@ -82,10 +82,10 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 1.  From the AWS console, at the top of the screen, click **Services** and type
     & select **Storage Gateway**
 
-2.  Click the **Get started** button (Appears if it’s the first time you have
+2.  Click the **Create gateway** button (Appears if it’s the first time you have
     used the service).
 
-    -   Select **File Gateway** from the list and select **Next**
+    -   Select **Amazon S3 File Gateway** from the list and select **Next**
 
     -   Select **Amazon EC2** & Click on the **Launch Instance** Icon
 
@@ -107,9 +107,9 @@ This bucket will be used to back the AWS File Gateway that you will deploy
         -   Click on **Add New Volume** (to add a second volume to the File
             Gateway to use as your cache drive) with the following values
 
-            -   Size : **150GB**
+            -   Size : **200GB**
 
-            -   Volume Type : **Provisioned IOPS SSD**
+            -   Volume Type : **GP3 - General Purpose SSD (GP3)**
 
             -   IOPS : **7500**
 
@@ -146,8 +146,8 @@ This bucket will be used to back the AWS File Gateway that you will deploy
             this EC2 instance shows “**2⁄2 checks passed**“ before proceeding to
             the next step (this may take a few minutes)
 
-        -   In the bottom window pane, select the **Description** tab, and take
-            note of the **private IP** Address for the File Gateway instance
+        -   In the bottom window pane, select the **Details** tab, and take
+            note of the **private IPv4** address for the File Gateway instance
             into your workshop.txt file for the value of
             **File-Gateway-Instance-Private-IP=**.
 
