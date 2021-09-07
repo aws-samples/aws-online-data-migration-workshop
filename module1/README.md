@@ -185,7 +185,7 @@ Manager**
     -   In the right hand pane, select the box next to “**Workshop Windows
         instance 1**”, then right click and select **Connect**
 
-    -   Click on **Download Remote Desktop File**
+    -   Click on The RDP Client tab, then **Download Remote Desktop File**
 
     -   Open the downloaded Remote Desktop File and select Connect at the prompt
 
@@ -200,7 +200,7 @@ Manager**
     where you stored the **\*.pem** key file earlier. **Right click** &
     select **copy** on the **\*.pem** file, and then go into your Remote Desktop
     Session (Windows EC2 instance) and **right click** on a free space on the
-    desktop screen and select **paste** to copy the **\*.pem** key file across.
+    **Desktop screen** and select **paste** to copy the **\*.pem** key file across.
 
 <br/><br/>
 
