@@ -192,7 +192,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 
 -   Click on **Save and continue**. Then on the **Configure logging** page leave the default settings, and Click **Save and continue**
 
--   Click **Finish**. Wait until see a **Status** of Online for your File Gateway before you continue to the next step.
+-   Click **Finish**. This will take a few minutes, please wait until see a **Status** of **Running** for your File Gateway before you continue to the next step (you may need to refresh the screen).
 
 <br/><br/>
 
