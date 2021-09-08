@@ -11,18 +11,17 @@ Errors or corrections? Contact akbariw@amazon.com.
 OBJECTIVE OF WORKSHOP
 --------------------------------
 
-The prospect of moving data workloads to the cloud can be daunting, so can
+The prospect of ingesting or moving data to the cloud can be daunting, so can
 trying to make sense of the array of tools, protocols, and mechanisms available
-to move data into AWS.
+to ingest data into AWS, whether your building a data lake, migrating application data or simply archiving data.
 
-In this workshop we will look at simple & repeatable design patterns you can use to simplify your data migration journey into AWS. You will get hands-on experience in deploying, configuring and
+In this workshop we will look at simple & repeatable design patterns you can use to simplify your data ingest and migration journey into AWS. You will get hands-on experience in deploying, configuring and
 transferring data at scale using some of the available AWS online & hybrid data transfer services. 
 
-In this lab we have a scenario where you will copy 10,000 small files to Amazon S3,
-using different methods such as AWS S3 copy command script, AWS File Gateway, and also
-AWS DataSync. Then visualize the benefits that AWS DataSync can provide in not only being able to simplify and accelerate the data transfer, but being able to preserve file metadata for transferred data from your NFS share. You will also learn how you can seamlessly access data your transferred data which is stored in Amazon S3 as objects, back in your environment using standard file shares. Lastly you will get hands on experience with AWS Transfer for SFTP and using it as a transfer mechanism.
+In this lab we have ifferent scenarios such as, ingesting application streaming data into an Amazon S3 bucket using Amazon Kinesis Data Firehose, or where you will copy 10,000 small files to an S3 bucket,using different methods such as AWS S3 copy script, S3 File Gateway, and also
+AWS DataSync. You will also get hands-on with AWS Transfer for SFTP in using the File Transfer Protocol to ingest data an S3 bucket. Then visualize the benefits that each of the AWS service can provide, to simplify and accelerate data transfer, and also preserve file metadata using S3 File Gateway and AWS Datasync, for data transferred from your NFS share. You will also learn how you can seamlessly access your transferred data which is stored in Amazon S3 as objects, back in your environment using standard file shares. 
 
-The image below illustrates at a high level the different 3 AWS Services that we will use to get the workshop data, into Amazon S3 in a simple, repeatable and efficient manner.
+The image below illustrates at a high level the different 4 AWS Services that you will use to get the workshop data into a common Amazon S3 bucket, in a simple, repeatable and efficient manner.
 
 <br>
 
