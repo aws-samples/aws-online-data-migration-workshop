@@ -26,7 +26,7 @@ The image below illustrates at a high level the different 3 AWS Services that we
 
 <br>
 
-<img src="images/0-0.PNG">
+<img src="images/0-1.PNG">
 
 <br/><br/>
 
