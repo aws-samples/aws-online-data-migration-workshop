@@ -253,6 +253,6 @@ the workshop.
 
 <br/>
 
-CLICK [here to go to the next module, and Deploy S3 FILE GATEWAY](/filegateway/README.md)
+CLICK [here to go to the S3 FILE GATEWAY module](/filegateway/README.md)
 -------------------
 
