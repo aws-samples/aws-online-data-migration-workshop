@@ -179,5 +179,9 @@ Congratulations! You are now ingesting your first events into your Amazon S3 ba
 -------------------
 
 
-**Click** [here to go to the CLEAN-UP WORKSHOP RESOURCES module](/cleanup/README.md)
+
+CLICK [here to go to the AWS DATASYNC module](/datasync/README.md)
+-------------------
+
+
 
