@@ -13,7 +13,7 @@ OBJECTIVE OF WORKSHOP
 
 The prospect of ingesting or moving data to the cloud can seem daunting, so can
 trying to make sense of the array of tools, protocols, and mechanisms available
-to ingest or transfer data into AWS, whether your building a data lake, migrating application data or simply archiving data.In this workshop we will look at simple & repeatable design patterns you can use to simplify your data ingest and migration journey into AWS. You will get hands-on experience in deploying, configuring and transferring data using some of the available AWS online & hybrid data transfer services. 
+to ingest or transfer data into AWS, whether your building a data lake, migrating application data or simply archiving data. In this workshop we will look at simple & repeatable design patterns you can use to simplify your data ingest and migration journey into AWS. You will get hands-on experience in deploying, configuring and transferring data using some of the available AWS online & hybrid data transfer services. 
 
 In this lab we cover different scenarios such as:
 
