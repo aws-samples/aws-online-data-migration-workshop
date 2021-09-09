@@ -404,6 +404,6 @@ bucket.
 -------------------
 
 
-CLICK [here to go to the next module, and deploy AWS TRANSFER FOR SFTP](/transfersftp/README.md)
+CLICK [here to go to the AWS TRANSFER FOR SFTP module](/transfersftp/README.md)
 -------------------
 
