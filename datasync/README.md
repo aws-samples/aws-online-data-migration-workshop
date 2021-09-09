@@ -558,6 +558,7 @@ knowledge or performance tuning to enable faster data transfers.
 **END OF MODULE - AWS DATASYNC**
 -------------------
 
+CLICK [here to go to the CLEAN-UP module](/cleanup/README.md)
+-------------------
 
-**Click** [here to go to the CLEAN-UP WORKSHOP RESOURCES module](/cleanup/README.md)
 
