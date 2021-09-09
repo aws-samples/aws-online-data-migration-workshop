@@ -11,16 +11,23 @@ Errors or corrections? Contact akbariw@amazon.com.
 OBJECTIVE OF WORKSHOP
 --------------------------------
 
-The prospect of ingesting or moving data to the cloud can be daunting, so can
+The prospect of ingesting or moving data to the cloud can seem daunting, so can
 trying to make sense of the array of tools, protocols, and mechanisms available
-to ingest data into AWS, whether your building a data lake, migrating application data or simply archiving data.
+to ingest or transfer data into AWS, whether your building a data lake, migrating application data or simply archiving data.
 
-In this workshop we will look at simple & repeatable design patterns you can use to simplify your data ingest and migration journey into AWS. You will get hands-on experience in deploying, configuring and
-transferring data at scale using some of the available AWS online & hybrid data transfer services. 
+In this workshop we will look at simple & repeatable design patterns you can use to simplify your data ingest and migration journey into AWS. You will get hands-on experience in deploying, configuring and transferring data using some of the available AWS online & hybrid data transfer services. 
 
-In this lab we have ifferent scenarios such as, ingesting application streaming data into an Amazon S3 bucket using Amazon Kinesis Data Firehose, or where you will copy 10,000 small files to an S3 bucket,using different methods such as AWS S3 copy script, S3 File Gateway, and also
-AWS DataSync. You will also get hands-on with AWS Transfer for SFTP in using the File Transfer Protocol to ingest data an S3 bucket. Then visualize the benefits that each of the AWS service can provide, to simplify and accelerate data transfer, and also preserve file metadata using S3 File Gateway and AWS Datasync, for data transferred from your NFS share. You will also learn how you can seamlessly access your transferred data which is stored in Amazon S3 as objects, back in your environment using standard file shares. 
+In this lab we cover different scenarios such as:
 
+   -   **Ingesting streaming data to Amazon S3**:  You will ingest streaming app data into an S3 bucket using Amazon Kinesis Data Firehose
+    
+   -   **Ingesting unstructured file data into Amazon S3 using traditional file shares**: You will ingest 10,000 files into an S3 bucket,using different methods such as a S3 copy script, S3 File Gateway, and also AWS DataSync and see the difference between each approach from a performance perspective. You will also see how S3 File Gateway and AWS DataSync can also preserve file metadata, for the file data they transfer to an S3 bucket. 
+   
+   -    **Ingesting data using the SFTP protocol into Amazon S3**: You will deploy and use AWS Transfer for SFTP to ingest and access data in an S3 bucket using the SFTP protocol. You will also learn how you can seamlessly access and share data stored in your S3 bucket using file shares, through the S3 File Gateway. 
+    
+The outcome of this workshop is to help you visualize the benefits that each of the AWS service can provide to simplify and accelerate your data ingest and data transfer journey. 
+    
+ 
 The image below illustrates at a high level the different 4 AWS Services that you will use to get the workshop data into a common Amazon S3 bucket, in a simple, repeatable and efficient manner.
 
 <br>
