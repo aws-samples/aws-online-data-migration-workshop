@@ -584,5 +584,9 @@ by AWS Transfer for SFTP service through the use of the AWS File Gateway.
 **END OF MODULE - AWS TRANSFER FOR SFTP**
 -------------------
 
+CLICK [here to go to the AMAZON KINESIS DATA FIREHOSE module](/kinesis/README.md)
+-------------------
 
-**Click** [here to go to the AMAZON KINESIS DATA FIREHOSE module](/kinesis/README.md)
+
+
+
