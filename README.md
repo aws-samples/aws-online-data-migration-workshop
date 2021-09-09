@@ -73,4 +73,7 @@ This workshop encompasses 5 hands-on workshop activity modules, and a final clea
 
 <br>
 
-**Click** [here to get started with the first module to DEPLOY WORKSHOP RESOURCES](/module1/README.md)
+
+CLICK [here to get started with the first module of the workshop](/module1/README.md)
+-------------------
+
