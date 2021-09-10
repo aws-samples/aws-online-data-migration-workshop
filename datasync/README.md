@@ -351,48 +351,46 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
 Lets view the data copied across from the local NFS share to our target Amazon S3 bucket
 
-1.  From the AWS console, click **Services** at the top of the screen type &
+1.  From the AWS console, using the search bar type &
     select **S3**
 
 -   Click your **Target-S3-bucket** name
 
     -   Check the box next to the folder labelled **s3-cli-copy**
 
-        -   Click on **Actions**→ **Get total size**
+        -   Click on **Actions**→ **Calculate total size**
 
         -   Note the total objects copied to your S3 bucket via the S3 copy
             script
 
-        -   Click **Cancel** when done viewing.
+        -   Click **Close** when done viewing.
 
     -   Check the box next to the folder labelled **datasync-copy**
 
-        -   Click on **Actions**→ **Get total size**
+        -   Click on **Actions**→ ***Calculate total size**
 
         -   Note the total objects copied to your S3 bucket via DataSync
 
-        -   Click **Cancel** when done viewing.
+        -   Click **Close** when done viewing.
 
 -   Click on the folder name **datasync-copy** to go into the directory/prefix
 
     -   Click on **Appdata**
 
-    -   Click on the box to the left of **saturn.gif**
+    -   Click on the **saturn.gif** file
 
-    -   From the right hand pop-up window, under the properties section click
-        on **Metadata**
+    -   In the next windo, scroll to the section on **Metadata**
 
     -   This will show you the metadata that DataSync added to object that it
-        copied across to S3. In the next section we view the value of this
+        copied across to S3, if you look closely you will see it is storing the file permissions, timestamp and ownership details as metadata. In the next section we view the value of this
         metadata to help avoid re-factoring applications that access files based
         on user/group permissions.
 
--   Click **Cancel** to continue
 
 <br/><br/>
 
 
-**COMPARE METADATA: SCRIPT VS DATASYNC**<br><br>
+**COMPARE METADATA BETWEEN DATA COPIED BY SCRIPT VS DATASYNC**<br><br>
 ------------------------------------------------
 
 <img src="images/3-8.png">
@@ -400,105 +398,24 @@ Lets view the data copied across from the local NFS share to our target Amazon S
 
 <br>
 
-Now let’s create a File Gateway NFS share and point it to the target Amazon S3 bucket
-that we  transferred data to, so that we can easily visualise the data from the view of a NFS file share. Then we will compare the file metadata
-details that were copied across using the two different methods.
-
-<br/><br/>
-
-**Create NFS Share**
-
-1.  From the AWS console, at the top of the screen, click **Services** and type
-    & select **Storage Gateway**
-
-2.  On the left hand pane of the AWS Storage Gateway console, select **File
-    shares**
-
-3.  Select **Create file Share** from the top menu
-
-4.  Enter the name of your **Target-S3-bucket** in the **Amazon S3 bucket
-    name** field.
-
-5.  Select **Network File System (NFS)**
-
-6.  Select the **File Gateway** you just deployed (STG316-filegateway)
-
-7.  Click **Next**
-
-8.  Leave all defaults and select **Next**
-
-9.  On the next page, click the **Edit** value next to **Allowed clients**
-
-    -   Remove the existing **0.0.0.0/0** value and replace it
-        with **192.168.0.0/16**
-
-    -   Then click the **Close** button to the on the right of the screen for
-        Allowed clients
-
-10. Click the **Edit** value next to **Mount options**
-
-    -   Select “**No root squash**” for Squash level
-
-    -   Leave export as **read-write**
-
-    -   Then click the **Close** button to the on the right of the screen for
-        Mount options
-
-11. Scroll to the bottom of the page and click **Create file share**
-
-12. You will be taken to the **File share** page. Click on the **refresh
-    Icon** on the top right hand corner, until the status of the file share
-    changes from **Creating** to **Available**, before proceeding to the next
-    steps.
-
-13. On the same File Share page, check the box next to the name of your **File
-    share ID**
-
-14. In the details pane below, copy the command for mounting **On Linux** in
-    to your **workshop.txt** for the value of
-    **Second-NFS-FileShare-mount-command**
 
 <br/><br/>
 
 
-**Mount NFS Share**
-
-1.  Navigate back to your SSH session and run the following command
-
-		sudo su
-
-2.  Next, copy the NFS mount command you noted down in your workshop.txt
-    for **Second-NFS-FileShare-mount-command**, and simply replace
-    the **[MountPath]** value at the end with the value of
-     **/nfs_target** and enter the entire command into the SSH session, and
-    hit Enter
-
-    -   *i.e. mount -t nfs -o nolock,hard 192.168.10.12:/stg316-target-citizenj
-        /nfs_target*
-
-
-3.  Run the below command to verify you have the NFS mount points of
-    **/nfs_target** showing in the list
-
-		df -h
-
-
-
-<br/><br/>
 
 **COMPARE TRANSFER METHODS: SCRIPT VS DATASYNC**
 
-Now let’s view the files that the S3 copy script & DataSync agent copied across
-from a file share point of view to see how the metadata translates to the stored
-files, and what attributes were preserved
+Now let’s view the files that the S3 copy script & DataSync agent copied across to your target Amazon S3 bucket. We have already mapped a File Gateway, file share to your target S3 bucket, usign the /nfs_target mount point.
+So lets use that file share access to our S3 data to see how the metadata translates to the stored
+files, and what attributes were preserved by the s3 copy script and DataSync.
 
-1.  From the AWS console, at the top of the screen, click **Services** and type
+1.  From the AWS console, in the top search bar, type
     & select **Storage Gateway**
 
     -   From the left hand pane select **File shares**
 
     -   Check the box next to the file share ID which shows
-        your **Target-S3-Bucket** name in the S3 Bucket column
+        your **Target-S3-Bucket** name in the S3 location column
 
     -   From the top menu select **Action**→ **Refresh Cache** then
         select **Start**
