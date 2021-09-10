@@ -1,4 +1,4 @@
-ONLINE DATA INGEST AND MIGRATION OPTIONS TO AMAZON S3<br>
+ONLINE DATA INGEST AND TRANSFER OPTIONS TO AMAZON S3<br>
 =======================================================================
 
 Copyright Amazon Web Services, Inc. and its affiliates.  All rights reserved. This sample code is made available under the MIT-0 license. See the LICENSE file.
