@@ -56,7 +56,7 @@ on generating and downloading an EC2 Key Pair.
 **WORKSHOP MODULES**
 --------------------
 
-This workshop encompasses 5 hands-on workshop activity modules, and a final clean-up module
+This lab workshop encompasses hands-on modules which NEED TO COMPLETED AS PER THE ORDER below, and a final clean-up module
 
 **Module 1** - DEPLOY WORKSHOP RESOURCES
 
