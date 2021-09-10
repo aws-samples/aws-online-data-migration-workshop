@@ -55,7 +55,7 @@ Now lets migrate 10,000 small files (hosted on the NFS server), using a copy scr
 
 
 
-- Update the **<Target-S3-Bucket>** in the script with
+- Update the **< Target-S3-Bucket >** in the script with
             the **Target-S3-Bucket** name you created in the previous steps
 
 
@@ -89,6 +89,8 @@ Now lets migrate 10,000 small files (hosted on the NFS server), using a copy scr
     - Switch back to your **first** SSH session and run the below commands to start
     the script to copy data from **/nfs_source** to your **Target-S3-Bucket**
 
+			sudo su
+			
 			cd /scripts/ds-demo
 
 			./start-transfer.sh
@@ -139,7 +141,6 @@ Now lets migrate the same 10,000 small files (hosted on the NFS server), this ti
 **DEPLOY AWS DATASYNC AGENT**
 -----------------------------
 
-
 We are going to deploy the AWS DataSync agent within AWS as an EC2 instance in
 the absence of an on-premise environment (where you could deploy it as a VMware
 appliance). The AWS DataSync agent will then read directly from the NFS server
@@ -147,7 +148,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
 1.  Using the Chrome icon on the Windows EC2 instance desktop, log into your AWS Account using Chrome and perform the following tasks to update the IAM role we are using for the Windows server EC2 instance
 
-    -   From the Chrome session, in the AWS console, at the top of the screen, click Services and type & select **IAM**
+    -   Using a Chrome session log into the AWS console. From the top search bar of the AWS console, type and select **IAM**
     -   Select **Roles** from the left hand pane
     -   In the search field enter **WindowsInstanceRole**, and click on the name that it returns
     -   In the Permissions tab on the next screen, click on the **Attach policies** blue button
@@ -156,32 +157,32 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
     -   Click on **Attach Policy**
 
 
-2.  From the Chrome session, in the AWS console, at the top of the screen, click **Services** and type & select **DataSync**
+2.  From the Chrome session navigate to the AWS console. From the top search bar of the AWS console, type and selec **DataSync**
 
     -   Select **Get Started**
 
-    -   In the Create agent page, under the **Amazon EC2** section click on
+    -   In the Deploy agent page hypervisor dropdown menu, select **Amazon EC2** section click on
         the **Learn more**  icon
 
 	-   Take note of the instructions for deploying the DataSync agent as an EC2 instance, which i have summarized for you with the follow steps. 
-	-   Open a Windows Command Promt (CMD), copy and paste the below command, where you replace the value of **$region** with your value (e.g. us-west-2) then run it, where it will return the value of the ami-id to use for your EC2 instance.
+	-   Open a Windows Command Promt (CMD) on your Windows server instance. Copy and paste the below command into the command prompot, and run it (note we are using the us-west-2 region in our lab). It will return the value of the ami-id we need to use for our EC2 instance for the DataSync agent.
 
-	`aws ssm get-parameter --name /aws/service/datasync/ami --region $region`
+	`aws ssm get-parameter --name /aws/service/datasync/ami --region us-west-2`
 
 	- From the output of the above command copy the "ami" value shown for the item of **"Value"** into your workpad file as ami-id to use  in the next step (e.g. ami-0b703a238b1fc4df5)
 	
 	**Note** : If you are unfamiliar with the region name syntax, you can use this command to list out the RegionName's (aws ec2 describe-regions --output table)
 
-	- Next copy and paste the below command into your workshop notepad file and replace the **source-file-system-region** with your value (i.e. us-west-2) and also replace **ami-id** with the value you noted from above then, copy and paste that whole URL into a new tab in your Chrome Internet browser. 
+	- Next copy and paste the below command into your workshop notepad file and replace **ami-id** with the value you noted from above. Then copy and paste that whole URL into a new tab in your Chrome Internet browser. 
 	
-	`https://console.aws.amazon.com/ec2/v2/home?region=source-file-system-region#LaunchInstanceWizard:ami=ami-id`
+	`https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-id`
 	
 	`e.g. https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#LaunchInstanceWizard:ami=ami-0b703a238b1fc4df5`
 
-	This will now use this AMI image for our DataSync agent when we deploy it on our Amazon EC2 instance.
+	This will now select the AMI image that we cna use for the DataSync agent.
 	
 
-    -   Ok, now lets go ahead and configure our EC2 instance specifications
+    -   Ok, now lets go ahead and configure our EC2 instance that we will use for our DataSync agent
 
         -   In the next page, select the box next to **r5.xlarge**
 
@@ -222,32 +223,34 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
             Instances**  
             
 
-    -   From the AWS console, click **Services** and type & select **EC2**
+    -   From the AWS console and its search bar, type & select **EC2**
 
         -   From the left hand menu, select **Instances**
 
         -   In the right hand pane, select the box next to “**STG316-DataSync**”
 
-        -   From the bottom window pane, select the **Description** tab, and
-            take note of the **private IP** address into your workshop.txt file
+        -   From the bottom window pane, select the **Details** tab, and
+            copy the **private IP** address that is shown, into your workshop.txt file
             for **DataSync-Instance-Private-IP**
 
             -   Ensure the “**Status Check**” column for this EC2 instance
                 shows **“2/2 checks passed“** before proceeding to the next
                 step.
 
-        -   From the AWS console, at the top of the screen,
-            click **Services** and type & select **DataSync**
+        -   From the AWS console using its search bar at the top of the screen,
+            type & select **DataSync**
 
             -   Select **Get Started**
 
             -   Enter the following values on the page
 
-                -   **Service endpoint:** Select Public service endpoints in US
+                -   **Deploy agent** type: Amazon EC2
+
+                -   **Service endpoint:** Public service endpoints in US
                     West (Oregon)
 
-                -   **Activation key:** Enter the Private IP address you noted
-                    down in the previous step for **DataSync-Instance-Private-IP**
+                -   **Activation key:** Select **Automatically get the activiation key**, then enter the Private IP address you copied
+                    in the previous step for **DataSync-Instance-Private-IP** into the http:// field.
 
                 -   Select **Get Key**
 
@@ -258,8 +261,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
 		<img src="images/3-5.png" width="600">
 
-	-   When the create agent process is complete click on the **blue DataSync**
-  	  link at the top left of the screen to continue with the next step of
+	-   When the create agent process is complete click on the **blue DataSync** hyperlink at the top left of the screen to continue with the next step of
   	  creating a task
 
 	<img src="images/3-6.png">
