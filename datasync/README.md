@@ -271,7 +271,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 **TRANSFER DATA USING DATASYNC** 
 ---------------------------------
 
-1.  Click on the **Create task** from the top right hand side of the window
+1.  Expand the right hand menu, click on **Tasks**, then click on the **Create task** in the right hand side of the window
 
     -   Select **Create a new location** from the source locations options
 
@@ -292,9 +292,9 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
     -   **S3 bucket:** **Target-S3-Bucket**
 
-    -   **S3 storage class:** select Standard
+    -   **S3 storage class:**  Standard
 
-    -   **Folder:** Type“**datasync-copy**“
+    -   **Folder:** Enter in this value “**datasync-copy**“
 
     -   **IAM role:**: click on the **Autogenerate** button
 
@@ -306,11 +306,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
     -   **Copy file metadata:** Ensure the following items are all checked
 
-        -   Copy ownership
-
-        -   Copy permissions
-
-        -   Copy time stamps
+    -   **Task logging**: Do not send logs to CloudWatch
 
     -   Leave all other options as such as default & select **Next**
 
@@ -321,7 +317,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 
 5.  Click on the **Start** button
 
-6.  Leave all options as they are (don’t override any) and click on **Start**
+6.   Select Start with defaults
 
 7.  At the top of the screen click on the **See execution details** button to
     view the progress of the transfer
@@ -329,7 +325,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 8.  The task will go through a few phases, where it will first compare the files
     in the source location with what’s stored on the target before sending the new or updated files. In this lab there
     are approx 10,000 files to be transferred so the launching phase may take a
-    moment or two before switching to the transferring state.
+    moment before switching to the transferring state.
 
     -   While it is going through these states, navigate through the
         performance, locations, options, filters and task logging tabs in the
@@ -339,7 +335,7 @@ appliance). The AWS DataSync agent will then read directly from the NFS server
 9.  When the **Execution status** show a status of **Success**, your data
     transfer has completed.
 
-    -   Take note of the **Duration** time taken for the data transfer, and also
+    -   Take note of the **Duration** time (shown in seconds) taken for the data transfer, and also
         of the **Data throughput** values, how do they compare with the values
         you achieved using the S3 copy script in the previous section?
 
