@@ -63,7 +63,9 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 **DEPLOY VPC ENVIRONMENT**
 --------------------------
 
-**Note:** Make sure you set your region to **us-west-2 (Oregon)**
+**NOTE:** Make sure you set your region to **us-west-2 (Oregon)**
+
+**NOTE:** If you are using an AWS provided Event Engine lab session **SKIP** this **DEPLOY VPC ENVIRONMENT** section, and go straight to the next section which is **DEPLOY WORKSHOP RESOURCES**.
 
 1.  From the AWS console on your local laptop/workstation,
     click **Services** and type & select **CloudFormation**
@@ -85,8 +87,6 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 
 4.  Leave all other values as unchanged  
     
-<img src="images/1-3.png">    
-
 5.  Click on **Next** to continue
 
 6.  On the next page scroll to the bottom and click on **Next** to continue
@@ -99,6 +99,12 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
     then progress to the next steps
 
 <img src="images/1-4.png">
+
+<br/><br/>
+
+
+<br/><br/>
+
 
 <br/><br/>
 
@@ -144,19 +150,16 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 6.  Scroll to the bottom of the next screen, check the **CloudFormation
     acknowledgement** box and click on **Create stack**
 
-<img src="images/1-6.png">
-
 
 -  You will be taken to the CloudFormation stack status page
 
 
 
 -  Click on the **refresh** icon as
-    highlighted in **RED** until the status value changes
+    until the status value changes
     to **CREATE_COMPLETE** (this may take a few minutes) as shown below,
     you can then progress to the next steps
 
-<img src="images/1-7.png">
 
 <br/><br/>
 
