@@ -99,7 +99,7 @@ To run the metric generator, we use Cloud9, which is an online development envir
     -   Click **Next**, and then **Create environment**
     -   It will take a few minutes for your environment to be provisioned.Once ready, your IDE will open a welcome screen. Below that, you should see a terminal prompt (red box shown) where you will copy and paste commands for this lab module. 	
 
-<img src="images/kinesis-3.png">
+<img src="images/kinesis-3-3.png">
 
 Lets now generate some streaming data
 
