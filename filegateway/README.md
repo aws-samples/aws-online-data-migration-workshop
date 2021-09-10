@@ -1,5 +1,5 @@
-DEPLOY S3 FILE GATEWAY (AWS STORAGE GATEWAY)
-==========================
+S3 FILE GATEWAY (AWS STORAGE GATEWAY) - FILE DATA MODULE
+=================================================================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
