@@ -193,8 +193,7 @@ the previous steps**.
 **SUMMARY**
 -----------
 
-In this module you deployed your base VPC, subnets, security groups, Amazon
-EC2 compute instances and the SSH key that that you will use for the remainder of
+In this module you deployed your Amazon EC2 compute instances and the SSH key that that you will use for the remainder of
 the workshop. 
 
 
