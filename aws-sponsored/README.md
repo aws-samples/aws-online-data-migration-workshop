@@ -10,100 +10,43 @@ Errors or corrections? Contact akbariw@amazon.com.
 **OBJECTIVE**
 ----------------
 
-In this module you will firstly deploy the base AWS VPC network environment via
-the first CloudFormation template, then using the second CloudFormation template
-deploy the workshop resources into the **US-WEST-2 (Oregon)** region which
-contains the following:
+In this module you will deploy the below workshop resources into the **US-WEST-2 (Oregon)** region:
 
--   1 x Windows instance (used as the access machine for the workshop)
+-   1 x Windows instance (used as the lab access machine for the entire workshop)
 
--   1 x Linux Instance (used to perform the data migrations)
+-   1 x Linux Instance (used to perform the data transfers)
 <br/><br/>
 
 **LOG INTO AWS CONSOLE**
 ------------------------
 
-1.  From your local workstation, open a web browser to the AWS console and login with your AWS Account
-    URL <https://console.aws.amazon.com>  
+1.  From your local workstation, open a web browser to the lab access URL provided for the workshop
+    -   Click on the **Launch** button
 
+    -   Click on the **Click here to access** link
 
-<br/><br/>
-**CREATE KEY PAIR**
--------------------
+    -   You will be taken to the Event Engine screen. **Important**- copy down down the **Event Engine Hash** value shown (red box) into a notepad file (this is only shown once). You will need this hash value to access your temporary AWS account during the  workshop. 
 
-1.  In the AWS Console window that you opened, in the top right hand corner,
-    next to your account name, click on the drop down and change your region
-    to **us-west-2 (Oregon)**
+    <img src="images/ee-1.PNG">
 
-<img src="images/1-1.png">
+    -   Once you have copied the has value, click on **Accept Terms & Login**
 
-1.  From the top left of the screen click **Services** and type & select **EC2**
+    -   Click on **Email One-Time Password**
 
-2.  From the left hand window pane, navigate to **Network & Security**, click on **Key Pairs** and from the right hand window
-    select **Create Key Pairs** from the top menu
+    -   You will then be takent o the Event Engine Team dashboard
 
-    -   Enter the Key pair name of : **stg316-key**
+    -   Copy down the **Event Engine URL** shown in the web browswer (i.e. https://dashboard.eventengine.run/dashboard). You will use this URL and the hash value you copied down to access your temporary AWS Account and AWS console during the entire lab. 
 
-    -   Select **PEM** file format
+    -   Click on **SSH Key**, then click **Download Key**, then click **OK**. You will need this SSH key during the lab
 
-    -   Select **Create**
+    -   It will then download a ".pem" file to your users downloads folder (or a location you have specified). If you are using Google Chrome, the downloaded file will also be shown at the bottom of the screen for reference.
 
-3.  It will then download a **.pem** file to your users **downloads** folder (or
-    a location you have specified). If you are using Google Chrome, the
-    downloaded file will also be shown at the bottom of the screen for
-    reference.
+    -   Now that you have taken note of the items you need to access your temporary account, lets start the workshop
 
-<br/>
+    -   Click on **AWS Console**
 
->   **Note:** Take note of the location of this **.pem** file you downloaded, as you will
-copy this key to your deployed Amazon Windows EC2 instance, once you have deployed it as part of the subsequent instructions
-
-<br/><br/>
-
-**DEPLOY VPC ENVIRONMENT**
---------------------------
-
-**NOTE:** Make sure you set your region to **us-west-2 (Oregon)**
-
-**NOTE:** If you are using an AWS provided Event Engine lab session **SKIP** this **DEPLOY VPC ENVIRONMENT** section, and go straight to the next section which is **DEPLOY WORKSHOP RESOURCES**.
-
-1.  From the AWS console on your local laptop/workstation,
-    click **Services** and type & select **CloudFormation**
-
-2.  In the top right hand corner, next to your account name, click on the drop
-    down and change your region to **us-west-2 (Oregon)**
-    <img src="images/1-1.png">
-
-    -  Now in the CloudFormation page click on **Create stack**
-
-    -  Click on **With new resources** from the drop down
-
-    -   Under Amazon S3 URL copy and paste this URL  
-    <https://ee-assets-prod-us-east-1.s3.amazonaws.com/modules/2343f58921ff4b66b136904c1265d64b/v1/part-1-deploy-vpc.json>
-
-    -   Click on **Next** at the bottom of the window
-
-3.  Enter the **Stack name** of **STG316-VPC**
-
-4.  Leave all other values as unchanged  
+    -   Click **Open AWS Console**
     
-5.  Click on **Next** to continue
-
-6.  On the next page scroll to the bottom and click on **Next** to continue
-
-7.  Click on **Create stack**
-
-8.  Click on the **refresh** icon as
-    highlighted in **RED** until the status value changes
-    to **CREATE_COMPLETE** (this may take a few minutes) as shown below, you can
-    then progress to the next steps
-
-<img src="images/1-4.png">
-
-<br/><br/>
-
-
-<br/><br/>
 
 
 <br/><br/>
@@ -114,7 +57,7 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 **Note:** Make sure your region is set to **us-west-2 (Oregon)**
 
 1.  From the AWS console on your local laptop/workstation,
-    click **Services** and type & select **CloudFormation**
+    from the services search bar, type & select **CloudFormation**
 
     -   Click on **Create stack**
 
@@ -134,7 +77,7 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
     -   **subnet** : Select option that has **STG316 Public Subnet-AZ1** in the
         name
 
-    -   **KeyName** : Select the key pair name you created in the previous step (**stg316-key**)
+    -   **KeyName** : Select the key pair shown (i.e ee-default-keypair)
 
     -   **SecurityGroupIds**: Select **STG316-BastionHostSG**
 
@@ -169,7 +112,7 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 **Firstly let’s retrieve the Windows administrator password from AWS Secrets
 Manager**
 
-1.  From **your laptop** connect to the AWS console, click **Services** and type
+1.  From **your workstation** navigate to your AWS console session, from the top search bar in the AWS console, type and 
     & select **Secrets Manager**
 
 2.  Click on the value shown under **Secret name** (i.e. AdminSecret-abczxy)
@@ -180,8 +123,7 @@ Manager**
 
 5.  Next let’s connect to your Windows Server EC2 instance
 
-6.  From **your laptop** connect to the AWS console, click **Services** and type
-    & select **EC2**
+6.  From the AWS console and top search bar, type and & select **EC2**
 
 7. From the left hand menu, select **Instances**
 
@@ -215,10 +157,10 @@ the previous steps**.
 <br/><br/>
 
 
-9.  Open the Chrome icon located on the desktop of the **Windows EC2 instance** and open a link to the workshop instructions  https://github.com/aws-samples/aws-online-data-migration-workshop/blob/master/module1/README.md and in another tab login to your AWS Account
-    URL <https://console.aws.amazon.com>
+9.  Open the Chrome browswer icon located on the desktop of the **Windows EC2 instance**, then paste the **Event Engine URL** you noted down earlier ((i.e. https://dashboard.eventengine.run/dashboard), then enter the **Event Engine Hash** vale in the field provided, so you can log into your temporary AWS account within the Windows EC2 instance, which you will use for the remainder of the lab. 
+    
 
-    -   From the AWS console, on the top left, click **Services** and type &
+    -   Click on **AWS Console** and **Open Console**. From the services search bar, type &
         select **EC2**
 
     -   From the top right hand drop-down ensure your region is **us-west-2
