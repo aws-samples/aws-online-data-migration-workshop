@@ -172,9 +172,10 @@ the previous steps**.
     -   In the right hand pane, select the box next to “**Workshop Linux
         instance 1**”.
 
-    -   From the bottom window, select the **Details** tab, and write down
-        the **private IP** address into the **workshop.txt** located on the desktop file where it
-        states **Linux-Instance-Private-IP=**
+    -   From the bottom window, select the **Details** tab, and copy down
+        the **private IP** address shown
+        
+    -   Then open the **workshop.txt** that is located on the desktop of your Windows workshoop instances, and paste the value you copied for **private IP**, into the field for  **Linux-Instance-Private-IP=**
 
     -   You will use this **Linux-Instance-Private-IP** in the next module
     
