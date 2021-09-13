@@ -470,7 +470,7 @@ knowledge or performance tuning to enable faster data transfers.
 
 <br/><br/>
 
-**END OF MODULE - AWS DATASYNC**
+**END OF MODULE**
 -------------------
 
 CLICK [here to go to the CLEAN-UP module](/cleanup/README.md)
