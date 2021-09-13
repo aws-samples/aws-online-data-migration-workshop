@@ -401,7 +401,7 @@ the local file gateway cache, where all your data is backed in an Amazon S3
 bucket.
 
 
-**END OF MODULE - S3 FILE GATEWAY**
+**END OF MODULE**
 -------------------
 
 
