@@ -175,7 +175,7 @@ Congratulations! You are now ingesting your first events into your Amazon S3 ba
 
 
 
-**END OF MODULE - AMAZON KINESIS**
+**END OF MODULE**
 -------------------
 
 
