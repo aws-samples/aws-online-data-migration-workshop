@@ -37,10 +37,6 @@ In this module you will deploy the below workshop resources into the **US-WEST-
 
     -   Copy down the **Event Engine URL** shown in the web browswer (i.e. https://dashboard.eventengine.run/dashboard). You will use this URL and the hash value you copied down to access your temporary AWS Account and AWS console during the entire lab. 
 
-    -   Click on **SSH Key**, then click **Download Key**, then click **OK**. You will need this SSH key during the lab
-
-    -   It will then download a ".pem" file to your users downloads folder (or a location you have specified). If you are using Google Chrome, the downloaded file will also be shown at the bottom of the screen for reference.
-
     -   Now that you have taken note of the items you need to access your temporary account, lets start the workshop
 
     -   Click on **AWS Console**
@@ -157,11 +153,23 @@ the previous steps**.
 <br/><br/>
 
 
-9.  Open the Chrome browswer icon located on the desktop of the **Windows EC2 instance**, then paste the **Event Engine URL** you noted down earlier ((i.e. https://dashboard.eventengine.run/dashboard), then enter the **Event Engine Hash** vale in the field provided, so you can log into your temporary AWS account within the Windows EC2 instance, which you will use for the remainder of the lab. 
+9.  Open the Chrome browswer icon located on the desktop of the **Windows EC2 instance**, then paste the **Event Engine URL** you noted down earlier (i.e. https://dashboard.eventengine.run/dashboard), then enter the **Event Engine Hash** vale in the field provided. This will now log you into your temporary AWS account within the Windows EC2 instance, which you will use for the remainder of the lab. 
     
 
-    -   Click on **AWS Console** and **Open Console**. From the services search bar, type &
-        select **EC2**
+    -   Click on **AWS Console**, then click on **SSH Key**, next click **Download Key**, finally click **OK**. You will need this SSH key during the lab
+
+    -   It will then download a ".pem" file to your users downloads folder, the downloaded file will also be shown at the bottom of the  Chrome screen for reference.
+
+    -   From your screen click on **Open Console**. 
+
+    -   From the AWS Console which you are now logged into, in the top services search bar, type & select **EC2**        
+        
+        
+    -   Click on **SSH Key**, then click **Download Key**, then click **OK**. You will need this SSH key during the lab
+
+    -   It will then download a ".pem" file to your users downloads folder (or a location you have specified). If you are using Google Chrome, the downloaded file will also be shown at the bottom of the screen for reference.
+
+
 
     -   From the top right hand drop-down ensure your region is **us-west-2
         (Oregon)**  
