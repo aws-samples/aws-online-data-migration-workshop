@@ -26,7 +26,7 @@ In this lab we cover different scenarios such as:
 The outcome of this workshop is to help you visualize the benefits that each of the AWS service can provide to simplify and accelerate your data ingest and data transfer journey. 
     
  
-The image below illustrates at a high level the different 4 AWS Services that you will use to get the workshop data into a common Amazon S3 bucket, in a simple, repeatable and efficient manner.
+The image below illustrates at a high level, the 4 different AWS Services that you will use to get the workshop data, using different protocols and data sources, into a common Amazon S3 bucket, in a simple, repeatable and efficient manner.
 
 <br>
 
