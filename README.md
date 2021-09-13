@@ -74,6 +74,10 @@ This lab workshop encompasses hands-on modules which NEED TO COMPLETED AS PER TH
 <br>
 
 
-CLICK [here to get started with the first module of the workshop](/module1/README.md)
+CLICK [here to START the AWS Sponsored workshop](/aws-sponsored/README.md)
 -------------------
 
+<br>
+
+CLICK [here to START the On-Demand workshop](/on-demand/README.md)
+-------------------
