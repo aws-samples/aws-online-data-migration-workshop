@@ -1,4 +1,4 @@
-AWS SPONSORED - DEPLOY WORKSHOP RESOURCES MODULE
+AWS SPONSORED WORKSHOP: DEPLOY WORKSHOP RESOURCES
 ================================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
@@ -136,12 +136,7 @@ Manager**
 
         -   Password : the value you obtained from Secrets manager
 
-7.  When you have successfully logged into your Windows EC2 instance via the
-    Remote Desktop Session, navigate back to your local workstation/laptop to
-    where you stored the **\*.pem** key file earlier. **Right click** &
-    select **copy** on the **\*.pem** file, and then go into your Remote Desktop
-    Session (Windows EC2 instance) and **right click** on a free space on the
-    **Desktop screen** and select **paste** to copy the **\*.pem** key file across.
+7.  You have now successfully logged into your Windows workshop instance.
 
 <br/><br/>
 
@@ -153,23 +148,20 @@ the previous steps**.
 <br/><br/>
 
 
-9.  Open the Chrome browswer icon located on the desktop of the **Windows EC2 instance**, then paste the **Event Engine URL** you noted down earlier (i.e. https://dashboard.eventengine.run/dashboard), then enter the **Event Engine Hash** vale in the field provided. This will now log you into your temporary AWS account within the Windows EC2 instance, which you will use for the remainder of the lab. 
+9.  Open the Chrome browswer icon located on the desktop of the **Windows EC2 instance** and paste the **Event Engine URL** you noted down earlier (i.e. https://dashboard.eventengine.run/dashboard)
     
 
-    -   Click on **AWS Console**, then click on **SSH Key**, next click **Download Key**, finally click **OK**. You will need this SSH key during the lab
+    -    Then in the Event Engine page, enter the **Event Engine Hash** value (that you noted down earlier) in the field provided, and click on the **Accept terms & Login** button. This will now log you into your temporary AWS account within the Windows EC2 instance, which you will use for the remainder of the lab. 
 
-    -   It will then download a ".pem" file to your users downloads folder, the downloaded file will also be shown at the bottom of the  Chrome screen for reference.
+    -    On the next Event Engine screen, click on **AWS Console**
 
-    -   From your screen click on **Open Console**. 
+    -    Then click on **SSH Key**, next click **Download Key**, finally click **OK**. 
 
-    -   From the AWS Console which you are now logged into, in the top services search bar, type & select **EC2**        
-        
-        
-    -   Click on **SSH Key**, then click **Download Key**, then click **OK**. You will need this SSH key during the lab
+    -   It will then download a "ee-default-keypair.pem" SSH key file to your users downloads folder (the downloaded file will also be shown at the bottom of the Chrome screen for reference). Copy the "ee-default-keypair.pem" file onto the **Desktop** of your Windows workshop instance, as you will need it in that location for the workshop   
 
-    -   It will then download a ".pem" file to your users downloads folder (or a location you have specified). If you are using Google Chrome, the downloaded file will also be shown at the bottom of the screen for reference.
+    -   Go back to your Event Engine screen and finally click on **Open Console**. You will now be logged into the AWS console.
 
-
+    -   From the AWS Console which you are now logged into, in the top services search bar, type & select **EC2**      
 
     -   From the top right hand drop-down ensure your region is **us-west-2
         (Oregon)**  
@@ -199,7 +191,7 @@ the workshop.
 
 <br>
 
-**END OF MODULE - DEPLOY WORKSHOP RESOURCES**
+**END OF MODULE**
 -------------------
 
 
