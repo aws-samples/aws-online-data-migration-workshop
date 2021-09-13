@@ -254,17 +254,18 @@ In the next steps you will create an NFS file share from your File Gateway.
 
 2.  Type CMD and hit Enter to open a new windows command prompt
 
-3.  You should have stored your SSH key \*.pem key file on the desktop as per the
-    previous instructions. Enter the below commands in the command prompt
+3.  Enter the below commands in the command prompt
 
 		cd c:\users\administrator\desktop
 
-4.  Next you will SSH into the Linux server by entering the below command into your windows command prompt, remember to
+4.  You should have your SSH key \*.pem key file located on the desktop (i.e. **ee-default-keypair.pem** or **stg316-key.pem**) as per the
+    previous instructions. Next you will SSH into the Linux server by entering the below command into your windows command prompt, where you need to 
     replace the two values shown in **\< \>** with your values 
  
-		ssh -i <your-key-file-name>.pem ec2-user@<Linux-Instance-Private-IP>
+		ssh -i <your-SSH-key-file-name>.pem ec2-user@<Linux-Instance-Private-IP>
       
-    i.e. ssh –i stg316-key.pem ec2-user\@192.168.10.102
+    i.e. ssh –i stg316-key.pem ec2-user\@192.168.10.102 
+
 
 5.  If this is the first time you have connected to this instance, a security
     alert dialog box that asks whether you trust the host to which you are
