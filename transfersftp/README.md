@@ -1,5 +1,5 @@
-AWS TRANSFER FOR SFTP MODULE- FILE TRANSFER PROTOCOL
-======================================================
+AWS TRANSFER FOR SFTP MODULE- FILE TRANSFER PROTOCOL DATA
+=========================================================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
 Errors or corrections? Contact akbariw@amazon.com.
@@ -581,7 +581,7 @@ by AWS Transfer for SFTP service through the use of the AWS File Gateway.
 <br/><br/>
 
 
-**END OF MODULE - AWS TRANSFER FOR SFTP**
+**END OF MODULE**
 -------------------
 
 CLICK [here to go to the AMAZON KINESIS DATA FIREHOSE module](/kinesis/README.md)
