@@ -105,9 +105,6 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
 
 <br/><br/>
 
-
-<br/><br/>
-
 **DEPLOY WORKSHOP RESOURCES**
 -----------------------------
 
