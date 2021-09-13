@@ -1,4 +1,4 @@
-DEPLOY WORKSHOP RESOURCES MODULE
+ON-DEMAND - DEPLOY WORKSHOP RESOURCES MODULE
 ================================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
