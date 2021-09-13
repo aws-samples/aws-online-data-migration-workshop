@@ -17,9 +17,9 @@ to ingest or transfer data into AWS, whether your building a data lake, migratin
 
 In this lab we cover different scenarios such as:
 
-   -   **Ingesting streaming data to Amazon S3**:  You will ingest streaming app data into an S3 bucket using Amazon Kinesis Data Firehose
+   -   **Ingesting streaming data to Amazon S3**:  You will ingest streaming app data into an Amazon S3 bucket using Amazon Kinesis Data Firehose
     
-   -   **Ingesting unstructured file data into Amazon S3 using traditional file shares**: You will ingest 10,000 files into an S3 bucket,using different methods such as a S3 copy script, S3 File Gateway, and also AWS DataSync and see the difference between each approach from a performance perspective. You will also see how S3 File Gateway and AWS DataSync can also preserve file metadata, for the file data they transfer to an S3 bucket. 
+   -   **Ingesting unstructured file data into Amazon S3 using traditional file shares**: You will ingest 10,000 files into an S3 bucket,using different methods such as a S3 copy script, S3 File Gateway, and also AWS DataSync and see the difference between each approach from a performance perspective. You will also see how S3 File Gateway and AWS DataSync can also preserve file metadata for the file data they transfer to an S3 bucket. 
    
    -    **Ingesting data using the SFTP protocol into Amazon S3**: You will deploy and use AWS Transfer for SFTP to ingest and access data in an S3 bucket using the SFTP protocol. You will also learn how you can seamlessly access and share data stored in your S3 bucket using file shares, through the S3 File Gateway. 
     
@@ -46,9 +46,6 @@ Firefox for this workshop.
 **Remote Desktop Client** - You will need a RDP client to logon to the Windows
 EC2 instance (Windows RDP)
 
-**Key Pair** – You will need a valid EC2 Key Pair in the AWS region you choose
-for your workshop (US-WEST-2 Oregon). Instructions are provided in this workshop
-on generating and downloading an EC2 Key Pair.
 
 
 <br/><br/>
