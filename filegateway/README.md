@@ -134,7 +134,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 
         -   Click **Launch**
 
-        -   Select your **key pair** that you created previously, and
+        -   Select a **key pair** that you want to use (an existing one that has been automatically created for this workshop, or one that you have created previously for this workshop), 
             acknowledge the checkbox and Click **Launch Instances**
 
 3.  From the AWS console, click **Services** and type & select **EC2**
