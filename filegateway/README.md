@@ -254,7 +254,7 @@ In the next steps you will create an NFS file share from your File Gateway.
 
 2.  Type CMD and hit Enter to open a new windows command prompt
 
-3.  You should have stored your \*.pem key file on the desktop as per the
+3.  You should have stored your SSH key \*.pem key file on the desktop as per the
     previous instructions. Enter the below commands in the command prompt
 
 		cd c:\users\administrator\desktop
