@@ -1,4 +1,4 @@
-AWS TRANSFER FOR SFTP - FILE TRANSFER PROTOCOL MODULE
+AWS TRANSFER FOR SFTP MODULE- FILE TRANSFER PROTOCOL
 ======================================================
 Copyright Amazon Web Services, Inc. and its affiliates. All rights reserved.This sample code is made available under the MIT-0 license. See the LICENSE file.
 
