@@ -37,7 +37,7 @@ First, you will create an Amazon Kinesis Data Stream, consisting of a single sha
 
 1.  Open your AWS Management Console
 
-2.  From the Chrome session, in the AWS console, at the top of the screen, click Services and type & select **Amazon Kinesis**
+2.  From the Chrome session, in the AWS console, at the top of the screen from the search bar, type  and type & select **Amazon Kinesis**
 
 - On the following screen, click Create Data Stream
 
