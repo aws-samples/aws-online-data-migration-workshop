@@ -112,7 +112,11 @@ Lets now generate some streaming data
 			python application-metrics-generator.py tenant-metrics-stream
 
 
-3.  You then should see the data that is sent to Kinesis. Keep the script running until the end of this lab in order to produce enough data. In the AWS Management Console, return to Amazon Kinesis. Select your stream under “Monitoring” and observe the PUT metrics associated with your stream. It may takes a few minutes for CloudWatch to show up the new metrics.
+3.  You should then see the data that is being sent to Kinesis. Keep the script running until the end of this lab in order to produce enough data. 
+
+4.  In the AWS Management Console, return to Amazon Kinesis. 
+
+5.  Select your stream under "Monitoring”, and observe the PUT metrics associated with your stream. It may take a few minutes for CloudWatch to show the new metrics.
     
 
 <br/><br/>
