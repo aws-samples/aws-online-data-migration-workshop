@@ -55,16 +55,16 @@ Session which you will terminate as part of the clean up.
 1.  Navigate to the AWS console, at the top of the screen from the search bar, 
     type and select **Cloud9**
 
-2.  Select the environment you created (i.e. SaaS Producer), then click on **Delete**. Confirm the delete in the following screen
+2.  Select the environment you created (i.e. SaaS Producer), then click on **Delete**. Then confirm the delete operation
 
 3.  Navigate to the AWS console, at the top of the screen from the search bar, 
     type and select **Amazon Kinesis**
 
-4.  Expand the left hand menu and select **Delivery Streams**. Then select the delivery stream you created for this workshop (i.e. tenant_metrics_firehose), and click on **Delete**. Confirm the delete in the following screen
+4.  Expand the left hand menu and select **Delivery Streams**. Then select the delivery stream you created for this workshop (i.e. tenant_metrics_firehose), and click on **Delete**. Then confirm the delete operation
 
 5.  Expand the left hand menu and select **Data Stream**. Then select the data stream you created for this workshop (i.e. tenant_metrics_stream).
 
-6.  Click on **Actions** and **Delete**. Confirm the delete in the following screen
+6.  Click on **Actions** and **Delete**. Then confirm the delete operation
 
 <br/><br/>
 
