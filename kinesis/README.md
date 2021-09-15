@@ -37,7 +37,7 @@ First, you will create an Amazon Kinesis Data Stream, consisting of a single sha
 
 1.  Open your AWS Management Console
 
-2.  From the Chrome session, in the AWS console, at the top of the screen from the search bar, type  and type & select **Amazon Kinesis**
+2.  From the Chrome session, in the AWS console, at the top of the screen from the AWS console search bar, type & select **Amazon Kinesis**
 
 - On the following screen, click Create Data Stream
 
@@ -87,7 +87,7 @@ The schema contains the following elements:
 
 To run the metric generator, we use Cloud9, which is an online development environment. 
 
-1.  Using the Chrome session in your RDP session, navigate to the AWS console. At the top of the screen from the search bar, type  & select **Cloud9**
+1.  Using the Chrome session in your RDP session, navigate to the AWS console. At the top of the screen from the AWS console search bar, type & select **Cloud9**
 
     -   Click on **Create environment**
     -   Enter a name for instance SaaS producer and click **Next**
@@ -121,7 +121,7 @@ Lets now generate some streaming data
 -----------------------------------------------------------------
 In this section you will set up a Kinesis Firehose that will deliver your stream into a S3 bucket as part of your data lake.
 
-1.  Navigate to the AWS Management Console, from the top search bar type & select **Amazon Kinesis**
+1.  Navigate to the AWS Management Console, at the top of the screen from the AWS console search bar, type & select **Amazon Kinesis**
 
     -   From the left side menu, select **Delivery streams**, then click on **Create Delivery Streams**
 
