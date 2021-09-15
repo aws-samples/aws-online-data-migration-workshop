@@ -33,13 +33,15 @@ In this module you will deploy the below workshop resources into the **US-WEST-
 
     -   Click on **Email One-Time Password**
 
-    -   You will then be takent o the Event Engine Team dashboard
+    -   You will then be taken to the Event Engine Team dashboard
 
-    -   Copy down the **Event Engine URL** shown in the web browswer (i.e. https://dashboard.eventengine.run/dashboard). You will use this URL and the hash value you copied down to access your temporary AWS Account and AWS console during the entire lab. 
-
-    -   Now that you have taken note of the items you need to access your temporary account, lets start the workshop
+    -   Copy down the **Event Engine URL** shown in the web browswer (i.e. https://dashboard.eventengine.run/dashboard). You will use this URL and the hash value you copied down to access your temporary AWS Account and AWS console during the entire lab from the Windows EC2 instance that you will deploy. 
 
     -   Click on **AWS Console**
+
+    -   **IMPORTANT:** Next click on **Copy login link** and paste it into a notepad file on your local machine. If your Event Engine hash doesnt work during the lab, you can use this alternative login link to access your temporary AWS account.
+
+    -   Now that you have taken note of the items you need to access your temporary account, lets start the workshop
 
     -   Click **Open AWS Console**
     
