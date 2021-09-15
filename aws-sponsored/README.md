@@ -23,23 +23,21 @@ In this module you will deploy the below workshop resources into the **US-WEST-
 1.  From your local workstation, open a web browser to the lab access URL provided for the workshop
     -   Click on the **Launch** button
 
-    -   Click on the **Click here to access** link
+    -   Click on the **Click here to access** link to be be taken to the Event Engine screen (your temporary AWS lab account).
 
-    -   You will be taken to the Event Engine screen. **Important**- copy down down the **Event Engine Hash** value shown (red box) into a notepad file (this is only shown once). You will need this hash value to access your temporary AWS account during the  workshop. 
+    -    **Important**- On the next screen copy down down the value shown for the **Event Engine Hash** (red box) into a notepad file, this value is only displayed once. You need this hash value to continue to access your temporary AWS account during the workshop from within the Windows Server EC2 instance that you will deploy in this module. 
 
     <img src="images/ee-1.PNG">
 
-    -   Once you have copied the has value, click on **Accept Terms & Login**
+    -   Once you have copied the Event Engine hash value, click on **Accept Terms & Login**
 
     -   Click on **Email One-Time Password**
 
     -   You will then be taken to the Event Engine Team dashboard
 
-    -   Copy down the **Event Engine URL** shown in the web browswer (i.e. https://dashboard.eventengine.run/dashboard). You will use this URL and the hash value you copied down to access your temporary AWS Account and AWS console during the entire lab from the Windows EC2 instance that you will deploy. 
-
     -   Click on **AWS Console**
 
-    -   **IMPORTANT:** Next click on **Copy login link** and paste it into a notepad file on your local machine. If your Event Engine hash doesnt work during the lab, you can use this alternative login link to access your temporary AWS account.
+    -   **IMPORTANT:** Click on the **Copy login link**, and paste it into a notepad file on your local machine. If your Event Engine hash doesnt work during the lab, you can use this alternative login URL link to access your temporary AWS account.
 
     -   Now that you have taken note of the items you need to access your temporary account, lets start the workshop
 
