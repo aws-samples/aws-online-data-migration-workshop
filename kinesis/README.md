@@ -170,7 +170,7 @@ Congratulations! You are now ingesting your first events into your Amazon S3 ba
 
     -   After a few minutes (you may have to press the refresh button), you will see that in the S3 bucket, under the stream/ prefix folder,  USERNAME-tenant-metrics files are being created. If you take a look at the files in S3, you will see that these are json objects files compressed in .gz format containing the data from our generator script running in Cloud9.
 
-    -   Outside of the scope of this workshop, with the data now stored in your S3 bucket, you could then query your stream of data in real-time
+    -   Outside of the scope of this workshop, with the data now stored in your S3 bucket, you could then query and analyze your stream of data using AWS services.
 
    
 
