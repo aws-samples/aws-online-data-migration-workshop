@@ -87,7 +87,7 @@ The schema contains the following elements:
 
 To run the metric generator, we use Cloud9, which is an online development environment. 
 
-1.  Using the Chrome session in your RDP session, navigate to the AWS console. At the top of the screen, click Services and type & select **Cloud9**
+1.  Using the Chrome session in your RDP session, navigate to the AWS console. At the top of the screen from the search bar, type  & select **Cloud9**
 
     -   Click on **Create environment**
     -   Enter a name for instance SaaS producer and click **Next**
