@@ -460,7 +460,7 @@ original source file, unlike the data copied across via the script.
 **SUMMARY**
 -----------
 
-In module 3, you obtained hands-on experience in deploying and configuring AWS
+In this module, you obtained hands-on experience in deploying and configuring AWS
 DataSync to simplify, automate and accelerate the transfer of data, in this case
 10,000 very small files to Amazon S3 compared to scripting it. AWS DataSync also
 copied across the metadata (so you could re-access the same objects again via
