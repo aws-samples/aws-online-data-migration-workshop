@@ -107,7 +107,7 @@ Lets now generate some streaming data
 
 			sudo pip3 install boto3
 
-			wget https://data-expert-path.workshop.aws/code/application-metrics-generator.py
+			wget https://github.com/aws-samples/aws-saas-factory-ref-solution-metrics-analytics/blob/master/metrics-generator/application-metrics-generator.py
 			
 			python application-metrics-generator.py tenant-metrics-stream
 
