@@ -212,7 +212,7 @@ the previous steps**.
 <br/><br/>
 
 
-9.  Open the Chrome icon located on the desktop of the **Windows EC2 instance** and open a link to the workshop instructions  https://github.com/aws-samples/aws-online-data-migration-workshop/blob/master/module1/README.md and in another tab login to your AWS Account
+9.  Open the Chrome icon located on the desktop of the **Windows EC2 instance** that you deployed. Then open the following workshop instructions ( https://github.com/aws-samples/aws-online-data-migration-workshop/blob/master/filegateway/README.md)in the Chrome browser. Then in another Chrome tab login to your AWS Account
     URL <https://console.aws.amazon.com>
 
     -   From the AWS console, on the top left, click **Services** and type &
