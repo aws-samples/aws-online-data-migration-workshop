@@ -131,7 +131,7 @@ copy this key to your deployed Amazon Windows EC2 instance, once you have deploy
     -   **subnet** : Select option that has **STG316 Public Subnet-AZ1** in the
         name
 
-    -   **KeyName** : Select the key pair name you created in the previous step (**stg316-key**)
+    -   **KeyName** : Select the key pair name you created in the previous step
 
     -   **SecurityGroupIds**: Select **STG316-BastionHostSG**
 
