@@ -81,27 +81,30 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 1.  From the AWS console, at the top of the screen, click **Services** and type
     & select **Storage Gateway**
 
-2.  Click the **Create gateway** button (Appears if it’s the first time you have
-    used the service).
+2.  Click the **Create gateway** button
+    -   Enter a name for your Gateway (i.e. stg STG316-filegateway)
+    -   Select **Amazon S3 File Gateway** as the Gateway type 
 
-    -   Select **Amazon S3 File Gateway** from the list and select **Next**
-
-    -   Select **Amazon EC2** & Click on the **Launch Instance** Icon
+    -   Select **Amazon EC2** from the Platform options, and Click on the **Launch Instance** Icon
 
     -   On the next screen, select the following values
 
-        -   Select the box next to **c5.2xlarge**
+        -   Name = STG316-filegateway 
 
-        -   Select **Next: Configure Instance Details**
+        -   Instance type = **c5.2xlarge**
+        -   Select a **key pair** that you want to use (an existing one that has been automatically created for this workshop, or one that you have created previously for this workshop), 
 
-        -   In the **Network** value select the workshop VPC which has the label
+        -   In the **Network settings** section, click Edit. Then enter the workshop VPC which has the label
             of “**STG316**”
 
         -   In the **Subnet** value select the one that has a label of **STG316**
+        -   Firewall =  Click on the **Select an existing security group** 
 
+            -   Select the security group with the name
+                of **STG316-FileGatewaySG**
         -   Leave all other values as default
 
-        -   Click **Next: Add Storage**
+        -   In the **Configure Storage** window, click on **Advanced** button, and then peform the following:
 
         -   Click on **Add New Volume** (to add a second volume to the File
             Gateway to use as your cache drive) with the following values
@@ -111,30 +114,10 @@ This bucket will be used to back the AWS File Gateway that you will deploy
             -   Volume Type : **GP3 - General Purpose SSD (GP3)**
 
             -   IOPS : **7500**
+            -   delete on termination : **YES**
 
-        -   Click **Next: Add Tags**
 
-        -   Click on **Add Tag**
-
-        -   Enter the following values (case sensitive)
-
-            -   Key = **Name**
-
-            -   Value = **STG316-filegateway**
-
-        -   Click **Next: Configure Security Group**
-
-            -   Click on the **Select an existing security group** check box
-
-            -   Select the security group with the name
-                of **STG316-FileGatewaySG**
-
-        -   Click **Review and Launch**
-
-        -   Click **Launch**
-
-        -   Select a **key pair** that you want to use (an existing one that has been automatically created for this workshop, or one that you have created previously for this workshop), 
-            acknowledge the checkbox and Click **Launch Instances**
+        -   Click on **Launch Instance** from the right hand window pane 
 
 3.  From the AWS console, click **Services** and type & select **EC2**
 
