@@ -75,7 +75,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 
 <br/><br/>
 
-**DEPLOY FILE GATEWAY APPLIANCE**
+**DEPLOY S3 FILE GATEWAY INSTANCE**
 ---------------------------------
 
 1.  From the AWS console, at the top of the screen, click **Services** and type
@@ -177,21 +177,20 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 **CREATE NFS SHARE**
 --------------------
 
-In the next steps you will create an NFS file share from your File Gateway.
+In the next steps you will create an NFS file share from your S3 File Gateway.
 
 1.  Following on from the previous steps, you should still be located in
-    the **AWS Storage Gateway console**, if not, from the AWS console, at the
-    top of the screen, click **Services** and type & select **Storage Gateway**
+    the **AWS Storage Gateway console**.
 
-2.  From the left hand pane of the AWS Storage Gateway console, select **File
-    shares**
+2.  If you are not on that screen, from the AWS console, at the
+    top of the screen, click **Services** and type & select **Storage Gateway**
 
 3.  Select **Create file Share** from the top menu
 
 4.  From the **Gateway** drop down, select the File Gateway instance you just deployed.  Then enter the name of your **Source-S3-bucket** in the **Amazon S3 bucket
-    name** field.
+    name** field. Leave the  S3 PREFIX NAME field BLANK
 
-5.  Select your region (us-west-2). Leave the **File share name** that is already populated. Select **Network File System (NFS)** for the **Access objects using** field
+5.  Select your region (us-west-2). Leave the **File share name** that is already populated (or if its blank leave it). Select **Network File System (NFS)** for the **Access objects using** field
 
 6.  Leave all other settings as default
 
