@@ -63,16 +63,15 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 
     -   Take note of your **Source-S3-bucket** name in your workshop.txt file
 
-4.  Next select **US West (Oregon)** as the region
+4.  Select **US West (Oregon)** as the region
 
-5.  Click **Next**
+5.  Select **ACLs Disabled**
 
-6.  Click **Next**
+6.  Leave all other options as default
 
-7.  Ensure the “**Block all public access**” check box is enabled, and
-    select **Next**
+7.  Ensure the “**Block all public access**” check box is enabled
 
-8.  On the final screen, select **Create bucket**
+8.  Select **Create bucket** to complete this step
 
 <br/><br/>
 
