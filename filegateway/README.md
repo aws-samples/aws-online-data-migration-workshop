@@ -85,7 +85,7 @@ This bucket will be used to back the AWS File Gateway that you will deploy
     -   Enter a name for your Gateway (i.e. stg STG316-filegateway)
     -   Select **Amazon S3 File Gateway** as the Gateway type 
 
-    -   Select **Amazon EC2** from the Platform options, and Click on the **Launch Instance** Icon
+    -   Select **Amazon EC2** from the Platform options, and Click on the **Launch Instance** Icon.
 
     -   On the next screen, select the following values
 
@@ -147,16 +147,12 @@ This bucket will be used to back the AWS File Gateway that you will deploy
 - Click the **Create gateway** button
 
 
-
-- Select **Amazon S3 File Gateway** from the list, and select **Next**
-
+- Enter the name for your gateway (i.e. STG316-FileGateway). Then select **Amazon S3 File Gateway** from the Gateway Options
 
 
-- Select **Amazon EC2**, and select **Next**
+- Select **Amazon EC2** from the Platform options,  Scroll to the bottom and confirm you have "launched and deployed the ECw instance", then click on **Next**
 
->   **Do not click on the Launch Instance, you have already done that previously.**
-
--   Select **Public** for endpoint type, click **Next**
+-   Select **Publically accessible** for endpoint type, 
 
 -   Enter the **private IP** address of your File Gateway EC2 instance (value
     of **File-Gateway-Instance-Private-IP**)
